@@ -21,8 +21,6 @@ features:
   name: true
   node_user_picture: false
   slogan: true
-#copyright_placeholder: ''
-#serach_placeholder: 'Search site'
 
 libraries:
   - shell/global-styling
