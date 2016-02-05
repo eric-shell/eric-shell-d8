@@ -1,0 +1,67 @@
+<?php
+// use Drupal\Component\Utility\Html;
+
+// function shell_preprocess_page(&$variables) {
+//   $variables['copyright'] = t('Copyright @date', array('@date' => date('Y')));
+//   $variables['copyright_holder'] = '';
+//   $name = \Drupal::config('system.site')->get('name');
+  
+//   if(!empty($name) || !empty($copyright_holder)){
+//     $name = !empty($copyright_holder) ? $copyright_holder : $name;
+//     $variables['copyright_holder'] = $name;
+//   }
+// }
+
+// function shell_theme_suggestions_node_alter(&$suggestions, $variables, $hook) {
+//   if (\Drupal::currentUser()->isAuthenticated()) {
+//     $bundle = $variables['elements']['#node']->bundle();
+//     $mode = $variables['elements']['#view_mode'];
+//     $view_mode = strtr($mode, '.', '_');
+
+//     $suggestions[] = 'node__' . $bundle . '__logged_in';
+//     $suggestions[] = 'node__' . $view_mode . '__logged_in';
+//   }
+// }
+
+// function shell_preprocess_node(&$variables) {
+//   $type = $variables['type'];
+
+//   $function = __FUNCTION__ . '__' . $type;
+//   if(function_exists($function)) {
+//     $function($variables);
+//   }
+// }
+
+// // New function to control all articles
+// function shell_preprocess_node__article(&$variables) {
+//   $mode = $variables['view_mode'];
+
+//   if($mode == 'teaser') {
+//     kint('I work for article teasers');
+//   }
+//   if($mode == 'full') {
+//     kint('I work for full articles');
+//   }
+// }
+
+// // Add body class to all pages
+// function shell_preprocess_html(&$variables) {
+//   $variables['attributes']['class'][] = 'ericshell';
+//   $theme = \Drupal::theme()->getActiveTheme()->getName();
+//   $regions = system_region_list($theme);
+
+//   foreach($regions as $region => $region_name) {
+//     $region_class = Html::getClass($region);
+//     if(!empty($variables['page'][$region])) {
+//       $variables['attributes']['class'][] = $region_class . '-active';
+//     }
+//   }
+// }
+
+// // Search form text
+// function shell_form_search_block_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+//   // Add placeholder text
+//   $search_placeholder = theme_get_setting('search_placeholder');
+//   $placeholder = isset($search_placeholder) ? $search_placeholder : t('Search');
+//   $form['keys']['#attributes']['placeholder'] = $placeholder;
+// }

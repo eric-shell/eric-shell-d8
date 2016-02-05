@@ -1,0 +1,28 @@
+name: 'Shell'
+descripton: 'Custom Shell theme for my personal Drupal 8 web application'
+type: theme
+screenshot: images/thumbnail.png
+base theme: classy
+core: 8.x
+version: VERSION
+
+regions:
+  header: Header
+  content: Content
+  footer: Footer
+  page_top: 'Page Top'
+  page_bottom: 'Page Bottom'
+
+features:
+  comment_user_picture: false
+  comment_user_verification: false
+  favicon: true
+  logo: true
+  name: true
+  node_user_picture: false
+  slogan: true
+#copyright_placeholder: ''
+#serach_placeholder: 'Search site'
+
+libraries:
+  - shell/global-styling
