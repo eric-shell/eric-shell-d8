@@ -1,0 +1,19 @@
+shell.small:
+  label: small
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+shell.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 640px) and (max-width: 1024px)'
+  weight: 1
+  multipliers:
+    - 1x
+shell.large:
+  label: large
+  mediaQuery: 'all and (min-width: 1025px)'
+  weight: 2
+  multipliers:
+    - 1x
