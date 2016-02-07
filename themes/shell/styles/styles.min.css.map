@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"styles.min.css","sourcesContent":[],"sourceRoot":"/source/"}
+{"version":3,"sources":["page/_front.scss"],"names":[],"mappings":"AAGI,yDACE,MAAA","file":"styles.min.css","sourcesContent":["// Front page\n.path-frontpage{\n  .view-frontpage{\n    .field--name-field-image{\n      float: left;\n    }\n  }\n}"],"sourceRoot":"/source/"}
