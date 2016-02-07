@@ -1,14 +1,12 @@
 <?php
 /**
  * @file
- * Contains Drupal\metatag\Plugin\metatag\Tag\OgImageUrl.
+ * Contains \Drupal\metatag_open_graph\Plugin\metatag\Tag\OgImageUrl.
  */
 
-namespace Drupal\metatag\Plugin\metatag\Tag;
+namespace Drupal\metatag_open_graph\Plugin\metatag\Tag;
 
-use Drupal\Core\Annotation\Translation;
-use Drupal\metatag\Plugin\metatag\Tag\MetaPropertyBase;
-use Drupal\metatag\Annotation\MetatagTag;
+use \Drupal\metatag\Plugin\metatag\Tag\MetaPropertyBase;
 
 /**
  * Provides a plugin for the 'og:image:url' meta tag.
