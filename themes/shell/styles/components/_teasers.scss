@@ -24,3 +24,11 @@
 .teaser-content{
   padding: 1rem;
 }
+
+.view-frontpage{
+  .views-row:nth-child(even){
+    .node-teaser{
+      flex-direction: row-reverse;
+    }
+  }
+}

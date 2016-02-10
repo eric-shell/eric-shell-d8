@@ -15,6 +15,7 @@ a{
   display: inline-block;
   overflow: hidden;
   top: 4px;
+
   &:before{
     content: '';
     height: 2px;
@@ -25,6 +26,7 @@ a{
     left: -100%;
     transition: all ease-in-out .25s;
   }
+
   &:after{
     content: '';
     height: 2px;
@@ -35,12 +37,15 @@ a{
     right: -100%;
     transition: all ease-in-out .25s;
   }
+
   &:hover{
+    
     &:before{
       left: 0;
       background: #000;
       transition: all ease-in-out .1s;
     }
+
     &:after{
       right: 0;
       background: #000;
