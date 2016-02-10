@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
-// Vendor 
-@import "page/front";
+// Components
+@import "components/resets";
+@import "components/type";
 
+// Layout
+@import "layout/body";
