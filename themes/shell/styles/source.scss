@@ -1,12 +1,10 @@
 @charset "UTF-8";
 
-// Components
-@import "components/resets";
-@import "components/variables";
-@import "components/mixins";
-@import "components/type";
+@import "base/resets";
+@import "base/variables";
+@import "base/mixins";
+@import "base/type";
+
+@import "layout/body";
 
 @import "components/teasers";
-
-// Layout
-@import "layout/body";
