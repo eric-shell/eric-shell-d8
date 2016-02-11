@@ -3,10 +3,12 @@
   display: flex;
 }
 
+// Teaser groupings
 .teaser-group{
   width: 50%;
 }
 
+// Teaser information
 .teaser-image{
   overflow: hidden;
   img{
@@ -21,10 +23,23 @@
   }
 }
 
+// Teaser information
 .teaser-content{
-  padding: 1rem;
+  padding: 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+// Teaser Tags
+.field--name-field-tags{
+  display: flex;
+  .field__item:not(:last-child){
+    margin-right: 1.5em;
+  }
+}
+
+// Creating teaser content offset
 .view-frontpage{
   .views-row:nth-child(even){
     .node-teaser{
