@@ -32,13 +32,13 @@
     
     &:before{
       left: 0;
-      background: #000;
+      background: $black;
       transition: all ease-in-out .1s;
     }
 
     &:after{
       right: 0;
-      background: #000;
+      background: $black;
       transition: all ease-in-out .1s;
     }
   }
