@@ -11,11 +11,14 @@
 // Teaser information
 .teaser-image{
   overflow: hidden;
+
   img{
     transform: scale(1);
     transition: all ease-in-out .1s;
   }
+
   &:hover{
+
     img{
       transform: scale(1.1);
       transition: all ease-in-out 2.5s;
@@ -34,14 +37,28 @@
 // Teaser Tags
 .field--name-field-tags{
   display: flex;
-  .field__item:not(:last-child){
-    margin-right: 1.5em;
+
+  .field__item{
+    margin-right: 1.5vw;
+
+    a{
+      font-size: 1.3vw;
+      font-weight: 700;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    &:last-child{
+      margin-right: 0;
+    }
   }
 }
 
 // Creating teaser content offset
 .view-frontpage{
+
   .views-row:nth-child(even){
+
     .node-teaser{
       flex-direction: row-reverse;
     }

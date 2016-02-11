@@ -1,5 +1,5 @@
 // Type
-@import url(https://fonts.googleapis.com/css?family=Lato:400,900);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
 
 body{
   font-size: 100%;
@@ -9,15 +9,24 @@ body{
 
 p{
   margin: 0 0 1rem;
+  font-size: 1.4vw;
+  line-height: 1.8;
+
+  a{
+    font-weight: 700;
+  }
+
+  &:last-child{
+    margin: 0;
+  }
 }
 
 a{
   color: #000;
   position: relative;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
   overflow: hidden;
-  top: 4px;
 
   &:before{
     content: '';
@@ -58,10 +67,14 @@ a{
 }
 
 h1{
+  font-size: 7vw;
+  font-weight: 900;
   text-transform: uppercase;
 }
 
 h2{
+  font-size: 3.5vw;
+  font-weight: 900;
   text-transform: uppercase;
 }
 
