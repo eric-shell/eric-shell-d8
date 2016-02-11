@@ -23,17 +23,23 @@ p{
 
 a{
   color: $black;
-  @include link-animation;
+  @include link-animation(2px);
 }
 
 h1{
   font-size: 7vw;
   font-weight: 900;
   text-transform: uppercase;
+  a{
+    @include link-animation(5px);
+  }
 }
 
 h2{
   font-size: 3.5vw;
   font-weight: 900;
   text-transform: uppercase;
+  a{
+    @include link-animation(4px);
+  }
 }

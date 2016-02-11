@@ -1,6 +1,6 @@
 // Mixins
 
-@mixin link-animation{
+@mixin link-animation($height){
   position: relative;
   text-decoration: none;
   display: inline-flex;
@@ -8,7 +8,7 @@
 
   &:before{
     content: '';
-    height: 2px;
+    height: $height;
     width: 100%;
     background: transparent;
     position: absolute;
@@ -19,7 +19,7 @@
 
   &:after{
     content: '';
-    height: 2px;
+    height: $height;
     width: 100%;
     background: transparent;
     position: absolute;
