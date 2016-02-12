@@ -1,0 +1,17 @@
+// Hero
+#hero{
+  position: relative;
+  display: flex;
+}
+
+#hero-photo{
+  flex-basis: 62%;
+}
+
+#hero-content{
+  flex-basis: 38%;
+  padding: 4vw 4vw 4vw 0;
+  margin-left: -2vw;
+  display: flex;
+  align-items: center;
+}

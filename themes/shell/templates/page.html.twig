@@ -44,6 +44,17 @@
 
   {% include directory ~ '/templates/header.html.twig' %}
 
+  {% if is_front == true %}
+    <section id="hero" role="complementary">
+      <div id="hero-photo">
+        <img src="/themes/shell/images/hero.png">
+      </div>
+      <div id="hero-content">
+        <p>I am a Digital Media Specialist capible of architecting comprehensive solutions using the latest available web technologies.  I support these solutions with a robust approach to visual design and content creation.  I enjoy contributing to all front end aspects of digital mediums.</p>
+      </div>
+    </section>
+  {% endif %}
+
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
