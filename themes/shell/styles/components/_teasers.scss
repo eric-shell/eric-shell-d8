@@ -5,71 +5,108 @@
 
 // Highlights
 .view-highlights{
+  background: $black;
+
+  .view-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .views-row{
     width: 33.33333%;
-  }
-}
+    position: relative;
 
-// Teaser groupings
-.teaser-group{
-  width: 50%;
-}
+    &:hover{
 
-// Teaser image container
-.teaser-image{
-  overflow: hidden;
-
-  img{
-    transform: scale(1);
-    transition: all ease-in-out .1s;
-  }
-
-  &:hover{
-
-    img{
-      transform: scale(1.1);
-      transition: all ease-in-out 2.5s;
+      .views-field-title{
+        bottom: 0;
+        transition: $in-transition;
+      }
     }
   }
-}
 
-// Teaser content container
-.teaser-content{
-  padding: 4vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-// Teaser description
-.field--name-body{
-  padding: 1vw 0 0;
-  flex-grow: 1;
-}
-
-// Teaser Tags
-.field--name-field-tags{
-  display: flex;
-
-  .field__item{
-    margin-right: 1.5vw;
+  .views-field-title{
+    position: absolute;
+    bottom: -8vw;
+    left: 0;
+    width: 100%;
+    transition: $out-transition;
 
     a{
-      font-size: 1.3vw;
-      font-weight: 700;
-      line-height: 1.5;
+      display: flex;
+      width: 100%;
+      font-size: 1.5vw;
+      font-weight: 900;
+      padding: 1.25em 1.5em;
       text-transform: uppercase;
-    }
-
-    &:last-child{
-      margin-right: 0;
+      text-decoration: none;
+      background: rgba(255,255,255,.85);
     }
   }
 }
 
-// Creating teaser content offset
-.view-post-articles{
+// Articles
+.view-articles{
 
+  // Article content containers
+  .teaser-group{
+    width: 50%;
+  }
+
+  // Article thumbnail
+  .teaser-image{
+    overflow: hidden;
+
+    img{
+      transform: scale(1);
+      transition: all ease-in-out .1s;
+    }
+
+    &:hover{
+
+      img{
+        transform: scale(1.1);
+        transition: all ease-in-out 2.5s;
+      }
+    }
+  }
+
+  // Article body container
+  .teaser-content{
+    padding: 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  // Article summary
+  .field--name-body{
+    padding: 1vw 0 0;
+    flex-grow: 1;
+  }
+
+  // Article tags
+  .field--name-field-tags{
+    display: flex;
+
+    .field__item{
+      margin-right: 1.5vw;
+
+      a{
+        font-size: 1.3vw;
+        font-weight: 700;
+        line-height: 1.5;
+        text-transform: uppercase;
+      }
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+
+  // Row offset
   .views-row:nth-child(even){
 
     .node-teaser{
