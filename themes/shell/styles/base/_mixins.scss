@@ -14,7 +14,7 @@
     position: absolute;
     bottom: 0;
     left: -100%;
-    transition: all ease-in-out .25s;
+    transition: $out-transition;
   }
 
   &:after{
@@ -25,7 +25,7 @@
     position: absolute;
     bottom: 0;
     right: -100%;
-    transition: all ease-in-out .25s;
+    transition: $out-transition;
   }
 
   &:hover{
@@ -33,13 +33,13 @@
     &:before{
       left: 0;
       background: $black;
-      transition: all ease-in-out .1s;
+      transition: $in-transition;
     }
 
     &:after{
       right: 0;
       background: $black;
-      transition: all ease-in-out .1s;
+      transition: $in-transition;
     }
   }
 }
