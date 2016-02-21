@@ -7,6 +7,10 @@ body{
   font-family: 'Lato', sans-serif;
 }
 
+a{
+  color: $black;
+}
+
 p{
   margin: 0 0 1rem;
   font-size: 1.4vw;
@@ -14,6 +18,7 @@ p{
 
   a{
     font-weight: 700;
+    @include link-animation(2px);
   }
 
   &:last-child{
@@ -21,9 +26,12 @@ p{
   }
 }
 
-a{
-  color: $black;
-  @include link-animation(2px);
+.field--name-field-tags{
+  
+  a{
+    font-weight: 700;
+    @include link-animation(2px);
+  }
 }
 
 h1{
