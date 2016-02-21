@@ -1,19 +1,24 @@
-// Pager
-.pager{
+// Admin tabs
+.tabs{
   display: flex;
   justify-content: center;
   background: $black;
 
+  ul{
+    margin: 0;
+  }
+
   li{
     float: left;
     padding: 0;
+    margin: 0;
   }
 
   a{
     float: left;
     color: $white;
     font-weight: 900;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     padding: 1.25em 1.5em;
     text-decoration: none;
     transition: $out-transition;
@@ -29,15 +34,5 @@
     a{
       background: $blue;
     }
-  }
-
-  .pager__item--ellipsis{
-    color: #fff;
-    padding: 1.25em .75em;
-  }
-
-  .pager__item--first,
-  .pager__item--last{
-    display: none;
   }
 }
