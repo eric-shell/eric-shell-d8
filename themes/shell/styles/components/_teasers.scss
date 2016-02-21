@@ -8,7 +8,7 @@
   width: 50%;
 }
 
-// Teaser information
+// Teaser image container
 .teaser-image{
   overflow: hidden;
 
@@ -26,7 +26,7 @@
   }
 }
 
-// Teaser information
+// Teaser content container
 .teaser-content{
   padding: 4vw;
   display: flex;
@@ -61,7 +61,7 @@
 }
 
 // Creating teaser content offset
-.view-frontpage{
+.view-post-articles{
 
   .views-row:nth-child(even){
 
