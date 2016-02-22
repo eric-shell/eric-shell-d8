@@ -1,6 +1,6 @@
 // Footer
 footer{
-  padding: 6rem 3rem;
+  padding: 8rem 4rem;
   background: $violet;
 }
 
@@ -10,12 +10,12 @@ footer{
   display: flex;
   color: #fff;
 
-  .block-menu{
+  .block{
     width: 25%;
 
     h2{
       font-size: 1.5vw;
-      padding: 0 .5em;
+      padding: 0 .5em .5em;
     }
   }
 
