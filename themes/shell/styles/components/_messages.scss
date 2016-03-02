@@ -1,0 +1,37 @@
+// Messages
+.messages{
+  border: 0;
+  border-radius: 0;
+  background-color: $black;
+
+  &.messages--status{
+    color: #81BD65;
+    a{
+      color: #81BD65;
+    }
+  }
+
+  &.messages--warning{
+    color: #E8A213;
+    a{
+      color: #E8A213;
+    }
+  }
+
+  &.messages--error{
+    color: #E03815;
+    a{
+      color: #E03815;
+    }
+  }
+
+  a{
+    transition: $out-transition;
+    
+    &:hover,
+    &:focus{
+      color: $white;
+      transition: $in-transition;
+    }
+  }
+}
