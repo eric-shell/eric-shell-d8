@@ -34,7 +34,7 @@
 }
 
 // Basic animated underline
-@mixin link($underline-height){
+@mixin link($underline-height: 2px){
   position: relative;
   text-decoration: none;
   display: inline-flex;
@@ -79,7 +79,7 @@
 }
 
 // Square emphasized link
-@mixin link-square($base-color, $active-text-color){
+@mixin link-square($base-color: $white, $active-text-color: $blue){
   
   a{
     color: $base-color;
@@ -103,7 +103,7 @@
 }
 
 // Round emphasized link
-@mixin link-round($base-color, $active-text-color){
+@mixin link-round($base-color: $white, $active-text-color: $blue){
   
   a{
     color: $base-color;

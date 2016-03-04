@@ -18,7 +18,7 @@ p{
 
   a{
     font-weight: 700;
-    @include link(2px);
+    @include link;
   }
 
   &:last-child{
@@ -30,7 +30,7 @@ p{
   
   a{
     font-weight: 700;
-    @include link(2px);
+    @include link;
   }
 }
 
