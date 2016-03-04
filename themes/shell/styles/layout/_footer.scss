@@ -8,7 +8,7 @@ footer{
   margin: 0 auto;
   max-width: 1000px;
   display: flex;
-  color: #fff;
+  color: $white;
 
   .block{
     width: 25%;
@@ -30,7 +30,7 @@ footer{
     a.is-active{
       float: left;
       width: 100%;
-      color: #fff;
+      color: $white;
       text-transform: uppercase;
       font-size: 1.2vw;
       padding: .6em;
