@@ -5,5 +5,5 @@
   justify-content: center;
   background: $cyan;
   padding: 1.5vw;
-  @include link-square($white, $white, $blue, $white);
+  @include link-square($white, $blue);
 }
