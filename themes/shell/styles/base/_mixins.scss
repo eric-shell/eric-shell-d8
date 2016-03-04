@@ -1,6 +1,5 @@
-// Mixins
-
-@mixin link-animation($height){
+// Basic animated underline
+@mixin link($underline-height){
   position: relative;
   text-decoration: none;
   display: inline-flex;
@@ -8,7 +7,7 @@
 
   &:before{
     content: '';
-    height: $height;
+    height: $underline-height;
     width: 100%;
     background: transparent;
     position: absolute;
@@ -19,7 +18,7 @@
 
   &:after{
     content: '';
-    height: $height;
+    height: $underline-height;
     width: 100%;
     background: transparent;
     position: absolute;
@@ -40,6 +39,30 @@
       right: 0;
       background: $black;
       transition: $in-transition;
+    }
+  }
+}
+
+// Square emphasized link
+@mixin link-square($border-color, $text-color, $active-text-color, $active-background-color){
+  
+  a{
+    color: $text-color;
+    border: 2px solid $border-color;
+    margin: 0 .5em;
+    padding: .5em .75em;
+    transition: $out-transition;
+
+    &:focus,
+    &:hover{
+      color: $active-text-color;
+      background: $active-background-color;
+      transition: $in-transition;
+    }
+
+    &:before,
+    &:after{
+      display: none;
     }
   }
 }

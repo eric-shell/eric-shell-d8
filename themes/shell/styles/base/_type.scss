@@ -18,7 +18,7 @@ p{
 
   a{
     font-weight: 700;
-    @include link-animation(2px);
+    @include link(2px);
   }
 
   &:last-child{
@@ -30,7 +30,7 @@ p{
   
   a{
     font-weight: 700;
-    @include link-animation(2px);
+    @include link(2px);
   }
 }
 
@@ -39,7 +39,7 @@ h1{
   font-weight: 900;
   text-transform: uppercase;
   a{
-    @include link-animation(5px);
+    @include link(5px);
   }
 }
 
@@ -48,6 +48,6 @@ h2{
   font-weight: 900;
   text-transform: uppercase;
   a{
-    @include link-animation(4px);
+    @include link(4px);
   }
 }

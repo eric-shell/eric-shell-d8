@@ -5,21 +5,5 @@
   justify-content: center;
   background: $cyan;
   padding: 1.5vw;
-  a{
-    color: $white;
-    border: 2px solid $white;
-    margin: 0 .5em;
-    padding: .5em .75em;
-    transition: $out-transition;
-    &:focus,
-    &:hover{
-      color: $blue;
-      background: $white;
-      transition: $in-transition;
-    }
-    &:before,
-    &:after{
-      display: none;
-    }
-  }
+  @include link-square($white, $white, $blue, $white);
 }
