@@ -7,6 +7,7 @@
 #hero-photo{
   flex-basis: 61.25%;
   position: relative;
+  animation: 1s ease-out fromLeft;
 }
 
 #hero-logo{
@@ -14,6 +15,7 @@
   top: 15vw;
   left: 8.5vw;
   width: 48%;
+  animation: 1.5s ease-out fromLeft;
 }
 
 #hero-content{
@@ -22,4 +24,5 @@
   margin-left: -2vw;
   display: flex;
   align-items: center;
+  animation: 2.5s ease-out reveal;
 }
