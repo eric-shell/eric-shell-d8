@@ -1,134 +1,159 @@
-// Teasers
-.node-teaser{
-  display: flex;
-}
+@media #{$small-up}{
 
-// Highlights
-.view-highlights{
-  background: $black;
-
-  .view-content{
+  // Teasers
+  .node-teaser{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 
-  .views-row{
-    width: 33.33333%;
-    position: relative;
-    overflow: hidden;
+  // Highlights
+  .view-highlights{
+    background: $black;
 
-    &:hover{
+    .view-content{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-      .views-field-title{
-        bottom: 0;
-        transition: $in-transition;
+    .views-row{
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+
+      &:hover{
+
+        .views-field-title{
+          bottom: 0;
+          transition: $in-transition;
+        }
+
+        .views-field-field-image{
+          img{
+            transform: scale(1.1);
+            transition: all ease-in-out 2.5s;
+          }
+        }
+      }
+    }
+
+    .views-field-field-image{
+      z-index: 5;
+      
+      img{
+        transform: scale(1);
+        transition: all ease-in-out .1s;
+      }
+    }
+
+    .views-field-title{
+      z-index: 10;
+      position: absolute;
+      bottom: -8vw;
+      left: 0;
+      width: 100%;
+      transition: $out-transition;
+
+      a{
+        display: flex;
+        width: 100%;
+        font-size: 1.5vw;
+        font-weight: 900;
+        padding: 1.25em 1.5em;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: rgba(255,255,255,.85);
+      }
+    }
+  }
+
+  // Articles
+  .view-articles{
+
+    // Article content containers
+    .teaser-group{
+      width: 50%;
+    }
+
+    // Article thumbnail
+    .teaser-image{
+      overflow: hidden;
+
+      img{
+        transform: scale(1);
+        transition: all ease-in-out .1s;
       }
 
-      .views-field-field-image{
+      &:hover{
+
         img{
           transform: scale(1.1);
           transition: all ease-in-out 2.5s;
         }
       }
     }
-  }
 
-  .views-field-field-image{
-    z-index: 5;
-    
-    img{
-      transform: scale(1);
-      transition: all ease-in-out .1s;
-    }
-  }
-
-  .views-field-title{
-    z-index: 10;
-    position: absolute;
-    bottom: -8vw;
-    left: 0;
-    width: 100%;
-    transition: $out-transition;
-
-    a{
+    // Article body container
+    .teaser-content{
+      padding: 4vw;
       display: flex;
-      width: 100%;
-      font-size: 1.5vw;
-      font-weight: 900;
-      padding: 1.25em 1.5em;
-      text-transform: uppercase;
-      text-decoration: none;
-      background: rgba(255,255,255,.85);
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    // Article summary
+    .field--name-body{
+      padding: 1vw 0 0;
+      flex-grow: 1;
+    }
+
+    // Article tags
+    .field--name-field-tags{
+      display: flex;
+
+      .field__item{
+        margin-right: 1.5vw;
+
+        a{
+          font-size: 1.3vw;
+          font-weight: 700;
+          line-height: 1.5;
+          text-transform: uppercase;
+        }
+
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+
+    // Row offset
+    .views-row:nth-child(even){
+
+      .node-teaser{
+        flex-direction: row-reverse;
+      }
     }
   }
 }
 
-// Articles
-.view-articles{
+@media #{$medium-up}{
 
-  // Article content containers
-  .teaser-group{
-    width: 50%;
-  }
+  // Highlights
+  .view-highlights{
 
-  // Article thumbnail
-  .teaser-image{
-    overflow: hidden;
-
-    img{
-      transform: scale(1);
-      transition: all ease-in-out .1s;
-    }
-
-    &:hover{
-
-      img{
-        transform: scale(1.1);
-        transition: all ease-in-out 2.5s;
-      }
+    .views-row{
+      width: 50%;
     }
   }
+}
 
-  // Article body container
-  .teaser-content{
-    padding: 4vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+@media #{$large-up}{
 
-  // Article summary
-  .field--name-body{
-    padding: 1vw 0 0;
-    flex-grow: 1;
-  }
+  // Highlights
+  .view-highlights{
 
-  // Article tags
-  .field--name-field-tags{
-    display: flex;
-
-    .field__item{
-      margin-right: 1.5vw;
-
-      a{
-        font-size: 1.3vw;
-        font-weight: 700;
-        line-height: 1.5;
-        text-transform: uppercase;
-      }
-
-      &:last-child{
-        margin-right: 0;
-      }
-    }
-  }
-
-  // Row offset
-  .views-row:nth-child(even){
-
-    .node-teaser{
-      flex-direction: row-reverse;
+    .views-row{
+      width: 33.33333%;
     }
   }
 }
