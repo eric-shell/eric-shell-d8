@@ -30,7 +30,7 @@
         .views-field-field-image{
           img{
             transform: scale(1.1);
-            transition: all ease-in-out 2.5s;
+            transition: all ease-out 2.5s;
           }
         }
       }
@@ -41,11 +41,12 @@
       
       img{
         transform: scale(1);
-        transition: all ease-in-out .1s;
+        transition: all ease-out .1s;
       }
     }
 
     .views-field-title{
+      display: none;
       z-index: 10;
       position: absolute;
       bottom: -8vw;
@@ -80,14 +81,14 @@
 
       img{
         transform: scale(1);
-        transition: all ease-in-out .1s;
+        transition: all ease-out .1s;
       }
 
       &:hover{
 
         img{
           transform: scale(1.1);
-          transition: all ease-in-out 2.5s;
+          transition: all ease-out 2.5s;
         }
       }
     }
@@ -144,11 +145,15 @@
     .views-row{
       width: 50%;
     }
+
+    .views-field-title{
+      display: block;
+    }
   }
 }
 
 @media #{$medium-only}{
-  
+
   // Highlights
   .view-highlights{
 
