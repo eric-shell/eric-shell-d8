@@ -147,6 +147,19 @@
   }
 }
 
+@media #{$medium-only}{
+  
+  // Highlights
+  .view-highlights{
+
+    .views-row{
+      &:nth-child(3n){
+        width: 100%;
+      }
+    }
+  }
+}
+
 @media #{$large-up}{
 
   // Highlights

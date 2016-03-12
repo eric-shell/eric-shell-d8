@@ -20,11 +20,11 @@ $screen-large: 1200px;
 $screen-xlarge: 1500px;
 
 // Individual media queries
-$small: 'screen and (max-width: #{$screen-small})';
-$medium: 'screen and (min-width: #{$screen-small}) and (max-width: #{$screen-medium})';
-$large: 'screen and (min-width: #{$screen-medium}) and (max-width: #{$screen-large})';
-$xlarge: 'screen and (min-width: #{$screen-large}) and (max-width: #{$screen-xlarge})';
-$xxlarge: 'screen and (min-width: #{$screen-xlarge})';
+$small-only: 'screen and (max-width: #{$screen-small})';
+$medium-only: 'screen and (min-width: #{$screen-small}) and (max-width: #{$screen-medium})';
+$large-only: 'screen and (min-width: #{$screen-medium}) and (max-width: #{$screen-large})';
+$xlarge-only: 'screen and (min-width: #{$screen-large}) and (max-width: #{$screen-xlarge})';
+$xxlarge-only: 'screen and (min-width: #{$screen-xlarge})';
 
 // Scaling media queries
 $small-up: 'screen';
