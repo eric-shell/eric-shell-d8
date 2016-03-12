@@ -1,44 +1,47 @@
-// Pager
-.pager{
-  display: flex;
-  justify-content: center;
-  background: $black;
+@media #{$small-up}{
 
-  li{
-    float: left;
-    padding: 0;
-  }
+  // Pager
+  .pager{
+    display: flex;
+    justify-content: center;
+    background: $black;
 
-  a{
-    float: left;
-    color: $white;
-    font-weight: 900;
-    font-size: 1.4vw;
-    padding: 1.25em 1.5em;
-    text-decoration: none;
-    transition: $out-transition;
-
-    &:hover,
-    &:focus{
-      background: $blue;
-      transition: $in-transition;
+    li{
+      float: left;
+      padding: 0;
     }
-  }
 
-  .is-active{
     a{
-      background: $blue;
+      float: left;
+      color: $white;
+      font-weight: 900;
+      font-size: 1.4vw;
+      padding: 1.25em 1.5em;
+      text-decoration: none;
+      transition: $out-transition;
+
+      &:hover,
+      &:focus{
+        background: $blue;
+        transition: $in-transition;
+      }
     }
-  }
 
-  .pager__item--ellipsis{
-    color: #fff;
-    font-size: 1.4vw;
-    padding: 1.25em .75em;
-  }
+    .is-active{
+      a{
+        background: $blue;
+      }
+    }
 
-  .pager__item--first,
-  .pager__item--last{
-    display: none;
+    .pager__item--ellipsis{
+      color: #fff;
+      font-size: 1.4vw;
+      padding: 1.25em .75em;
+    }
+
+    .pager__item--first,
+    .pager__item--last{
+      display: none;
+    }
   }
 }

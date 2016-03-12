@@ -1,28 +1,31 @@
-// Hero
-#hero{
-  position: relative;
-  display: flex;
-}
+@media #{$small-up}{
 
-#hero-photo{
-  flex-basis: 61.25%;
-  position: relative;
-  animation: 1s ease-out fromLeft;
-}
+  // Hero
+  #hero{
+    position: relative;
+    display: flex;
+  }
 
-#hero-logo{
-  position: absolute;
-  top: 15vw;
-  left: 8.5vw;
-  width: 48%;
-  animation: 1.5s ease-out fromLeft;
-}
+  #hero-photo{
+    flex-basis: 61.25%;
+    position: relative;
+    animation: 1s ease-out fromLeft;
+  }
 
-#hero-content{
-  flex-basis: 38.75%;
-  padding: 4vw 4vw 4vw 0;
-  margin-left: -2vw;
-  display: flex;
-  align-items: center;
-  animation: 2.5s ease-out reveal;
+  #hero-logo{
+    position: absolute;
+    top: 15vw;
+    left: 8.5vw;
+    width: 48%;
+    animation: 1.5s ease-out fromLeft;
+  }
+
+  #hero-content{
+    flex-basis: 38.75%;
+    padding: 4vw 4vw 4vw 0;
+    margin-left: -2vw;
+    display: flex;
+    align-items: center;
+    animation: 2.5s ease-out reveal;
+  }
 }

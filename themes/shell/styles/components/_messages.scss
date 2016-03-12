@@ -1,42 +1,45 @@
-// Messages
-.messages{
-  border: 0;
-  border-radius: 0;
-  padding: 1.25rem 1.25rem 1.25rem 3.25rem;
-  background-position: 1.25rem 1.4rem;
-  background-color: $black;
+@media #{$small-up}{
 
-  &.messages--status{
-    color: #81BD65;
-    
-    a{
+  // Messages
+  .messages{
+    border: 0;
+    border-radius: 0;
+    padding: 1.25rem 1.25rem 1.25rem 3.25rem;
+    background-position: 1.25rem 1.4rem;
+    background-color: $black;
+
+    &.messages--status{
       color: #81BD65;
+      
+      a{
+        color: #81BD65;
+      }
     }
-  }
 
-  &.messages--warning{
-    color: #E8A213;
-
-    a{
+    &.messages--warning{
       color: #E8A213;
-    }
-  }
 
-  &.messages--error{
-    color: #E03815;
+      a{
+        color: #E8A213;
+      }
+    }
+
+    &.messages--error{
+      color: #E03815;
+
+      a{
+        color: #E03815;
+      }
+    }
 
     a{
-      color: #E03815;
-    }
-  }
-
-  a{
-    transition: $out-transition;
-    
-    &:hover,
-    &:focus{
-      color: $white;
-      transition: $in-transition;
+      transition: $out-transition;
+      
+      &:hover,
+      &:focus{
+        color: $white;
+        transition: $in-transition;
+      }
     }
   }
 }

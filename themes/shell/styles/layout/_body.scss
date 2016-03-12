@@ -1,14 +1,17 @@
-// Setting base background for browsers with elastic viewports
-html{
-  background: $black;
-}
+@media #{$small-up}{
 
-// Setting the basic content background
-.layout-container{
-  background: #fff;
-}
+  // Setting base background for browsers with elastic viewports
+  html{
+    background: $black;
+  }
 
-// Hiding main content target to fix unwanted negative space
-a#main-content{
-  display: none;
+  // Setting the basic content background
+  .layout-container{
+    background: #fff;
+  }
+
+  // Hiding main content target to fix unwanted negative space
+  a#main-content{
+    display: none;
+  }
 }

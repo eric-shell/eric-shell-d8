@@ -1,9 +1,12 @@
-// Blocks
-#block-availableforwork{
-  color: $white;
-  display: flex;
-  justify-content: center;
-  background: $cyan;
-  padding: 1.5vw;
-  @include link-square;
+@media #{$small-up}{  
+
+  // Blocks
+  #block-availableforwork{
+    color: $white;
+    display: flex;
+    justify-content: center;
+    background: $cyan;
+    padding: 1.5vw;
+    @include link-square;
+  }
 }
