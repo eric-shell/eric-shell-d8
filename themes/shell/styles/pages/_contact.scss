@@ -1,7 +1,7 @@
-// Contact
-.path-contact{
+@media #{$small-up}{
 
-  @media #{$small-up}{
+  // Contact
+  .path-contact{
 
     .layout-container{
       color: $white;

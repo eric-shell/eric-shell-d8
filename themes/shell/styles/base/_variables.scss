@@ -14,10 +14,10 @@ $in-transition: all .1s ease-in-out;
 $out-transition: all .25s ease-in-out;
 
 // Screen size breakpoints
-$screen-small: 480px;
-$screen-medium: 800px;
+$screen-small: 600px;
+$screen-medium: 900px;
 $screen-large: 1200px;
-$screen-xlarge: 1600px;
+$screen-xlarge: 1500px;
 
 // Individual media queries
 $small: 'screen and (max-width: #{$screen-small})';
