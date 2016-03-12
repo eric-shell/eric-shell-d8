@@ -15,8 +15,8 @@
       float: left;
       color: $white;
       font-weight: 900;
-      font-size: 1.4vw;
-      padding: 1.25em 1.5em;
+      font-size: .8rem;
+      padding: 1.5em 1em;
       text-decoration: none;
       transition: $out-transition;
 
@@ -35,13 +35,45 @@
 
     .pager__item--ellipsis{
       color: #fff;
-      font-size: 1.4vw;
-      padding: 1.25em .75em;
+      font-size: .8rem;
+      padding: 1.5em .25em;
     }
 
     .pager__item--first,
     .pager__item--last{
       display: none;
+    }
+  }
+}
+
+@media #{$medium-up}{
+  
+  // Pager
+  .pager{
+
+    a{
+      font-size: 1rem;
+      padding: 1.25em 1.5em;
+    }
+
+    .pager__item--ellipsis{
+      font-size: 1rem;
+      padding: 1.25em .75em;
+    }
+  }
+}
+
+@media #{$large-up}{
+
+  // Pager
+  .pager{
+
+    a{
+      font-size: 1.4vw;
+    }
+
+    .pager__item--ellipsis{
+      font-size: 1.4vw;
     }
   }
 }
