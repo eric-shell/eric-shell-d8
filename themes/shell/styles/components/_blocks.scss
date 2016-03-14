@@ -8,6 +8,10 @@
     background: $cyan;
     padding: 1rem;
     @include link-square;
+
+    p{
+      font-size: 3.5vw;
+    }
   }
 }
 
@@ -16,5 +20,20 @@
   // Blocks
   #block-availableforwork{
     padding: 1.5vw;
+
+    p{
+      font-size: 2vw;
+    }
+  }
+}
+
+@media #{$large-up}{  
+
+  // Blocks
+  #block-availableforwork{
+
+    p{
+      font-size: 1rem;
+    }
   }
 }

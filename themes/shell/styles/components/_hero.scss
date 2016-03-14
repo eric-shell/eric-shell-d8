@@ -10,8 +10,8 @@
   #hero-photo{
     background: $blue;
     position: relative;
-    animation: 1s ease-out fromLeft;
-    height: 80vw;
+    height: 70vw;
+    animation: 1s ease-out reveal;
 
     // Hide profile photo on mobile
     > img{
@@ -21,16 +21,17 @@
 
   #hero-logo{
     position: absolute;
-    top: 20vw;
+    top: 14vw;
     left: 15%;
     width: 70%;
-    animation: 1.5s ease-out fromLeft;
+    animation: 1.5s ease-out reveal;
   }
 
   #hero-content{
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 1.5rem;
     display: flex;
     align-items: center;
+    text-align: center;
     animation: 2.5s ease-out reveal;
   }
 }
@@ -46,6 +47,7 @@
     height: auto;
     flex-basis: 61.25%;
     background: transparent;
+    animation: 1s ease-out fromLeft;
 
     // Reveal profile photo
     > img{
@@ -58,12 +60,15 @@
     top: 15vw;
     left: 8.5vw;
     width: 48%;
+    animation: 1.5s ease-out fromLeft;
   }
 
   #hero-content{
     margin-left: -2vw;
     flex-basis: 38.75%;
+    text-align: left;
     padding: 4vw 4vw 4vw 0;
     background: transparent;
+    animation: 2.5s ease-out reveal;
   }
 }
