@@ -4,12 +4,53 @@
   #hero{
     position: relative;
     display: flex;
+    flex-direction: column;
   }
 
   #hero-photo{
-    flex-basis: 61.25%;
+    background: $blue;
     position: relative;
     animation: 1s ease-out fromLeft;
+    height: 80vw;
+
+    // Hide profile photo on mobile
+    > img{
+      display: none;
+    }
+  }
+
+  #hero-logo{
+    position: absolute;
+    top: 20vw;
+    left: 15%;
+    width: 70%;
+    animation: 1.5s ease-out fromLeft;
+  }
+
+  #hero-content{
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    animation: 2.5s ease-out reveal;
+  }
+}
+
+@media #{$medium-up}{
+
+  // Hero
+  #hero{
+    flex-direction: row;
+  }
+
+  #hero-photo{
+    height: auto;
+    flex-basis: 61.25%;
+    background: transparent;
+
+    // Reveal profile photo
+    > img{
+      display: block;
+    }
   }
 
   #hero-logo{
@@ -17,15 +58,12 @@
     top: 15vw;
     left: 8.5vw;
     width: 48%;
-    animation: 1.5s ease-out fromLeft;
   }
 
   #hero-content{
+    margin-left: -2vw;
     flex-basis: 38.75%;
     padding: 4vw 4vw 4vw 0;
-    margin-left: -2vw;
-    display: flex;
-    align-items: center;
-    animation: 2.5s ease-out reveal;
+    background: transparent;
   }
 }

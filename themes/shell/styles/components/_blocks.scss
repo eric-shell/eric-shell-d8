@@ -6,7 +6,15 @@
     display: flex;
     justify-content: center;
     background: $cyan;
-    padding: 1.5vw;
+    padding: 1rem;
     @include link-square;
+  }
+}
+
+@media #{$medium-up}{  
+
+  // Blocks
+  #block-availableforwork{
+    padding: 1.5vw;
   }
 }
