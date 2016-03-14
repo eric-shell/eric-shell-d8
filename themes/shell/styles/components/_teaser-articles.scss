@@ -62,6 +62,7 @@
     .field--name-field-tags{
       display: flex;
       flex-wrap: wrap;
+      padding: 1rem 0 0;
 
       .field__item{
         margin-right: 1.5em;
@@ -111,6 +112,7 @@
     // Article tags
     .field--name-field-tags{
       display: flex;
+      padding: 0;
 
       .field__item{
         margin-right: 1.5vw;

@@ -7,49 +7,98 @@ body{
   font-family: 'Lato', sans-serif;
 }
 
-a{
-  color: $black;
-}
-
-p{
-  margin: 0 0 1rem;
-  font-size: 1.4vw;
-  line-height: 1.8;
+@media #{$small-up}{
 
   a{
-    font-weight: 700;
-    @include link;
+    color: $black;
   }
 
-  &:last-child{
-    margin: 0;
+  p{
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    line-height: 1.8;
+
+    a{
+      font-weight: 700;
+      @include link;
+    }
+
+    &:last-child{
+      margin: 0;
+    }
+  }
+
+  .field--name-field-tags{
+    
+    a{
+      font-weight: 700;
+      @include link;
+    }
+  }
+
+  h1{
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    
+    a{
+      @include link(.25em);
+    }
+  }
+
+  h2{
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    a{
+      @include link(.125em);
+    }
   }
 }
 
-.field--name-field-tags{
-  
-  a{
-    font-weight: 700;
-    @include link;
+@media #{$medium-up}{
+
+  p{
+    font-size: 1rem;
+  }
+
+  h1{
+    font-size: 7.5vw;
+
+    a{
+      @include link(5px);
+    }
+  }
+
+  h2{
+    font-size: 4vw; 
+
+    a{
+      @include link(4px);
+    }   
   }
 }
 
-h1{
-  font-size: 6vw;
-  font-weight: 900;
-  text-transform: uppercase;
-  
-  a{
-    @include link(5px);
+@media #{$large-up}{
+
+  p{
+    font-size: 1.4vw;
   }
-}
 
-h2{
-  font-size: 3vw;
-  font-weight: 900;
-  text-transform: uppercase;
+  h1{
+    font-size: 6vw;
 
-  a{
-    @include link(4px);
+    a{
+      @include link(5px);
+    }
+  }
+
+  h2{
+    font-size: 3vw; 
+
+    a{
+      @include link(4px);
+    }   
   }
 }
