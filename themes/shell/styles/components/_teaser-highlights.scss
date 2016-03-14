@@ -49,7 +49,7 @@
       display: none;
       z-index: 10;
       position: absolute;
-      bottom: -8vw;
+      bottom: -10vw;
       left: 0;
       width: 100%;
       transition: $out-transition;
@@ -57,7 +57,7 @@
       a{
         display: flex;
         width: 100%;
-        font-size: 1.5vw;
+        font-size: 2.5vw;
         font-weight: 900;
         padding: 1.25em 1.5em;
         text-transform: uppercase;
@@ -103,6 +103,14 @@
 
     .views-row{
       width: 33.33333%;
+    }
+
+    .views-field-title{
+      display: block;
+
+      a{
+        font-size: 1.5vw;
+      }
     }
   }
 }
