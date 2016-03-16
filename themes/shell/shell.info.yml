@@ -23,4 +23,4 @@ features:
   slogan: true
 
 libraries:
-  - shell/global-styling
+  - shell/global-theming
