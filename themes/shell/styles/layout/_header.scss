@@ -9,6 +9,7 @@
     padding: 2rem;
     background: $white;
     transition: $out-transition;
+    z-index: 50;
 
     .menu{
       margin: 0 auto;
