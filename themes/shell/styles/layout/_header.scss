@@ -3,11 +3,11 @@
   // Header
   #block-shell-main-menu{
     position: fixed;
-    top: -6rem;
+    top: -12vw;
     left: 0;
     width: 100%;
-    padding: 2rem;
-    background: $white;
+    padding: .75vw 2rem 1.25vw;
+    background: rgba(255,255,255,.97);
     transition: $out-transition;
     z-index: 50;
 
@@ -16,9 +16,20 @@
       max-width: 1000px;
       display: flex;
 
+      li{
+        margin: 0 .75em 0 0;
+
+        &:last-child{
+          margin: 0;
+        }
+      }
+
       a{
         font-size: 1rem;
         padding: .5em;
+        text-transform: uppercase;
+        font-weight: 700;
+        @include link(.15em);
       }
     }
 
@@ -61,7 +72,7 @@
     .menu{
 
       a{
-        font-size: 1.5vw;
+        font-size: 1.7vw;
       }
     }
   }
