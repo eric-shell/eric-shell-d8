@@ -1,1 +1,5 @@
-console.log('JS is working');
+(function ($) {
+  $( document ).ready(function( $ ) {
+
+  });
+})(jQuery);
