@@ -1,0 +1,57 @@
+@media #{$small-up}{
+
+  // Header
+  #block-shell-main-menu{
+    position: fixed;
+    top: -6rem;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: $violet;
+    transition: $out-transition;
+
+    .menu{
+      margin: 0 auto;
+      max-width: 1000px;
+      display: flex;
+
+      a{
+        font-size: 1rem;
+        padding: .5em;
+      }
+    }
+
+    &.hidden-main-menu{
+      top: 0;
+      transition: $in-transition;
+    }
+  }
+}
+
+@media #{$medium-up}{
+
+  // Header
+  #block-shell-main-menu{
+
+    .menu{
+
+      a{
+        font-size: 1.2vw;
+      }
+    }
+  }
+}
+
+@media #{$large-up}{
+
+  // Header
+  #block-shell-main-menu{
+
+    .menu{
+      
+      a{
+        font-size: 1.5vw;
+      }
+    }
+  }
+}
