@@ -69,16 +69,25 @@
 #}
 <article{{ attributes }}>
 
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
+  <div class="node-teaser" {{ content_attributes }}>
 
-  <div{{ content_attributes }}>
-    {{ content }}
+    <div class="teaser-group teaser-image">
+      {{ content.field_image }}
+    </div>
+
+    <div class="teaser-group teaser-content">
+      {{ title_prefix }}
+      {% if not page %}
+        <h2{{ title_attributes }}>
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h2>
+      {% endif %}
+      {{ title_suffix }}
+
+      {{ content.body }}
+
+      {{ content.field_tags }}
+    </div>
   </div>
 
   {% if display_submitted %}

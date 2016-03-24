@@ -69,15 +69,15 @@
 #}
 <article{{ attributes }}>
 
-  {# {{ kint(content) }} #}
+  <div{{ content_attributes }}>
 
-  <div class="node-teaser" {{ content_attributes }}>
+    {% if content.field_type['#items'].getValue()|first.value == 'highlight' %}
+      <div class="post-group post-image">
+        {{ content.field_image }}
+      </div>
+    {% endif %}
 
-    <div class="teaser-group teaser-image">
-      {{ content['field_image'] }}
-    </div>
-
-    <div class="teaser-group teaser-content">
+    <div class="post-group post-content">
       {{ title_prefix }}
       {% if not page %}
         <h2{{ title_attributes }}>
@@ -86,10 +86,22 @@
       {% endif %}
       {{ title_suffix }}
 
-      {{ content['body'] }}
+      <h1>{{ label }}</h1>
 
-      {{ content['field_tags'] }}
+      {{ content.body }}
+
+      {{ content.field_tags }}
     </div>
   </div>
+
+  {% if display_submitted %}
+    <footer>
+      {{ author_picture }}
+      <div{{ author_attributes }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
 
 </article>
