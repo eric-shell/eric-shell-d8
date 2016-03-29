@@ -3,21 +3,11 @@
   // Posts
   .page-node-type-post{
 
-    .field--name-body{
-      padding: 5vw 2.5vw 2.5vw;
-      max-width: 40rem;
-      margin: 0 auto;
-
-      p{
-        line-height: 2;
-        margin: 0 0 2.5vw;
-      }
-    }
-
     .field--name-field-image{
       display: flex;
       justify-content: center;
       background: $black;
+
       img{
         width: inherit;
         margin: 0 auto;
@@ -26,13 +16,21 @@
       }
     }
 
-    .sharethis-wrapper{
-      position: fixed;
-      right: 0;
-      top: calc(50% - 35px);
+    h1{
+      max-width: 40rem;
+      font-size: 4vw;
+      margin: 0 auto;
+      padding: 3.5vw 0 1.25vw;
+    }
 
-      span{
-        display: block;
+    .field--name-body{
+      padding: 1.25vw 2.5vw 2.5vw;
+
+      p{
+        max-width: 40rem;
+        line-height: 2;
+        margin: 0 auto;
+        padding: 0 0 2.5vw;
       }
     }
 

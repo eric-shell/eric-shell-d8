@@ -6,7 +6,7 @@
     top: -12vw;
     left: 0;
     width: 100%;
-    padding: .85vw 2rem 1.25vw;
+    padding: 0 2rem;
     background: rgba(255,255,255,.95);
     transition: $out-transition;
     z-index: 50;
@@ -17,6 +17,7 @@
       display: flex;
 
       li{
+        padding: 0;
         margin: 0 .75em 0 0;
 
         &:last-child{
@@ -25,6 +26,7 @@
       }
 
       a{
+        float: left;
         font-size: 1rem;
         padding: .5em;
         text-transform: uppercase;

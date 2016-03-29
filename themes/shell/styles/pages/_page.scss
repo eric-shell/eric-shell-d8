@@ -1,0 +1,12 @@
+@media #{$small-up}{
+
+  // Pages
+  .page-node-type-page{
+
+    h1.page-title,
+    .field--name-body p{
+      max-width: 40rem;
+      margin: auto;
+    }
+  }
+}
