@@ -34,7 +34,7 @@
 }
 
 // Basic animated underline
-@mixin link($underline-height: 2px){
+@mixin link($underline-height: 2px, $underline-color: $black){
   position: relative;
   text-decoration: none;
   display: inline-flex;
@@ -66,13 +66,13 @@
     
     &:before{
       left: 0;
-      background: $black;
+      background: $underline-color;
       transition: $in-transition;
     }
 
     &:after{
       right: 0;
-      background: $black;
+      background: $underline-color;
       transition: $in-transition;
     }
   }
