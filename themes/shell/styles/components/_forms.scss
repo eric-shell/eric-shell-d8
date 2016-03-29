@@ -1,0 +1,47 @@
+@media #{$small-up}{  
+
+  // Forms
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 30rem;
+    margin: 0 auto;
+
+    label{
+      display: inline-block;
+      width: 100%;
+      clear: both;
+    }
+
+    input,
+    textarea{
+      width: 100%;
+      border: 1px solid $black;
+    }
+
+    #edit-submit{
+      color: $black;
+      background: $white;
+      border: 2px solid $black;
+      margin: 0 .5em;
+      padding: .5em .75em;
+      transition: $out-transition;
+
+      &:focus,
+      &:hover{
+        color: $blue;
+        background: $white;
+        border: 2px solid $blue;
+        transition: $in-transition;
+      }
+    }
+
+    // Hidden elements
+    .description,
+    #edit-preview{
+      display: none;
+    }
+  }
+}
