@@ -22,10 +22,6 @@ body{
       font-weight: 700;
       @include link;
     }
-
-    &:last-child{
-      margin: 0;
-    }
   }
 
   .field--name-field-tags{
@@ -37,6 +33,7 @@ body{
   }
 
   h1{
+    margin: 0;
     font-size: 2rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -47,6 +44,7 @@ body{
   }
 
   h2{
+    margin: 0;
     font-size: 1.5rem;
     font-weight: 900;
     text-transform: uppercase;
