@@ -6,10 +6,10 @@
     top: -12vw;
     left: 0;
     width: 100%;
+    z-index: 50;
     padding: 0 2rem;
     background: rgba(255,255,255,.95);
     transition: $out-transition;
-    z-index: 50;
 
     .menu{
       margin: 0 auto;
@@ -31,7 +31,16 @@
         padding: .5em 0;
         text-transform: uppercase;
         font-weight: 700;
+        transition: $out-transition;
         @include link(.15em);
+      }
+    }
+
+    // Hover properties
+    &:hover{
+      a{
+        margin: .5em 0;
+        transition: $in-transition;
       }
     }
 

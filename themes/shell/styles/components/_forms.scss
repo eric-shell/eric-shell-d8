@@ -7,18 +7,45 @@
     justify-content: center;
     align-items: center;
     max-width: 30rem;
+    padding: 5vw 1vw;
     margin: 0 auto;
+
+    .form-item{
+      margin: 0 0 1em;
+      padding: 0;
+
+      &:last-child{
+        margin: 0;
+      }
+    }
 
     label{
       display: inline-block;
       width: 100%;
       clear: both;
+      font-size: .8em;
     }
 
     input,
     textarea{
+      border: 2px solid rgba(0,0,0,.1);
       width: 100%;
-      border: 1px solid $black;
+      padding: 1rem;
+      position: relative;
+
+      &:focus{
+        outline: 0;
+      }
+    }
+
+
+    .form-required:after{
+      content: '*';
+      font-size: 1em;
+      color: $red;
+      background: transparent;
+      position: relative;
+      top: .2em;
     }
 
     #edit-submit{
@@ -27,12 +54,13 @@
       border: 2px solid $black;
       margin: 0 .5em;
       padding: .5em .75em;
+      overflow: hidden;
       transition: $out-transition;
 
       &:focus,
       &:hover{
-        color: $blue;
-        background: $white;
+        color: $white;
+        background: $blue;
         border: 2px solid $blue;
         transition: $in-transition;
       }
