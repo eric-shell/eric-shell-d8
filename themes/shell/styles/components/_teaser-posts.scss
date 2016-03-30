@@ -1,7 +1,7 @@
 @media #{$small-up}{
 
-  // Highlights
-  .view-highlights{
+  // Posts
+  .view-posts{
     background: $black;
 
     // Teasers
@@ -70,8 +70,8 @@
 
 @media #{$medium-up}{
 
-  // Highlights
-  .view-highlights{
+  // Posts
+  .view-posts{
 
     .views-row{
       width: 50%;
@@ -85,8 +85,8 @@
 
 @media #{$medium-only}{
 
-  // Highlights
-  .view-highlights{
+  // Posts
+  .view-posts{
 
     .views-row{
       &:nth-child(3n){
@@ -98,8 +98,8 @@
 
 @media #{$large-up}{
 
-  // Highlights
-  .view-highlights{
+  // Posts
+  .view-posts{
 
     .views-row{
       width: 33.33333%;

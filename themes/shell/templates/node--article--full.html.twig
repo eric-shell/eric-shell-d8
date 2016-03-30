@@ -71,7 +71,7 @@
 
   <div{{ content_attributes }}>
 
-    {% if content.field_type['#items'].getValue()|first.value == 'highlight' %}
+    {% if content.field_article_type.0['#title'] == 'Post' %}
       <div class="post-group post-image">
         {{ content.field_image }}
       </div>
