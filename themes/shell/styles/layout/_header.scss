@@ -8,7 +8,7 @@
     width: 100%;
     z-index: 50;
     padding: 0 2rem;
-    background: rgba(255,255,255,.95);
+    background: $black;
     transition: $out-transition;
 
     .menu{
@@ -31,8 +31,9 @@
         padding: .5em 0;
         text-transform: uppercase;
         font-weight: 700;
+        color: $white;
         transition: $out-transition;
-        @include link(.15em);
+        @include link(.15em, $white);
       }
     }
 
