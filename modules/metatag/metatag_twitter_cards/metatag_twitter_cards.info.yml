@@ -1,12 +1,10 @@
-name: Metatag
+name: 'Metatag: Twitter Cards'
 type: module
-description: Manage meta tags for all entities.
+description: Provides support for Twitter's Card meta tags.
 # core: 8.x
 package: SEO
 dependencies:
-  - field
-  - token
-configure: entity.metatag_defaults.collection
+  - metatag
 
 # Information added by Drupal.org packaging script on 2016-03-11
 version: '8.x-1.0-beta5'
