@@ -1,11 +1,10 @@
 @charset "UTF-8";
 
-@import "base/resets";
 @import "base/variables";
 @import "base/mixins";
+@import "base/resets";
 @import "base/type";
 
-@import "layout/body";
 @import "layout/header";
 @import "layout/footer";
 
@@ -20,4 +19,6 @@
 
 @import "pages/page";
 @import "pages/article";
+@import "pages/posts";
+@import "pages/work";
 @import "pages/contact";

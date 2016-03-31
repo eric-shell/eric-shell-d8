@@ -67,7 +67,12 @@
  * @ingroup themeable
  */
 #}
+
 <article{{ attributes }}>
+
+  {% if url == '/home' %}
+    {% include directory ~ '/templates/hero.html.twig' %}
+  {% endif %}
 
   {{ title_prefix }}
   {% if not page %}
@@ -77,9 +82,11 @@
   {% endif %}
   {{ title_suffix }}
 
-  <div{{ content_attributes }}>
-    {{ content }}
-  </div>
+  {% if url != '/home' %}
+    <div{{ content_attributes }}>
+      {{ content }}
+    </div>
+  {% endif %}
 
   {% if display_submitted %}
     <footer>
