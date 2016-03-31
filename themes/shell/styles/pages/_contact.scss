@@ -3,5 +3,17 @@
   // Contact
   .path-contact{
 
+    #block-contactpageheader{
+      color: $white;
+      background: $blue;
+      text-align: center;
+      padding: 5vw 20px;
+
+      .field--name-body{
+        padding: 0;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+    }
   }
 }
