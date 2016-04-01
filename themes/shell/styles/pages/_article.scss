@@ -16,6 +16,13 @@
       }
     }
 
+    .field--name-field-video{
+      display: flex;
+      justify-content: center;
+      background: $black;
+      max-height: 85vh;
+    }
+
     h1{
       max-width: 40rem;
       font-size: 4vw;
