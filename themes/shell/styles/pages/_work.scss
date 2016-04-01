@@ -1,9 +1,10 @@
 @media #{$small-up}{
 
-  // Posts
+  // PWOrk page
   .path-work{
 
-    .view-header{
+    // Hero
+    #block-workpageheader{
       color: $white;
       background: $blue;
       text-align: center;
@@ -17,6 +18,21 @@
         h1, p{
           animation: 1s ease-out fromTop;
         }
+      }
+    }
+
+    // List cta
+    #block-worklistbanner{
+      color: $white;
+      display: flex;
+      justify-content: center;
+      background: $cyan;
+      padding: 1rem;
+      @include link-square;
+
+      p{
+        margin: 0;
+        font-size: 1.5vw;
       }
     }
   }
