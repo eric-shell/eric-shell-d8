@@ -67,6 +67,7 @@
  * @ingroup themeable
  */
 #}
+
 <article{{ attributes }}>
 
   <div{{ content_attributes }}>
@@ -74,6 +75,12 @@
     {% if content.field_article_type.0['#title'] == 'Post' %}
       <div class="post-group post-image">
         {{ content.field_image }}
+      </div>
+    {% endif %}
+
+    {% if content.field_article_type.0['#title'] == 'Work' %}
+      <div class="post-group post-video">
+        {{ content.field_video }}
       </div>
     {% endif %}
 
