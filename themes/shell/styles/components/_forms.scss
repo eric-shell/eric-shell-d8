@@ -23,7 +23,7 @@
       display: inline-block;
       width: 100%;
       clear: both;
-      font-size: .8em;
+      font-size: .75em;
     }
 
     input,
@@ -38,7 +38,6 @@
       }
     }
 
-
     .form-required:after{
       content: '*';
       font-size: 1em;
@@ -52,6 +51,7 @@
       color: $black;
       background: $white;
       border: 2px solid $black;
+      font-size: 1.5vw;
       margin: 0 .5em;
       padding: .5em .75em;
       overflow: hidden;
