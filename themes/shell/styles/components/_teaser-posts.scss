@@ -1,7 +1,8 @@
 @media #{$small-up}{
 
   // Posts
-  .view-posts{
+  .view-posts,
+  .view-posts-page{
     background: $black;
 
     // Teasers
@@ -71,7 +72,8 @@
 @media #{$medium-up}{
 
   // Posts
-  .view-posts{
+  .view-posts,
+  .view-posts-page{
 
     .views-row{
       width: 50%;
@@ -86,7 +88,8 @@
 @media #{$medium-only}{
 
   // Posts
-  .view-posts{
+  .view-posts,
+  .view-posts-page{
 
     .views-row{
       &:nth-child(3n){
@@ -99,7 +102,8 @@
 @media #{$large-up}{
 
   // Posts
-  .view-posts{
+  .view-posts,
+  .view-posts-page{
 
     .views-row{
       width: 33.33333%;
