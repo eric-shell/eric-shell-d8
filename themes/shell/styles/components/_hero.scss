@@ -33,6 +33,21 @@
     align-items: center;
     text-align: center;
     animation: 2.5s ease-out reveal;
+    @include link-round($blue, $white);
+
+    a{
+      margin: 1.5em 0 0;
+    }
+
+    p{
+      text-align: justify;
+
+      &:last-child{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 }
 
