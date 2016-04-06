@@ -31,5 +31,11 @@
         font-size: 1.5vw;
       }
     }
+
+    // Teaser container
+    .views-infinite-scroll-content-wrapper{
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 }
