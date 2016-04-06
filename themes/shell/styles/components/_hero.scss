@@ -35,10 +35,6 @@
     animation: 2.5s ease-out reveal;
     @include link-round($blue, $white);
 
-    a{
-      margin: 1.5em 0 0;
-    }
-
     p{
       text-align: justify;
 
@@ -88,6 +84,7 @@
 
     p{
       font-size: 1.4vw;
+      margin-bottom: 2.8vw;
     }
   }
 }
