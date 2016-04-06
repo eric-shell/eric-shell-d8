@@ -1,0 +1,33 @@
+@media #{$small-up}{  
+
+  // Lists
+  .view-work-list,
+  .view-posts-list{
+    background: $black;
+
+    .view-content{
+      max-width: 600px;
+      padding: 4rem 0;
+      margin: 0 auto;
+    }
+
+    .views-row{
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .views-field-title a{
+      font-size: 1.5rem;
+      color: $white;
+      font-weight: 900;
+      text-transform: uppercase;
+      @include link(.1em, $white);
+    }
+
+    .views-field-created{
+      font-size: 1rem;
+      margin: .2em 0 0;
+      color: $gray;
+    }
+  }
+}
