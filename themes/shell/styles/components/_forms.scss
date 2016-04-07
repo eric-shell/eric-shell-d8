@@ -10,61 +10,63 @@
     padding: 5vw 1vw;
     margin: 0 auto;
 
+    input:focus,
+    textarea:focus{
+     outline: 0; 
+    }
+
     .form-item{
       padding: 0;
       width: 100%;
       margin: 0 0 1em;
 
-      &:last-child{
-        margin: 0;
+      label{
+        display: inline-block;
+        width: 100%;
+        clear: both;
+        font-size: .75em;
+      }
+
+      input,
+      textarea{
+        border: 2px solid rgba(0,0,0,.1);
+        width: 100%;
+        padding: 1rem;
+        position: relative;
+        height: 55px;
+
+        &:focus{
+          height: auto;
+        }
+      }
+
+      .form-required:after{
+        content: '*';
+        font-size: 1em;
+        color: $red;
+        background: transparent;
+        position: relative;
+        top: .2em;
       }
     }
 
-    label{
-      display: inline-block;
-      width: 100%;
-      clear: both;
-      font-size: .75em;
-    }
-
-    input,
-    textarea{
-      border: 2px solid rgba(0,0,0,.1);
-      width: 100%;
-      padding: 1rem;
-      position: relative;
-      height: 55px;
-
-      &:focus{
-        height: auto;
-        outline: 0;
-      }
-    }
-
-    .form-required:after{
-      content: '*';
-      font-size: 1em;
-      color: $red;
-      background: transparent;
-      position: relative;
-      top: .2em;
+    .form-actions{
+      margin: 0;
     }
 
     #edit-submit{
-      color: $black;
+      color: $blue;
       background: $white;
-      border: 2px solid $black;
-      font-size: 1rem;
-      margin: 0 .5em;
-      padding: .5em .75em;
-      overflow: hidden;
+      border: 2px solid $blue;
+      border-radius: 3em;
+      margin: 1em .5em 0;
+      padding: 1em 1.75em;
       transition: $out-transition;
 
       &:focus,
       &:hover{
         color: $white;
         background: $blue;
-        border: 2px solid $blue;
         transition: $in-transition;
       }
     }
