@@ -72,6 +72,10 @@
 
   <div{{ content_attributes }}>
 
+    {{ content.field_prev }}
+
+    {{ content.field_next }}
+
     {% if content.field_article_type.0['#title'] == 'Post' %}
       <div class="post-group post-image">
         {{ content.field_image }}
