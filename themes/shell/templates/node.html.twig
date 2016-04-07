@@ -70,7 +70,7 @@
 
 <article{{ attributes }}>
 
-  {% if url == '/home' %}
+  {% if url == '/ell' %}
     {% include directory ~ '/templates/hero.html.twig' %}
   {% endif %}
 
@@ -82,7 +82,7 @@
   {% endif %}
   {{ title_suffix }}
 
-  {% if url != '/home' %}
+  {% if url != '/ell' %}
     <div{{ content_attributes }}>
       {{ content }}
     </div>
