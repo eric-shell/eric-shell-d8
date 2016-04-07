@@ -36,7 +36,11 @@
     @include link-round($blue, $white);
 
     p{
-      text-align: justify;
+      text-align: left;
+
+      &:first-child{
+        margin: 0 0 2rem;
+      }
 
       &:last-child{
         width: 100%;
@@ -84,7 +88,11 @@
 
     p{
       font-size: 1.4vw;
-      margin-bottom: 2.8vw;
+      text-align: justify;
+
+      &:first-child{
+        margin: 3vw 0 2vw;
+      }
     }
   }
 }
