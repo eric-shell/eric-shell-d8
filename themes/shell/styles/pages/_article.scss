@@ -79,16 +79,19 @@
       }
     }
 
-    .field--name-field-image{
-      display: flex;
-      justify-content: center;
-      background: $black;
+    .post-image{
+      
+      .field--name-field-image{
+        display: flex;
+        justify-content: center;
+        background: $black;
 
-      img{
-        width: inherit;
-        margin: 0 auto;
-        min-width: inherit;
-        max-height: 85vh;
+        img{
+          width: inherit;
+          margin: 0 auto;
+          min-width: inherit;
+          max-height: 85vh;
+        }
       }
     }
 
