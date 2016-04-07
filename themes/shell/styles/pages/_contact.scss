@@ -7,12 +7,10 @@
       color: $white;
       background: $blue;
       text-align: center;
-      padding: 5vw 20px;
+      padding: 3rem 20px;
 
-      .field--name-body{
-        padding: 0;
-        max-width: 500px;
-        margin: 0 auto;
+      h1{
+        font-size: 6.5vw;
       }
     }
   }

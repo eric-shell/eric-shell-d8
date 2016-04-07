@@ -15,7 +15,6 @@ body{
 
   p{
     font-size: 1rem;
-    margin: 0 0 1rem;
     line-height: 1.8;
 
     a{
@@ -75,6 +74,27 @@ body{
       @include link(.125em);
     }
   }
+
+  .field--name-title{
+    display: block;
+    max-width: 45rem;
+    margin: 0 auto;
+    padding: 3rem 1rem 0;
+  }
+
+  .field--name-body{
+    max-width: 45rem;
+    margin: 0 auto;
+    padding: 2rem 1rem 2rem;
+
+    p{
+      padding: 0 0 2.5em;
+
+      &:last-child{
+        padding: 0 0 1em;
+      }
+    }
+  }
 }
 
 @media #{$medium-up}{
@@ -84,7 +104,7 @@ body{
   }
 
   h1{
-    font-size: 7.5vw;
+    font-size: 6vw;
 
     a{
       @include link(5px);
@@ -123,7 +143,7 @@ body{
   }
 
   h1{
-    font-size: 6vw;
+    font-size: 5vw;
 
     a{
       @include link(5px);

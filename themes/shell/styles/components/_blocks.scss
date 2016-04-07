@@ -1,6 +1,6 @@
 @media #{$small-up}{  
 
-  // Blocks
+  // Blocks that are used on more than one page
   #block-availableforwork{
     color: $white;
     display: flex;
@@ -11,13 +11,18 @@
 
     p{
       font-size: 3.5vw;
+      padding: 0;
+    }
+
+    .field--name-body{
+      padding: 0;
     }
   }
 }
 
 @media #{$medium-up}{  
 
-  // Blocks
+  // Blocks that are used on more than one page
   #block-availableforwork{
     padding: 1.5vw;
 
@@ -29,7 +34,7 @@
 
 @media #{$large-up}{  
 
-  // Blocks
+  // Blocks that are used on more than one page
   #block-availableforwork{
 
     p{
