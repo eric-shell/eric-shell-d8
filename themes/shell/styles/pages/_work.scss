@@ -11,7 +11,7 @@
       padding: 3rem 20px;
 
       h1{
-        font-size: 6.5vw;
+        font-size: 15vw;
       }
     }
 
@@ -25,7 +25,7 @@
       @include link-square;
 
       p{
-        font-size: 1.5vw;
+        font-size: 3.5vw;
         padding: 0;
       }
 
@@ -38,6 +38,51 @@
     .views-infinite-scroll-content-wrapper{
       display: flex;
       flex-wrap: wrap;
+    }
+  }
+}
+
+@media #{$medium-up}{
+
+  // Post page
+  .path-work{
+
+    // Hero
+    #block-workpageheader{
+      h1{
+        font-size: 10vw;
+      }
+    }
+
+    // List cta
+    #block-worklistbanner{
+
+      p{
+        font-size: 2vw;
+      }
+    }
+  }
+}
+
+@media #{$large-up}{
+
+  // Post page
+  .path-work{
+
+    // Hero
+    #block-workpageheader{
+
+      h1{
+        font-size: 6.5vw;
+      }
+    }
+
+    // List cta
+    #block-worklistbanner{
+
+      p{
+        font-size: 1.5vw
+      }
     }
   }
 }
