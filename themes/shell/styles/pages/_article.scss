@@ -124,7 +124,7 @@
       a{
         color: $white;
         font-size: 1rem;
-        margin: 0 .75em;
+        margin: .75em;
         text-transform: uppercase;
 
         &:before,
@@ -153,6 +153,7 @@
 
       a{
         font-size: 2.5vw;
+        margin: 0 .75em;
       }
     }
   }
