@@ -7,6 +7,7 @@
       position: absolute;
       top: calc(42.5vh - 22px);
       right: 1rem;
+      z-index: 10;
       
       a{
         position: relative;
@@ -46,6 +47,7 @@
       position: absolute;
       top: calc(42.5vh - 22px);
       left: 1rem;
+      z-index: 10;
       
       a{
         position: relative;
