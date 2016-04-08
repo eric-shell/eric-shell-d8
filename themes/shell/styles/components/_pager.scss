@@ -15,7 +15,7 @@
       float: left;
       color: $white;
       font-weight: 900;
-      font-size: .8rem;
+      font-size: 1rem;
       padding: 1.5em 1em;
       text-decoration: none;
       transition: $out-transition;
@@ -35,7 +35,7 @@
 
     .pager__item--ellipsis{
       color: #fff;
-      font-size: .8rem;
+      font-size: 1rem;
       padding: 1.5em .25em;
     }
 
@@ -54,12 +54,10 @@
   .pager{
 
     a{
-      font-size: 1rem;
       padding: 1.25em 1.5em;
     }
 
     .pager__item--ellipsis{
-      font-size: 1rem;
       padding: 1.25em .75em;
     }
   }
