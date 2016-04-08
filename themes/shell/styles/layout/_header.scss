@@ -14,14 +14,20 @@
     // Header force close button
     h2#block-shell-main-menu-menu{
       cursor: pointer;
-      background: red;
-      width: 30px;
-      height: 30px;
+      background: $red;
+      border-radius: 50%;
+      width: 1.5vw;
+      height: 1.5vw;
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 1vw;
+      left: 1vw;
       clip: auto;
       text-indent: -9999px;
+      transition: $out-transition;
+
+      &:hover{
+        background: red;
+      }
     }
 
     .menu{
@@ -64,6 +70,11 @@
 
     // Hover properties
     &:hover{
+
+      h2#block-shell-main-menu-menu{
+        top: 1.8vw;
+        transition: $in-transition;
+      }
 
       a{
         padding: 1em 0;
