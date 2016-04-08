@@ -10,6 +10,34 @@
       padding: 3rem 20px;
 
       h1{
+        font-size: 15vw;
+      }
+    }
+  }
+}
+
+@media #{$medium-up}{
+
+  // Contact
+  .path-contact{
+
+    #block-contactpageheader{
+
+      h1{
+        font-size: 10vw;
+      }
+    }
+  }
+}
+
+@media #{$large-up}{
+
+  // Contact
+  .path-contact{
+
+    #block-contactpageheader{
+
+      h1{
         font-size: 6.5vw;
       }
     }
