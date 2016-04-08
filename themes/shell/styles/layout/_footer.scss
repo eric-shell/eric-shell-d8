@@ -108,7 +108,7 @@
         text-transform: uppercase;
         text-decoration: none;
         text-align: center;
-        @include link(2px, $white);
+        @include link(.175em, $white);
       }
     }
   }

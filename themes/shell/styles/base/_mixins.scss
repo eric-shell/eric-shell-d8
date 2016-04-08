@@ -45,7 +45,7 @@
 }
 
 // Basic animated underline
-@mixin link($underline-height: 2px, $underline-color: $black){
+@mixin link($underline-height: .125em, $underline-color: $black){
   position: relative;
   text-decoration: none;
   display: inline-flex;
