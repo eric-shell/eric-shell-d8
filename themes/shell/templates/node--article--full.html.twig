@@ -73,24 +73,24 @@
 
   <div{{ content_attributes }}>
 
-    <div class="post-pager">
+    <div class="article-group article-pager">
       {{ content.field_prev }}
       {{ content.field_next }}
     </div>
 
     {% if content.field_article_type.0['#title'] == 'Post' %}
-      <div class="post-group post-image">
+      <div class="article-group article-image">
         {{ content.field_image }}
       </div>
     {% endif %}
 
     {% if content.field_article_type.0['#title'] == 'Work' %}
-      <div class="post-group post-video">
+      <div class="article-group article-video">
         {{ content.field_video }}
       </div>
     {% endif %}
 
-    <div class="post-group post-content">
+    <div class="article-group article-content">
       {{ title_prefix }}
       {% if not page %}
         <h2{{ title_attributes }}>

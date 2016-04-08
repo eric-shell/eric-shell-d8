@@ -3,11 +3,11 @@
   // Articles
   .page-node-type-article{
 
-    .post-pager{
+    .article-pager{
       display: none;
     }
 
-    .post-image{
+    .article-image{
       position: relative;
       z-index: 5;
 
@@ -25,7 +25,7 @@
       }
     }
 
-    .post-video{
+    .article-video{
       position: relative;
       z-index: 5;
 
@@ -94,7 +94,7 @@
       }
     }
 
-    .post-pager{
+    .article-pager{
       display: block;
       position: relative;
       z-index: 10;
