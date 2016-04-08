@@ -106,6 +106,7 @@
 
     .field--name-field-tags{
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       background: $black;
       padding: 5vw;
