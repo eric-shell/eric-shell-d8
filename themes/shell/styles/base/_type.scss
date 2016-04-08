@@ -173,4 +173,12 @@ body{
       @include link(4px);
     }   
   }
+
+  .field--name-title{
+    max-width: 60vw;
+  }
+
+  .field--name-body{
+    max-width: 60vw;
+  }
 }

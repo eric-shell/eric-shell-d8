@@ -64,14 +64,6 @@
   // Articles
   .page-node-type-article{
 
-    .field--name-field-video{
-
-      iframe{
-        max-width: 85vw;
-        margin: 0 auto;
-      }
-    }
-
     .field--name-field-tags{
 
       a{
@@ -86,6 +78,14 @@
 
   // Articles
   .page-node-type-article{
+
+    .field--name-field-video{
+
+      iframe{
+        max-width: 85vw;
+        margin: 0 auto;
+      }
+    }
 
     .field--name-field-tags{
 
