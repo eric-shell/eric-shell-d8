@@ -3,87 +3,90 @@
   // Articles
   .page-node-type-article{
 
-    .field--name-field-prev{
-      position: absolute;
-      top: calc(42.5vh - 22px);
-      right: 1rem;
-      
-      a{
-        position: relative;
-        display: block;
-        width: 32px;
-        height: 44px;
-        text-indent: -9999px;
-        overflow: hidden;
-        z-index: 10;
+    .post-pager{
+      position: relative;
+      z-index: 10;
 
-        &:before{
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: '';
-          width: 0;
-          height: 0;
-          border-top: 22px solid transparent;
-          border-left: 32px solid $white;
-          border-bottom: 22px solid transparent;
-          opacity: .75;
-          transform: scale(.75);
-          mix-blend-mode: difference;
-          transition: $out-transition;
-        }
+      .field--name-field-prev{
+        position: absolute;
+        top: calc(42.5vh - 22px);
+        right: 1rem;
+        
+        a{
+          position: relative;
+          display: block;
+          width: 32px;
+          height: 44px;
+          text-indent: -9999px;
+          overflow: hidden;
 
-        &:hover{
           &:before{
-            opacity: 1;
-            transform: scale(1);
-            transition: $in-transition;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 22px solid transparent;
+            border-left: 32px solid $gray;
+            border-bottom: 22px solid transparent;
+            opacity: .75;
+            transform: scale(.75);
+            transition: $out-transition;
+          }
+
+          &:hover{
+            &:before{
+              opacity: 1;
+              transform: scale(1);
+              transition: $in-transition;
+            }
           }
         }
       }
-    }
 
-    .field--name-field-next{
-      position: absolute;
-      top: calc(42.5vh - 22px);
-      left: 1rem;
-      
-      a{
-        position: relative;
-        display: block;
-        width: 32px;
-        height: 44px;
-        text-indent: -9999px;
-        overflow: hidden;
-        z-index: 10;
+      .field--name-field-next{
+        position: absolute;
+        top: calc(42.5vh - 22px);
+        left: 1rem;
+        
+        a{
+          position: relative;
+          display: block;
+          width: 32px;
+          height: 44px;
+          text-indent: -9999px;
+          overflow: hidden;
 
-        &:before{
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: '';
-          width: 0;
-          height: 0;
-          border-top: 22px solid transparent;
-          border-right: 32px solid $white;
-          border-bottom: 22px solid transparent;
-          opacity: .75;
-          transform: scale(.75);
-          mix-blend-mode: difference;
-          transition: $out-transition;
-        }
-
-        &:hover{
           &:before{
-            opacity: 1;
-            transform: scale(1);
-            transition: $in-transition;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 22px solid transparent;
+            border-right: 32px solid $gray;
+            border-bottom: 22px solid transparent;
+            opacity: .75;
+            transform: scale(.75);
+            transition: $out-transition;
+          }
+
+          &:hover{
+            &:before{
+              opacity: 1;
+              transform: scale(1);
+              transition: $in-transition;
+            }
           }
         }
       }
     }
 
     .post-image{
+      position: relative;
+      z-index: 5;
 
       .field--name-field-image{
         display: flex;
@@ -99,11 +102,16 @@
       }
     }
 
-    .field--name-field-video{
-      display: flex;
-      justify-content: center;
-      background: $black;
-      max-height: 85vh;
+    .post-video{
+      position: relative;
+      z-index: 5;
+
+      .field--name-field-video{
+        display: flex;
+        justify-content: center;
+        background: $black;
+        max-height: 85vh;
+      }
     }
 
     .field--name-field-tags{

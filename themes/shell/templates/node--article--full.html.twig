@@ -68,13 +68,15 @@
  */
 #}
 
+
 <article{{ attributes }}>
 
   <div{{ content_attributes }}>
 
-    {{ content.field_prev }}
-
-    {{ content.field_next }}
+    <div class="post-pager">
+      {{ content.field_prev }}
+      {{ content.field_next }}
+    </div>
 
     {% if content.field_article_type.0['#title'] == 'Post' %}
       <div class="post-group post-image">
