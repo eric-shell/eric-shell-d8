@@ -7,7 +7,6 @@
       position: absolute;
       top: calc(42.5vh - 22px);
       right: 1rem;
-      z-index: 10;
       
       a{
         position: relative;
@@ -16,6 +15,7 @@
         height: 44px;
         text-indent: -9999px;
         overflow: hidden;
+        z-index: 10;
 
         &:before{
           position: absolute;
@@ -47,7 +47,6 @@
       position: absolute;
       top: calc(42.5vh - 22px);
       left: 1rem;
-      z-index: 10;
       
       a{
         position: relative;
@@ -56,6 +55,7 @@
         height: 44px;
         text-indent: -9999px;
         overflow: hidden;
+        z-index: 10;
 
         &:before{
           position: absolute;
