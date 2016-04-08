@@ -1,6 +1,10 @@
 (function ($) {
   $( document ).ready(function( $ ) {
 
+    $('h2#block-shell-main-menu-menu').click(function() {
+      $('#block-shell-main-menu').removeClass('hidden-main-menu');
+    });
+
   });
 
   var lastScrollTop = 0;  
