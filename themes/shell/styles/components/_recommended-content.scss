@@ -20,7 +20,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 4vw;
+      font-size: 6.5vw;
       font-weight: 900;
       color: $white;
       text-transform: uppercase;
@@ -49,6 +49,7 @@
     }
 
     h2 a{
+      display: none;
       position: absolute;
       bottom: -100%;
       left: 0;
@@ -62,6 +63,32 @@
     .field--name-title{
       padding: 0;
       margin: 0;
+    }
+  }
+}
+
+@media #{$medium-up}{  
+
+  // Recommended Content
+  .field--name-field-recommended-content{
+
+    &:before{
+      font-size: 6vw;
+    }
+
+    h2 a{
+      display: block;
+    }
+  }
+}
+
+@media #{$large-up}{  
+
+  // Recommended Content
+  .field--name-field-recommended-content{
+
+    &:before{
+      font-size: 4.5vw;
     }
   }
 }

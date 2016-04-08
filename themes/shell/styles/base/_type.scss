@@ -27,7 +27,7 @@ body{
     
     a{
       font-weight: 700;
-      @include link;
+      @include link(.15em);
     }
   }
 
