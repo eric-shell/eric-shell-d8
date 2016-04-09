@@ -4,67 +4,102 @@
   #block-resume{
     color: $white;
     background: $black;
-    padding: 3rem 0;
+    padding: 3rem 0 1rem;
+  }
 
-    p{
-      padding: 0 0 1.5em;
-    }
-
-    h1,h3,h4,h5,h6{
-      padding: 0 0 .25em;
-    }
+  // Hathway
+  #block-hathway{
+    background: #ccff33;
+    padding: 3rem 0 1rem;
 
     h2{
-      font-size: 3.75vw;
-      padding: 1.5em 0 .5em;
+      max-width: 60vw;
+      margin: 0 auto;
+      padding: 0 1rem;
     }
 
-    h3{
-      font-size: 3vw;
+    .field--name-body{
+      padding: 0 1rem;
+    }
+  }
+
+  // AccuAir
+  #block-accuairsuspension{
+    background: #000;
+    color: #fff;
+    padding: 5rem 0 1rem;
+
+    h2{
+      max-width: 60vw;
+      margin: 0 auto;
+      padding: 0 1rem;
+      color: #ffc61e;
     }
 
-    h4{
-      font-size: 2.25vw;
+    .field--name-body{
+      padding: 0 1rem;
+    }
+  }
+
+  // IMRC
+  #block-lehighuniversityimrc{
+    background: #4c280f;
+    color: #fff;
+    padding: 5rem 0 1rem;
+
+    h2{
+      max-width: 60vw;
+      margin: 0 auto;
+      padding: 0 1rem;
+      color: #ffcf49;
     }
 
-    .employer{
-      font-size: 2.25vw;
-      font-weight: 900;
-      display: block;
-      line-height: 1.4;
+    .field--name-body{
+      padding: 0 1rem;
     }
+  }
 
+  // Education
+  #block-education{
+    color: $white;
+    background: $black;
+    padding: 3rem 0 1rem;
+
+    h2{
+      max-width: 60vw;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+  }
+
+  .block{
     .job-title{
-      font-size: 1.6vw;
-      display: block;
+      font-size: 1.75vw;
       line-height: 1.4;
-      margin: 0 0 .2em;
+      padding: 0 0 .2em;
     }
 
     .job-location{
-      font-size: 1.2vw;
-      display: block;
+      font-size: 1.25vw;
       line-height: 1.4;
-      margin: 0 0 .3em;
+      padding: 0 0 .3em;
     }
 
     .job-duration{
-      font-size: 1.2vw;
-      display: block;
+      font-size: 1.25vw;
       line-height: 1.4;
     }
 
     .job-description{
-      font-size: 1.4vw;
-      display: block;
+      font-size: 1.5vw;
     }
 
     .job-responsibilities{
-      font-size: 1.4vw;
-      margin: 0 0 3.5rem;
+      font-size: 1.5vw;
+      padding: 0 0 3.5rem;
 
       li:first-child{
-        margin: 0 0 .25em;
+        padding: 0 0 .25em;
         font-weight: 900;
       }
     }
