@@ -3,7 +3,6 @@
   // Admin tabs
   .tabs{
     display: flex;
-    padding: 0 2rem;
     background: $gray;
 
     ul{
@@ -22,7 +21,7 @@
       float: left;
       color: $white;
       font-weight: 900;
-      font-size: 1.25vw;
+      font-size: .9rem;
       text-transform: uppercase;
       padding: .5em 1.25em;
       text-decoration: none;
@@ -40,6 +39,30 @@
       a{
         background: $cyan;
       }
+    }
+  }
+}
+
+@media #{$medium-up}{
+
+  // Admin tabs
+  .tabs{
+    padding: 0 2rem;
+
+    a{
+      font-size: 1.15rem;
+    }
+  }
+}
+
+@media #{$large-up}{
+
+  // Admin tabs
+  .tabs{
+    padding: 0 2rem;
+
+    a{
+      font-size: 1.25rem;
     }
   }
 }
