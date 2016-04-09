@@ -13,7 +13,7 @@ body{
     color: $black;
   }
 
-  p{
+  p {
     font-size: 1rem;
     line-height: 1.8;
 
@@ -94,6 +94,12 @@ body{
         padding: 0 0 1em;
       }
     }
+
+    ul{
+      margin: 0;
+      list-style: none;
+      line-height: 1.5;
+    }
   }
 }
 
@@ -133,6 +139,13 @@ body{
     a{
       @include link(4px);
     }   
+  }
+
+  .field--name-body{
+    
+    ul{
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -180,5 +193,9 @@ body{
 
   .field--name-body{
     max-width: 60vw;
+
+    ul{
+      font-size: 1.6vw;
+    }
   }
 }

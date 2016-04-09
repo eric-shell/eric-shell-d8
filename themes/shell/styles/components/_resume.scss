@@ -1,0 +1,72 @@
+@media #{$small-up}{  
+
+  // Resume
+  #block-resume{
+    color: $white;
+    background: $black;
+    padding: 3rem 0;
+
+    p{
+      padding: 0 0 1.5em;
+    }
+
+    h1,h3,h4,h5,h6{
+      padding: 0 0 .25em;
+    }
+
+    h2{
+      font-size: 3.75vw;
+      padding: 1.5em 0 .5em;
+    }
+
+    h3{
+      font-size: 3vw;
+    }
+
+    h4{
+      font-size: 2.25vw;
+    }
+
+    .employer{
+      font-size: 2.25vw;
+      font-weight: 900;
+      display: block;
+      line-height: 1.4;
+    }
+
+    .job-title{
+      font-size: 1.6vw;
+      display: block;
+      line-height: 1.4;
+      margin: 0 0 .2em;
+    }
+
+    .job-location{
+      font-size: 1.2vw;
+      display: block;
+      line-height: 1.4;
+      margin: 0 0 .3em;
+    }
+
+    .job-duration{
+      font-size: 1.2vw;
+      display: block;
+      line-height: 1.4;
+    }
+
+    .job-description{
+      font-size: 1.4vw;
+      display: block;
+    }
+
+    .job-responsibilities{
+      font-size: 1.4vw;
+      margin: 0 0 3.5rem;
+
+      li:first-child{
+        margin: 0 0 .25em;
+        font-weight: 900;
+      }
+    }
+  }
+}
