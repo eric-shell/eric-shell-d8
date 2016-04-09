@@ -79,6 +79,31 @@
   }
 }
 
+@media #{$small-only}{
+
+  // Header
+  #block-shell-main-menu{
+
+    .menu{
+
+      li{
+        width: 23%;
+
+        &:last-child{
+          width: 31%;
+        }
+      }
+
+      a{
+        margin: 0;
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+
 @media #{$medium-up}{
 
   // Header
