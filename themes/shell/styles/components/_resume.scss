@@ -13,7 +13,7 @@
     padding: 3rem 0 1rem;
 
     h2{
-      max-width: 60vw;
+      max-width: 45rem;
       margin: 0 auto;
       padding: 0 1rem;
     }
@@ -30,7 +30,7 @@
     padding: 5rem 0 1rem;
 
     h2{
-      max-width: 60vw;
+      max-width: 45rem;
       margin: 0 auto;
       padding: 0 1rem;
       color: #ffc61e;
@@ -48,7 +48,7 @@
     padding: 5rem 0 1rem;
 
     h2{
-      max-width: 60vw;
+      max-width: 45rem;
       margin: 0 auto;
       padding: 0 1rem;
       color: #ffcf49;
@@ -59,35 +59,62 @@
     }
   }
 
-  // Education
-  #block-education{
-    color: $white;
-    background: $black;
-    padding: 3rem 0 1rem;
+  .block{
+    .job-title{
+      font-size: 1.75rem;
+      line-height: 1.4;
+      padding: 0 0 .2em;
+    }
+
+    .job-location{
+      font-size: 1.25rem;
+      line-height: 1.4;
+      padding: 0 0 .3em;
+    }
+
+    .job-duration{
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+
+    .job-description{
+      font-size: 1.5rem;
+    }
+
+    .job-responsibilities{
+      font-size: 1.5rem;
+      padding: 0 0 3.5rem;
+
+      li:first-child{
+        padding: 0 0 .25em;
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+@media #{$large-up}{
+
+  #block-accuairsuspension,
+  #block-accuairsuspension,
+  #block-lehighuniversityimrc{
 
     h2{
       max-width: 60vw;
-      margin: 0 auto;
-      padding: 0 1rem;
     }
   }
 
   .block{
     .job-title{
       font-size: 1.75vw;
-      line-height: 1.4;
-      padding: 0 0 .2em;
     }
 
     .job-location{
       font-size: 1.25vw;
-      line-height: 1.4;
-      padding: 0 0 .3em;
     }
 
     .job-duration{
       font-size: 1.25vw;
-      line-height: 1.4;
     }
 
     .job-description{
@@ -96,12 +123,6 @@
 
     .job-responsibilities{
       font-size: 1.5vw;
-      padding: 0 0 3.5rem;
-
-      li:first-child{
-        padding: 0 0 .25em;
-        font-weight: 900;
-      }
     }
   }
 }
