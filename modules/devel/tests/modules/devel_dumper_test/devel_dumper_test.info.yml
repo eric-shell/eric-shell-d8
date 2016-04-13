@@ -1,10 +1,9 @@
-name: 'Devel Kint'
+name: 'Devel dumper test module'
 type: module
-description: 'Wrapper for Kint debugging tool'
-package: Development
+description: 'Test pluggable dumpers.'
+package: Testing
+# version: VERSION
 # core: 8.x
-tags:
- - developer
 
 # Information added by Drupal.org packaging script on 2016-04-11
 version: '8.x-1.x-dev'
