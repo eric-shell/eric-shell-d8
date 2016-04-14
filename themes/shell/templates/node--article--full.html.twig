@@ -73,23 +73,26 @@
   <div{{ content_attributes }}>
 
     <div class="article-group article-pager">
+
       {{ content.field_prev }}
       {{ content.field_next }}
+
     </div>
 
-    {% if content.field_article_type.0['#title'] == 'Post' %}
-      <div class="article-group article-image">
-        {{ content.field_image }}
-      </div>
-    {% endif %}
+    <div class="article-group article-featured-media">
 
-    {% if content.field_video.0 != '' %}
-      <div class="article-group article-video">
+      {% if content.field_article_type.0['#title'] == 'Post' %}
+        {{ content.field_image }}
+      {% endif %}
+
+      {% if content.field_video.0 != '' %}
         {{ content.field_video }}
-      </div>
-    {% endif %}
+      {% endif %}
+
+    </div>
 
     <div class="article-group article-content">
+
       {{ title_prefix }}
       {% if not page %}
         <h2{{ title_attributes }}>
@@ -107,7 +110,9 @@
       {{ content.field_tags }}
 
       {{ content.field_recommended_content }}
+
     </div>
+    
   </div>
 
   {% if display_submitted %}

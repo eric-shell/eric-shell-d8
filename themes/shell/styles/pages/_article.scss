@@ -5,6 +5,12 @@
 
     .article-pager{
       display: none;
+      position: relative;
+      z-index: 10;
+    }
+
+    .article-featued-media{
+      z-index: 5;
     }
 
     .field--name-field-tags{
@@ -62,7 +68,7 @@
       .field--name-field-prev{
         position: absolute;
         right: 1rem;
-        top: 50%;
+        top: 50vh;
         
         a{
           position: relative;
@@ -100,7 +106,7 @@
       .field--name-field-next{
         position: absolute;
         left: 1rem;
-        top: 50%;
+        top: 50vh;
         
         a{
           position: relative;
