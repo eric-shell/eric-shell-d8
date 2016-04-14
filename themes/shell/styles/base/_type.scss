@@ -82,6 +82,14 @@ body{
     padding: 3rem 1rem 0;
   }
 
+  .field--name-created{
+    display: block;
+    font-weight: 700;
+    max-width: 45rem;
+    padding: .25em 1rem 0;
+    margin: 0 auto;
+  }
+
   .field--name-body{
     max-width: 45rem;
     margin: 0 auto;
@@ -188,6 +196,10 @@ body{
   }
 
   .field--name-title{
+    max-width: 60vw;
+  }
+
+  .field--name-created{
     max-width: 60vw;
   }
 
