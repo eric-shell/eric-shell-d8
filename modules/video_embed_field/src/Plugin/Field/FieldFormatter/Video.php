@@ -12,6 +12,7 @@ use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Session\AccountInterface;
+use Drupal\field\Entity\FieldConfig;
 use Drupal\video_embed_field\ProviderManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -49,15 +50,20 @@ class Video extends FormatterBase implements ContainerFactoryPluginInterface {
     $element = [];
     foreach ($items as $delta => $item) {
       $provider = $this->providerManager->loadProviderFromInput($item->value);
+
       $autoplay = $this->currentUser->hasPermission('never autoplay videos') ? FALSE : $this->getSetting('autoplay');
       $element[$delta] = $provider->renderEmbedCode($this->getSetting('width'), $this->getSetting('height'), $autoplay);
       $element[$delta]['#cache']['contexts'][] = 'user.permissions';
-    }
-    // Attach a library and attributes to the field renderable array in the case
-    // of responsive videos.
-    if ($this->getSetting('responsive')) {
-      $element['#attached']['library'][] = 'video_embed_field/responsive-video';
-      $element['#attributes']['class'][] = 'video-embed-field-responsive-video';
+
+      // For responsive videos, wrap each field item in it's own container
+      if ($this->getSetting('responsive')) {
+        $element[$delta] = [
+          '#type' => 'container',
+          '#attached' => ['library' => ['video_embed_field/responsive-video']],
+          '#attributes' => ['class' => ['video-embed-field-responsive-video']],
+          'children' => $element[$delta],
+        ];
+      }
     }
     return $element;
   }
@@ -67,7 +73,7 @@ class Video extends FormatterBase implements ContainerFactoryPluginInterface {
    */
   public static function defaultSettings() {
     return [
-      'responsive' => FALSE,
+      'responsive' => TRUE,
       'width' => '854',
       'height' => '480',
       'autoplay' => TRUE,
@@ -78,13 +84,14 @@ class Video extends FormatterBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function settingsForm(array $form, FormStateInterface $form_state) {
-    $form['autoplay'] = [
+    $elements = parent::settingsForm($form, $form_state);
+    $elements['autoplay'] = [
       '#title' => t('Autoplay'),
       '#type' => 'checkbox',
       '#description' => $this->t('Autoplay the videos for users without the "never autoplay videos" permission. Roles with this permission will bypass this setting.'),
       '#default_value' => $this->getSetting('autoplay'),
     ];
-    $form['responsive'] = [
+    $elements['responsive'] = [
       '#title' => t('Responsive Video'),
       '#type' => 'checkbox',
       '#description' => $this->t("Make the video fill the width of it's container, adjusting to the size of the user's screen."),
@@ -99,7 +106,7 @@ class Video extends FormatterBase implements ContainerFactoryPluginInterface {
         ]
       ],
     ];
-    $form['width'] = [
+    $elements['width'] = [
       '#title' => t('Width'),
       '#type' => 'textfield',
       '#default_value' => $this->getSetting('width'),
@@ -107,7 +114,7 @@ class Video extends FormatterBase implements ContainerFactoryPluginInterface {
       '#size' => 20,
       '#states' => $responsive_checked_state,
     ];
-    $form['height'] = [
+    $elements['height'] = [
       '#title' => t('Height'),
       '#type' => 'textfield',
       '#default_value' => $this->getSetting('height'),
@@ -115,7 +122,7 @@ class Video extends FormatterBase implements ContainerFactoryPluginInterface {
       '#size' => 20,
       '#states' => $responsive_checked_state,
     ];
-    return $form;
+    return $elements;
   }
 
   /**
@@ -173,6 +180,32 @@ class Video extends FormatterBase implements ContainerFactoryPluginInterface {
       $container->get('video_embed_field.provider_manager'),
       $container->get('current_user')
     );
+  }
+
+  /**
+   * Get an instance of the Video field formatter plugin.
+   *
+   * This is useful because there is a lot of overlap to the configuration and
+   * display of a video in a WYSIWYG and configuring a field formatter. We
+   * get an instance of the plugin with our own WYSIWYG settings shimmed in,
+   * as well as a fake field_definition because one in this context doesn't
+   * exist. This allows us to reuse aspects such as the form and settings
+   * summary for the WYSIWYG integration.
+   *
+   * @param array $settings
+   *   The settings to pass to the plugin.
+   *
+   * @return static
+   *   The formatter plugin.
+   */
+  public static function mockInstance($settings) {
+    return \Drupal::service('plugin.manager.field.formatter')->createInstance('video_embed_field_video', [
+      'settings' => !empty($settings) ? $settings : [],
+      'third_party_settings' => [],
+      'field_definition' => new FieldConfig(['field_name' => 'mock', 'entity_type' => 'mock', 'bundle' => 'mock']),
+      'label' => '',
+      'view_mode' => '',
+    ]);
   }
 
 }

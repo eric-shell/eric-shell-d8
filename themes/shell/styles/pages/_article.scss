@@ -26,14 +26,13 @@
     }
 
     .article-video{
+      background: #000;
       position: relative;
       z-index: 5;
 
-      .field--name-field-video{
-        display: flex;
-        justify-content: center;
+      iframe{
+        margin: 0 auto;
         background: #000;
-        max-height: 85vh;
       }
     }
 
@@ -101,14 +100,14 @@
 
       .field--name-field-prev{
         position: absolute;
-        top: calc(42.5vh - 22px);
+        top: calc(42.5vh - 15px);
         right: 1rem;
         
         a{
           position: relative;
           display: block;
-          width: 32px;
-          height: 44px;
+          width: 28px;
+          height: 30px;
           text-indent: -9999px;
           overflow: hidden;
 
@@ -119,9 +118,9 @@
             content: '';
             width: 0;
             height: 0;
-            border-top: 22px solid transparent;
-            border-left: 32px solid $gray;
-            border-bottom: 22px solid transparent;
+            border-top: 15px solid transparent;
+            border-left: 28px solid $gray;
+            border-bottom: 15px solid transparent;
             opacity: .75;
             transform: scale(.75);
             transition: $out-transition;
@@ -139,13 +138,13 @@
 
       .field--name-field-next{
         position: absolute;
-        top: calc(42.5vh - 22px);
+        top: calc(42.5vh - 15px);
         left: 1rem;
         
         a{
           position: relative;
           display: block;
-          width: 32px;
+          width: 28px;
           height: 44px;
           text-indent: -9999px;
           overflow: hidden;
@@ -157,9 +156,9 @@
             content: '';
             width: 0;
             height: 0;
-            border-top: 22px solid transparent;
-            border-right: 32px solid $gray;
-            border-bottom: 22px solid transparent;
+            border-top: 15px solid transparent;
+            border-right: 28px solid $gray;
+            border-bottom: 15px solid transparent;
             opacity: .75;
             transform: scale(.75);
             transition: $out-transition;

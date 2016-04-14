@@ -7,13 +7,13 @@
 
 namespace Drupal\video_embed_field\Plugin\Field\FieldFormatter;
 
+use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Url;
 use Drupal\image\Entity\ImageStyle;
-use Drupal\image\ImageStyleStorageInterface;
 use Drupal\video_embed_field\ProviderManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -40,7 +40,7 @@ class Thumbnail extends FormatterBase implements ContainerFactoryPluginInterface
   /**
    * The image style entity storage.
    *
-   * @var \Drupal\image\ImageStyleStorageInterface
+   * @var \Drupal\Core\Entity\EntityStorageInterface
    */
   protected $imageStyleStorage;
 
@@ -87,14 +87,15 @@ class Thumbnail extends FormatterBase implements ContainerFactoryPluginInterface
    * {@inheritdoc}
    */
   public function settingsForm(array $form, FormStateInterface $form_state) {
-    $form['image_style'] = [
+    $element = parent::settingsForm($form, $form_state);
+    $element['image_style'] = [
       '#title' => $this->t('Image Style'),
       '#type' => 'select',
       '#default_value' => $this->getSetting('image_style'),
       '#required' => FALSE,
       '#options' => image_style_options(),
     ];
-    $form['link_image_to'] = [
+    $element['link_image_to'] = [
       '#title' => $this->t('Link image to'),
       '#type' => 'select',
       '#empty_option' => $this->t('- None -'),
@@ -104,7 +105,7 @@ class Thumbnail extends FormatterBase implements ContainerFactoryPluginInterface
         static::LINK_PROVIDER => $this->t('Provider URL'),
       ],
     ];
-    return $form;
+    return $element;
   }
 
   /**
@@ -142,7 +143,7 @@ class Thumbnail extends FormatterBase implements ContainerFactoryPluginInterface
    * @param \Drupal\video_embed_field\ProviderManagerInterface $provider_manager
    *   The video embed provider manager.
    */
-  public function __construct($plugin_id, $plugin_definition, $field_definition, $settings, $label, $view_mode, $third_party_settings, ProviderManagerInterface $provider_manager, ImageStyleStorageInterface $image_style_storage) {
+  public function __construct($plugin_id, $plugin_definition, $field_definition, $settings, $label, $view_mode, $third_party_settings, ProviderManagerInterface $provider_manager, EntityStorageInterface $image_style_storage) {
     parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $label, $view_mode, $third_party_settings);
     $this->providerManager = $provider_manager;
     $this->imageStyleStorage = $image_style_storage;

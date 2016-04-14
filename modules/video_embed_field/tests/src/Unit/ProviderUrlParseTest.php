@@ -85,6 +85,58 @@ class ProviderUrlParseTest extends UnitTestCase {
         $this->randomMachineName(),
         FALSE,
       ],
+      'YouTube: Playlist URL' => [
+        'Drupal\video_embed_field\Plugin\video_embed_field\Provider\YouTube',
+        'https://www.youtube.com/watch?v=-A2Nc3TRpi0&list=PLs4n2zZ8S1eszdZZwDSQ1G8iP95DmJHSh',
+        FALSE,
+      ],
+      'YouTube: Playlist URL (reversed params)' => [
+        'Drupal\video_embed_field\Plugin\video_embed_field\Provider\YouTube',
+        'https://www.youtube.com/watch?list=PLs4n2zZ8S1eszdZZwDSQ1G8iP95DmJHSh&v=-A2Nc3TRpi0',
+        FALSE,
+      ],
+      // Youtube Playlists passing cases.
+      'YouTube Playlist' => [
+        'Drupal\video_embed_field\Plugin\video_embed_field\Provider\YouTubePlaylist',
+        'https://www.youtube.com/watch?v=xoJH3qZwsHc&list=PLpeDXSh4nHjQCIZmkxg3VSdpR5e87X5eB',
+        'PLpeDXSh4nHjQCIZmkxg3VSdpR5e87X5eB',
+      ],
+      'YouTube Playlist: Reversed param order' => [
+        'Drupal\video_embed_field\Plugin\video_embed_field\Provider\YouTubePlaylist',
+        'https://www.youtube.com/watch?list=PLpeDXSh4nHjQCIZmkxg3VSdpR5e87X5eB&v=xoJH3qZwsHc',
+        'PLpeDXSh4nHjQCIZmkxg3VSdpR5e87X5eB',
+      ],
+      'YouTube Playlist: Underscore in ID' => [
+        'Drupal\video_embed_field\Plugin\video_embed_field\Provider\YouTubePlaylist',
+        'https://www.youtube.com/watch?list=PLpeDXSh4nHjQCIZmkxg3VSdpR5e8_7X5eB&v=xoJH3qZwsHc',
+        'PLpeDXSh4nHjQCIZmkxg3VSdpR5e8_7X5eB',
+      ],
+      'YouTube Playlist: No HTTPs' => [
+        'Drupal\video_embed_field\Plugin\video_embed_field\Provider\YouTubePlaylist',
+        'http://www.youtube.com/watch?v=xoJH3qZwsHc&list=PLpeDXSh4nHjQCIZmkxg3VSdpR5e87X5eB',
+        'PLpeDXSh4nHjQCIZmkxg3VSdpR5e87X5eB',
+      ],
+      'YouTube Playlist: No www' => [
+        'Drupal\video_embed_field\Plugin\video_embed_field\Provider\YouTubePlaylist',
+        'https://youtube.com/watch?v=xoJH3qZwsHc&list=PLpeDXSh4nHjQCIZmkxg3VSdpR5e87X5eB',
+        'PLpeDXSh4nHjQCIZmkxg3VSdpR5e87X5eB',
+      ],
+      // Youtube Playlists failing cases.
+      'YouTube Playlist: Invalid ID' => [
+        'Drupal\video_embed_field\Plugin\video_embed_field\Provider\YouTubePlaylist',
+        'https://www.youtube.com/watch?v=xoJH3qZwsHc&list=!@#123',
+        FALSE,
+      ],
+      'YouTube Playlist: No ID' => [
+        'Drupal\video_embed_field\Plugin\video_embed_field\Provider\YouTubePlaylist',
+        'https://www.youtube.com/watch?v=xoJH3qZwsHc&list=',
+        FALSE,
+      ],
+      'YouTube Playlist: No List' => [
+        'Drupal\video_embed_field\Plugin\video_embed_field\Provider\YouTubePlaylist',
+        'https://www.youtube.com/watch?v=xoJH3qZwsHc',
+        FALSE,
+      ],
       // Vimeo passing cases.
       'Vimeo: Normal URL' => [
         'Drupal\video_embed_field\Plugin\video_embed_field\Provider\Vimeo',

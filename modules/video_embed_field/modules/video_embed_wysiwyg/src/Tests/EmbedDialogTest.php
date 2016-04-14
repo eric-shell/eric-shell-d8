@@ -18,7 +18,7 @@ class EmbedDialogTest extends WebTestBase {
 
   /**
    * Modules to install.
-   *Video
+   *
    * @var array
    */
   public static $modules = [
@@ -49,10 +49,14 @@ class EmbedDialogTest extends WebTestBase {
     $this->assertResponse(403);
 
     // Enable the filter.
-    $this->drupalGet('admin/config/content/formats/manage/plain_text');
+    $this->drupalPostForm('admin/config/content/formats/manage/plain_text', [
+      'editor[editor]' => 'ckeditor',
+    ], t('Save configuration'));
+    $this->drupalPostAjaxForm(NULL, [], 'editor_configure');
     $this->drupalPostForm(NULL, [
-      'filters[video_embed_wysiwyg][status]' => '1',
-    ], 'Save configuration');
+      'filters[video_embed_wysiwyg][status]' => TRUE,
+      'editor[settings][toolbar][button_groups]' => '[[{"name":"Group","items":["video_embed"]}]]',
+    ], t('Save configuration'));
 
     // Visit the modal again.
     $this->drupalGet('video-embed-wysiwyg/dialog/plain_text');
@@ -79,12 +83,12 @@ class EmbedDialogTest extends WebTestBase {
     $this->assertAjax('editorDialogSave', function ($command) {
       $this->assertEqual($command['values']['video_url'], 'https://www.youtube.com/watch?v=iaf3Sl2r3jE&t=1553s');
       $this->assertEqual($command['values']['settings'], [
-        'responsive' => 0,
+        'responsive' => 1,
         'width' => '854',
         'height' => '480',
         'autoplay' => 1,
       ]);
-      $this->assertEqual($command['values']['settings_summary'], ['Embedded Video (854x480, autoplaying).']);
+      $this->assertEqual($command['values']['settings_summary'], ['Embedded Video (Responsive, autoplaying).']);
     });
 
     // Assert the modal close command is sent.
