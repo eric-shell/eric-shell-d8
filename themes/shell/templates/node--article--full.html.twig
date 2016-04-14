@@ -68,7 +68,6 @@
  */
 #}
 
-
 <article{{ attributes }}>
 
   <div{{ content_attributes }}>
@@ -84,7 +83,7 @@
       </div>
     {% endif %}
 
-    {% if content.field_video %}
+    {% if content.field_video.0 != '' %}
       <div class="article-group article-video">
         {{ content.field_video }}
       </div>
