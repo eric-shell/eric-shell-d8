@@ -118,7 +118,7 @@
       width: .8rem;
       height: .8rem;
       position: absolute;
-      top: .9rem;
+      top: .8rem;
       left: .55rem;
       clip: auto;
       text-indent: -9999px;
@@ -132,7 +132,7 @@
     .menu{
 
       a{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
     }
 
@@ -140,7 +140,7 @@
     &:hover{
 
       h2#block-shell-main-menu-menu{
-        top: 1.5rem;
+        top: 1.4rem;
         transition: $in-transition;
       }
     }
@@ -156,14 +156,14 @@
     h2#block-shell-main-menu-menu{
       width: 1rem;
       height: 1rem;
-      top: 1.2rem;
+      top: 1.05rem;
       left: 1rem;
     }
 
     .menu{
 
       a{
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
     }
 
@@ -171,7 +171,7 @@
     &:hover{
 
       h2#block-shell-main-menu-menu{
-        top: 1.95rem;
+        top: 1.85rem;
         transition: $in-transition;
       }
     }
