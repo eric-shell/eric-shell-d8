@@ -27,12 +27,22 @@
 
     .article-video{
       background: #000;
+      padding: 0;
+      margin: 0;
+      height: 47.8125vw; /* ratio = 9/16 * 85 = 47.8125 */
       position: relative;
       z-index: 5;
 
       iframe{
+        width: 85vw; /* 85% of viewport vidth */
+        height: 47.8125vw; /* ratio = 9/16 * 85 = 47.8125 */
+        max-height: 90vh;
+        max-width: 151.1113vh; /* 16/9 * 85 = 151.1113 */
         margin: 0 auto;
-        background: #000;
+        padding: 0;
+        position: absolute;
+        top:0;bottom:0;
+        left:0;right:0;
       }
     }
 
@@ -77,14 +87,6 @@
 
   // Articles
   .page-node-type-article{
-
-    .field--name-field-video{
-
-      iframe{
-        max-width: 85vw;
-        margin: 0 auto;
-      }
-    }
 
     .field--name-field-tags{
 
