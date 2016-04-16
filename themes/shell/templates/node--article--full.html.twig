@@ -79,17 +79,17 @@
 
     </div>
 
-    <div class="article-group article-featured-media">
-
-      {% if content.field_article_type.0['#title'] == 'Post' %}
+    {% if content.field_article_type.0['#title'] == 'Post' %}
+      <div class="article-group article-featured-image">
         {{ content.field_image }}
-      {% endif %}
+      </div>
+    {% endif %}
 
-      {% if content.field_video.0 != '' %}
+    {% if content.field_video.0 != '' %}
+      <div class="article-group article-featured-video">
         {{ content.field_video }}
-      {% endif %}
-
-    </div>
+      </div>
+    {% endif %}
 
     <div class="article-group article-content">
 
