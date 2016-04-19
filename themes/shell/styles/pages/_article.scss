@@ -166,5 +166,16 @@
         }
       }
     }
+
+    .no-featured-content{
+      .article-pager{
+        position: relative;
+
+        .field--name-field-prev,
+        .field--name-field-next{
+          top: calc(50vh - 11px);    
+        }
+      }
+    }
   }
 }
