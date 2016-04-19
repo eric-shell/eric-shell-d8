@@ -3,6 +3,10 @@
   // Articles
   .page-node-type-article{
 
+    .article-pager{
+      display: none;
+    }
+
     .article-featured-content{
       position: relative;
     }
