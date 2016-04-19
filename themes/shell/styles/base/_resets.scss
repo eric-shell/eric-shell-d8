@@ -15,6 +15,12 @@ img{
   vertical-align: bottom;
 }
 
+// Removing inherited blue outline focus
+*:focus{
+  border: 0;
+  outline: 0;
+}
+
 // Setting base background for browsers with elastic viewports
 html{
   background: $black;
