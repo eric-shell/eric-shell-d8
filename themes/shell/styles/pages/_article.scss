@@ -7,11 +7,6 @@
       position: relative;
     }
 
-    .article-pager{
-      display: none;
-      z-index: 10;
-    }
-
     .article-featured-image{
       display: flex;
       justify-content: center;
@@ -26,13 +21,18 @@
     }
 
     .article-featured-video{
-      background: $black;
+      position: relative;
+      background: #000;
       z-index: 5;
 
       .video-embed-field-responsive-video{
+        display: flex;
+        justify-content: center;
       }
 
       iframe{
+        max-width: 85vw;
+        margin: 0 auto;
       }
     }
 
@@ -100,6 +100,7 @@
           height: 30px;
           text-indent: -9999px;
           overflow: hidden;
+          z-index: 10;
 
           &:before{
             position: absolute;
@@ -138,6 +139,7 @@
           height: 44px;
           text-indent: -9999px;
           overflow: hidden;
+          z-index: 10;
 
           &:before{
             position: absolute;

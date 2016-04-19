@@ -72,7 +72,7 @@
 
   <div{{ content_attributes }}>
 
-    <div class="article-group article-featured-content">
+    <div class="article-group article-featured-content {% if content.field_video.0 == '' and content.field_article_type.0['#title'] == 'Work' %}no-featured-content{% endif %}">
 
       <div class="article-pager">
         {{ content.field_prev }}
