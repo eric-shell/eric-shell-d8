@@ -19,4 +19,11 @@ $request = Request::createFromGlobals();
 $response = $kernel->handle($request);
 $response->send();
 
+try {
+    \Drupal::entityDefinitionUpdateManager()->applyUpdates();
+  }
+  catch (EntityStorageException $e) {
+    print_r($e);
+  }
+
 $kernel->terminate($request, $response);
