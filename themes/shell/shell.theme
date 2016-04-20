@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Shell theme.
+ */
+
+// http://drupal.stackexchange.com/questions/159154/drupal-8-theme-a-contact-form
+function shell_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  // Name
+  $form['name']['#attributes']['placeholder'][] = $form['name']['#title'].'*';
+  unset($form['name']['#title']);
+
+  // Mail
+  $form['mail']['#attributes']['placeholder'][] = $form['mail']['#title'].'*';
+  unset($form['mail']['#title']);
+
+  // Message
+  $form['message']['widget'][0]['value']['#attributes']['placeholder'][] = $form['message']['widget'][0]['#title'].'*';
+  unset($form['message']['widget'][0]['value']['#title']);
+
+  // Submit
+  $form['actions']['submit']['#value'] = 'Send email';
+
+}
