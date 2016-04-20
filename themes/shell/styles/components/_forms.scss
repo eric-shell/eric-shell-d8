@@ -48,6 +48,12 @@
         position: relative;
         top: .2em;
       }
+
+      &.form-type-item{
+        padding: 1rem;
+        color: rgba(0,0,0,.4);
+        border: 2px solid rgba(0,0,0,.1);
+      }
     }
 
     .form-actions{
