@@ -96,11 +96,6 @@ body{
 
     p{
       padding: 0 0 2.5em;
-
-      &.image-container{
-        padding: 0 0 2.5rem;
-        max-width: 100%;
-      }
     }
 
     ul{
@@ -204,13 +199,6 @@ body{
   }
 
   .field--name-body{
-
-    p{
-
-      &.image-container{
-        max-width: 75vw;
-      }
-    }
 
     ul{
       font-size: 1.6vw;
