@@ -60,6 +60,8 @@
       justify-content: center;
       background: $black;
       padding: 5vw;
+      position: relative;
+      z-index: 15;
 
       a{
         color: $white;
@@ -118,9 +120,9 @@
       display: block;
 
       .field--name-field-prev{
-        position: absolute;
+        position: fixed;
         right: 1rem;
-        top: calc(50% - 14px);
+        top: calc(42.5vh - 14px);
         
         a{
           position: relative;
@@ -157,9 +159,9 @@
       }
 
       .field--name-field-next{
-        position: absolute;
+        position: fixed;
         left: 1rem;
-        top: calc(50% - 14px);
+        top: calc(42.5vh - 14px);
         
         a{
           position: relative;
@@ -197,8 +199,8 @@
     }
 
     .no-featured-content{
+
       .article-pager{
-        position: relative;
 
         .field--name-field-prev,
         .field--name-field-next{

@@ -4,6 +4,8 @@
   footer{
     padding: 4rem 2rem;
     background: $violet;
+    position: relative;
+    z-index: 15;
   }
 
   .region-footer{
