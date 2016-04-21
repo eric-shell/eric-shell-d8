@@ -92,15 +92,14 @@ body{
   }
 
   .field--name-body{
-    max-width: 45rem;
-    margin: 0 auto;
-    padding: 2rem 1rem 2rem;
+    padding: 2rem 0;
 
     p{
       padding: 0 0 2.5em;
 
-      &:last-child{
-        padding: 0 0 1em;
+      &.image-container{
+        padding: 0 0 2.5rem;
+        max-width: 100%;
       }
     }
 
@@ -205,7 +204,13 @@ body{
   }
 
   .field--name-body{
-    max-width: 60vw;
+
+    p{
+
+      &.image-container{
+        max-width: 75vw;
+      }
+    }
 
     ul{
       font-size: 1.6vw;

@@ -8,7 +8,7 @@
 
     // Adding class to body content that contains an image
     $('body.page-node-type-article .field--name-body p img').each(function() {
-      $(this).parent().addClass('photo-container');
+      $(this).parent().addClass('image-container');
     }); 
 
   });
