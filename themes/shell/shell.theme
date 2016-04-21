@@ -5,6 +5,20 @@
  * Functions to support theming in the Shell theme.
  */
 
+/**
+ * Implements hook_preprocess_html().
+ */
+function shell_preprocess_html(&$variables) {
+  if ($node = \Drupal::request()->attributes->get('node')) {
+    $variables['attributes']['class'][] = 'page-node-' . $node->id();
+    $variables['attributes']['class'][] = 'page-node-' . strtolower($node->label());
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+
 // http://drupal.stackexchange.com/questions/159154/drupal-8-theme-a-contact-form
 function shell_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
 
