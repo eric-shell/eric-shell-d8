@@ -21,11 +21,7 @@ function shell_preprocess_html(&$variables) {
 
 // http://drupal.stackexchange.com/questions/159154/drupal-8-theme-a-contact-form
 function shell_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-
-  // Name
-  $form['name']['#attributes']['placeholder'][] = $form['name']['#title'].'*';
-  unset($form['name']['#title']);
-
+  
   // Mail
   $form['mail']['#attributes']['placeholder'][] = $form['mail']['#title'].'*';
   unset($form['mail']['#title']);
