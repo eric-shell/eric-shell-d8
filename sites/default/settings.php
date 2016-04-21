@@ -23,8 +23,15 @@ $local_settings = __DIR__ . "/settings.local.php";
 if (file_exists($local_settings)) {
   include $local_settings;
 }
+
+/**
+ * Install profile configuration
+ */
 $settings['install_profile'] = 'standard';
 
+/**
+ * Trusted host domains that can access the information of this site
+ */
 $settings['trusted_host_patterns'] = array(
   '^es$',
   '^eric\.sh$',
