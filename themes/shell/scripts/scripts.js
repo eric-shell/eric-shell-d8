@@ -1,9 +1,15 @@
 (function ($) {
   $( document ).ready(function( $ ) {
 
+    // Creating main menu force close functionality
     $('h2#block-shell-main-menu-menu').click(function() {
       $('#block-shell-main-menu').removeClass('hidden-main-menu');
     });
+
+    // Adding class to body content that contains an image
+    $('body.page-node-type-article .field--name-body p img').each(function() {
+      $(this).parent().addClass('photo-container');
+    }); 
 
   });
 
