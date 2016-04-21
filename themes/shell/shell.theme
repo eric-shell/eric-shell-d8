@@ -11,7 +11,7 @@
 function shell_preprocess_html(&$variables) {
   if ($node = \Drupal::request()->attributes->get('node')) {
     $variables['attributes']['class'][] = 'page-node-' . $node->id();
-    $variables['attributes']['class'][] = 'page-node-' . strtolower($node->label());
+    $variables['attributes']['class'][] = 'page-node-' . str_replace(' ', '-', strtolower($node->label()));
   }
 }
 
