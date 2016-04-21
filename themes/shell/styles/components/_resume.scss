@@ -39,13 +39,13 @@
     .job-title{
       font-size: 1.25rem;
       line-height: 1.4;
-      padding: 0 0 .2em;
+      padding: 0 1rem .2em;
     }
 
     .job-location{
       font-size: 1.25rem;
       line-height: 1.4;
-      padding: 0 0 .3em;
+      padding: 0 1rem .3em;
     }
 
     .job-duration{
@@ -69,14 +69,6 @@
 }
 
 @media #{$large-up}{
-
-  #block-hathway,
-  #block-accuairsuspension,
-  #block-lehighuniversityimrc{
-
-    h2{
-    }
-  }
 
   .block{
     .job-title{
