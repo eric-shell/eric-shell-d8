@@ -20,11 +20,17 @@
         margin: 0 auto;
         padding: 0 1rem;
       }
+
+      p.image-container{
+        padding: 0 0 2.5em;
+        max-width: 100%;
+      }
     }
   }
 }
 
 @media #{$large-up}{
+  
   // About and resume
   .page-node-about{
 
@@ -33,6 +39,10 @@
       p, ul, h1, h2, h3, h4{
         max-width: 60vw;
       }
+
+      p.image-container{
+        max-width: 75vw;
+      }     
     }
   }
 }
