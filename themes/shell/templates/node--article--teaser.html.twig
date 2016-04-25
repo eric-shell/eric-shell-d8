@@ -84,7 +84,9 @@
       {% endif %}
       {{ title_suffix }}
 
-      {{ content.body }}
+      <div class="field--name-field-summary">
+        <p>{{ content.field_summary.0['#context'].value }}</p>
+      </div>
 
       {{ content.field_tags }}
     </div>
