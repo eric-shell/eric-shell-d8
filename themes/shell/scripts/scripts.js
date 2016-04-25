@@ -6,11 +6,6 @@
       $('#block-shell-main-menu').removeClass('hidden-main-menu');
     });
 
-    // Adding class to body content that contains an image
-    $('.field--name-body p img').each(function() {
-      $(this).parent().addClass('image-container');
-    }); 
-
   });
 
   var lastScrollTop = 0;  
