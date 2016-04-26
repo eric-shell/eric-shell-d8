@@ -128,6 +128,7 @@
       .field--name-field-prev{
         position: fixed;
         right: 1rem;
+        z-index: 20;
         top: calc(42.5vh - 14px);
         
         a{
@@ -137,7 +138,6 @@
           height: 30px;
           text-indent: -9999px;
           overflow: hidden;
-          z-index: 10;
 
           &:before{
             position: absolute;
@@ -167,6 +167,7 @@
       .field--name-field-next{
         position: fixed;
         left: 1rem;
+        z-index: 20;
         top: calc(42.5vh - 14px);
         
         a{
@@ -176,7 +177,6 @@
           height: 44px;
           text-indent: -9999px;
           overflow: hidden;
-          z-index: 10;
 
           &:before{
             position: absolute;
