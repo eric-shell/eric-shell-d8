@@ -93,6 +93,7 @@ body{
 
   .field--name-body,
   .field--name-field-body,
+  .field--name-field-page-body,
   .field--name-field-summary{
     padding: 2rem 0;
 
@@ -146,7 +147,9 @@ body{
     }   
   }
 
-  .field--name-body{
+  .field--name-body,
+  .field--name-field-body,
+  .field--name-field-page-body{
     
     ul{
       font-size: 1.2rem;
@@ -200,7 +203,9 @@ body{
     max-width: 60vw;
   }
 
-  .field--name-body{
+  .field--name-body,
+  .field--name-field-body,
+  .field--name-field-page-body{
 
     ul{
       font-size: 1.6vw;

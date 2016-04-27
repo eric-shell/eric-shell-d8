@@ -18,12 +18,7 @@
       h1, h2, h3, h4{        
         max-width: 45rem;
         margin: 0 auto;
-        padding: 0 1rem;
-      }
-
-      p.image-container{
-        padding: 0 0 2.5em;
-        max-width: 100%;
+        padding: 0 1rem .25em;
       }
 
       // Resume
@@ -37,6 +32,10 @@
       #block-hathway{
         background: #ccff33;
         padding: 3rem 0 1rem;
+
+        .field--name-body{
+          padding: 1rem 0 2rem;
+        }
       }
 
       // AccuAir
@@ -47,6 +46,10 @@
 
         h2{
           color: #ffc61e;
+        }
+
+        .field--name-body{
+          padding: 1rem 0 2rem;
         }
       }
 
@@ -59,10 +62,15 @@
         h2{
           color: #ffcf49;
         }
+
+        .field--name-body{
+          padding: 1rem 0 2rem;
+        }
       }
 
       .block{
         .job-title{
+          font-weight: 900;
           font-size: 1.25rem;
           line-height: 1.4;
           padding: 0 1rem .2em;
@@ -105,10 +113,6 @@
 
       p, ul, h1, h2, h3, h4{
         max-width: 60vw;
-      }
-
-      p.image-container{
-        max-width: 75vw;
       }
 
       .block{
