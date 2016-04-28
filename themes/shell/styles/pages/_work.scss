@@ -1,7 +1,7 @@
 @media #{$small-up}{
 
   // Work page
-  .path-work{
+  .page-node-work{
 
     // Hero
     #block-workpageheader{
@@ -12,25 +12,6 @@
 
       h1{
         font-size: 15vw;
-      }
-    }
-
-    // List cta
-    #block-worklistbanner{
-      color: $white;
-      display: flex;
-      justify-content: center;
-      background: $cyan;
-      padding: 1rem;
-      @include link-square;
-
-      p{
-        font-size: 3.5vw;
-        padding: 0;
-      }
-
-      .field--name-body{
-        padding: 0;
       }
     }
 
@@ -45,20 +26,12 @@
 @media #{$medium-up}{
 
   // Post page
-  .path-work{
+  .page-node-work{
 
     // Hero
     #block-workpageheader{
       h1{
         font-size: 10vw;
-      }
-    }
-
-    // List cta
-    #block-worklistbanner{
-
-      p{
-        font-size: 2vw;
       }
     }
   }
@@ -67,21 +40,13 @@
 @media #{$large-up}{
 
   // Post page
-  .path-work{
+  .page-node-work{
 
     // Hero
     #block-workpageheader{
 
       h1{
         font-size: 6.5vw;
-      }
-    }
-
-    // List cta
-    #block-worklistbanner{
-
-      p{
-        font-size: 1.5vw
       }
     }
   }

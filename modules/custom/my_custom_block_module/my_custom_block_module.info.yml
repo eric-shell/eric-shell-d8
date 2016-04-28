@@ -1,0 +1,5 @@
+name: My Custom Block Module
+type: module
+description: this is a test of creating a custom block module
+core: 8.x
+package: Custom

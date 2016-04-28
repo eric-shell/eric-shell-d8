@@ -18,6 +18,44 @@
       padding: 0;
     }
   }
+
+  // Posts List cta
+  #block-postslistbanner{
+    color: $white;
+    display: flex;
+    justify-content: center;
+    background: $cyan;
+    padding: 1rem;
+    @include link-square;
+
+    p{
+      font-size: 3.5vw;
+      padding: 0;
+    }
+
+    .field--name-body{
+      padding: 0;
+    }
+  }
+
+    // Work list cta
+    #block-worklistbanner{
+      color: $white;
+      display: flex;
+      justify-content: center;
+      background: $cyan;
+      padding: 1rem;
+      @include link-square;
+
+      p{
+        font-size: 3.5vw;
+        padding: 0;
+      }
+
+      .field--name-body{
+        padding: 0;
+      }
+    }
 }
 
 @media #{$medium-up}{  
@@ -25,6 +63,22 @@
   // Blocks that are used on more than one page
   #block-availableforwork{
     padding: 1.5vw;
+
+    p{
+      font-size: 2vw;
+    }
+  }
+
+  // Posts list cta
+  #block-postslistbanner{
+
+    p{
+      font-size: 2vw;
+    }
+  }
+
+  // Work list cta
+  #block-worklistbanner{
 
     p{
       font-size: 2vw;
@@ -39,6 +93,22 @@
 
     p{
       font-size: 1.5vw;
+    }
+  }
+
+  // Posts list cta
+  #block-postslistbanner{
+
+    p{
+      font-size: 1.5vw
+    }
+  }
+
+  // Work list cta
+  #block-worklistbanner{
+
+    p{
+      font-size: 1.5vw
     }
   }
 }
