@@ -3,19 +3,20 @@
   // Work page
   .page-node-work{
 
-    // Hero
-    #block-workpageheader{
+    h1{
+      font-size: 15vw;
       color: $white;
       background: $blue;
       text-align: center;
-      padding: 3rem 20px;
-
-      h1{
-        font-size: 15vw;
-      }
     }
 
-    // Teaser container
+    .field--name-field-page-body{
+      padding: .5rem 0 2rem;
+      color: $white;
+      background: $blue;
+      text-align: center;
+    }
+
     .views-infinite-scroll-content-wrapper{
       display: flex;
       flex-wrap: wrap;
@@ -28,11 +29,8 @@
   // Post page
   .page-node-work{
 
-    // Hero
-    #block-workpageheader{
-      h1{
-        font-size: 10vw;
-      }
+    h1{
+      font-size: 10vw;
     }
   }
 }
@@ -42,12 +40,8 @@
   // Post page
   .page-node-work{
 
-    // Hero
-    #block-workpageheader{
-
-      h1{
-        font-size: 6.5vw;
-      }
+    h1{
+      font-size: 6.5vw;
     }
   }
 }

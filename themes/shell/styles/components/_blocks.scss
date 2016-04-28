@@ -38,24 +38,24 @@
     }
   }
 
-    // Work list cta
-    #block-worklistbanner{
-      color: $white;
-      display: flex;
-      justify-content: center;
-      background: $cyan;
-      padding: 1rem;
-      @include link-square;
+  // Work list cta
+  #block-worklistbanner{
+    color: $white;
+    display: flex;
+    justify-content: center;
+    background: $cyan;
+    padding: 1rem;
+    @include link-square;
 
-      p{
-        font-size: 3.5vw;
-        padding: 0;
-      }
-
-      .field--name-body{
-        padding: 0;
-      }
+    p{
+      font-size: 3.5vw;
+      padding: 0;
     }
+
+    .field--name-body{
+      padding: 0;
+    }
+  }
 }
 
 @media #{$medium-up}{  
