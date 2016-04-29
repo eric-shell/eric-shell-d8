@@ -1,11 +1,6 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\video_embed_field\Tests\KernelTestBase.
- */
-
-namespace Drupal\video_embed_field\Tests;
+namespace Drupal\Tests\video_embed_field\Kernel;
 
 use Drupal\Core\Entity\Entity\EntityViewDisplay;
 use Drupal\field\Entity\FieldConfig;

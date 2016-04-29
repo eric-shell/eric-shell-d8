@@ -1,11 +1,6 @@
 <?php
 
-/**
- * @file
- * Contains Drupal\video_embed_field\Tests\MockHttpClient.
- */
-
-namespace Drupal\video_embed_field\Tests;
+namespace Drupal\Tests\video_embed_field\Kernel;
 
 use GuzzleHttp\ClientInterface;
 use Psr\Http\Message\RequestInterface;
@@ -54,4 +49,12 @@ class MockHttpClient implements ClientInterface {
   public function getConfig($option = NULL) {
     throw new \Exception(static::EXCEPTION_MESSAGE);
   }
+
+  /**
+   * Patch up a magic method call.
+   */
+  public function head($url) {
+    throw new \Exception(static::EXCEPTION_MESSAGE);
+  }
+
 }

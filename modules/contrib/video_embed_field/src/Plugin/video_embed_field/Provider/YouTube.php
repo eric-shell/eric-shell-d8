@@ -1,15 +1,12 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\video_embed_field\Plugin\video_embed_field\Provider\Youtube.
- */
-
 namespace Drupal\video_embed_field\Plugin\video_embed_field\Provider;
 
 use Drupal\video_embed_field\ProviderPluginBase;
 
 /**
+ * A YouTube provider plugin.
+ *
  * @VideoEmbedProvider(
  *   id = "youtube",
  *   title = @Translation("YouTube")
@@ -51,7 +48,16 @@ class YouTube extends ProviderPluginBase {
    * {@inheritdoc}
    */
   public function getRemoteThumbnailUrl() {
-    return sprintf('http://img.youtube.com/vi/%s/hqdefault.jpg', $this->getVideoId());
+    $url = 'http://img.youtube.com/vi/%s/%s.jpg';
+    $high_resolution = sprintf($url, $this->getVideoId(), 'maxresdefault');
+    $backup = sprintf($url, $this->getVideoId(), 'mqdefault');
+    try {
+      $this->httpClient->head($high_resolution);
+      return $high_resolution;
+    }
+    catch (\Exception $e) {
+      return $backup;
+    }
   }
 
   /**

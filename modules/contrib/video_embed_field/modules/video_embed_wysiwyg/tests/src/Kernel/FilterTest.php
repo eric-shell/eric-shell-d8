@@ -1,15 +1,9 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\video_embed_wysiwyg\Tests\FilterTest.
- */
-
-namespace Drupal\video_embed_wysiwyg\Tests;
+namespace Drupal\Tests\video_embed_wysiwyg\Kernel;
 
 use Drupal\filter\Entity\FilterFormat;
-use Drupal\video_embed_field\Tests\KernelTestBase;
-use Drupal\video_embed_field\Tests\StripWhitespaceTrait;
+use Drupal\Tests\video_embed_field\Kernel\KernelTestBase;
 
 /**
  * A test for the filter.
@@ -17,8 +11,6 @@ use Drupal\video_embed_field\Tests\StripWhitespaceTrait;
  * @group video_embed_wysiwyg
  */
 class FilterTest extends KernelTestBase {
-
-  use StripWhitespaceTrait;
 
   /**
    * Modules to enable.
@@ -49,7 +41,7 @@ class FilterTest extends KernelTestBase {
    * Test cases for the video filter test.
    *
    * @return array
-   *  An array of test cases and FALSE when no change is expected.
+   *   An array of test cases and FALSE when no change is expected.
    */
   public function videoFilterTestCases() {
     return [
@@ -63,6 +55,10 @@ class FilterTest extends KernelTestBase {
       ],
       'JSON keys in reverse order' => [
         '<p>Content.</p><p>{"settings_summary":["Embedded Video (854x480, autoplaying)."],"settings":{"responsive":1,"width":"854","height":"480","autoplay":1},"video_url":"https://vimeo.com/18352872","preview_thumbnail":"http://example.com/thumbnail.jpg"}</p><p>More content.</p>',
+        '<p>Content.</p><div class="video-embed-field-responsive-video"><iframe width="854" height="480" frameborder="0" allowfullscreen="allowfullscreen" src="https://player.vimeo.com/video/18352872?autoplay=1"></iframe></div><p>More content.</p>',
+      ],
+      'Relative thumbnail URL' => [
+        '<p>Content.</p><p>{"settings_summary":["Embedded Video (854x480, autoplaying)."],"settings":{"responsive":1,"width":"854","height":"480","autoplay":1},"video_url":"https://vimeo.com/18352872","preview_thumbnail":"/thumbnail.jpg"}</p><p>More content.</p>',
         '<p>Content.</p><div class="video-embed-field-responsive-video"><iframe width="854" height="480" frameborder="0" allowfullscreen="allowfullscreen" src="https://player.vimeo.com/video/18352872?autoplay=1"></iframe></div><p>More content.</p>',
       ],
       'Invalid URL' => [
@@ -112,6 +108,21 @@ class FilterTest extends KernelTestBase {
     ]);
     $this->filter->setFilterConfig('video_embed_wysiwyg', ['status' => 1]);
     $this->filter->save();
+  }
+
+  /**
+   * Remove HTML whitespace from a string.
+   *
+   * @param string $string
+   *   The input string.
+   *
+   * @return string
+   *   The whitespace cleaned string.
+   */
+  protected function stripWhitespace($string) {
+    $no_whitespace = preg_replace('/\s{2,}/', '', $string);
+    $no_whitespace = str_replace("\n", '', $no_whitespace);
+    return $no_whitespace;
   }
 
 }

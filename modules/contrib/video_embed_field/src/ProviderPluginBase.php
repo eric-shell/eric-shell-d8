@@ -1,16 +1,10 @@
 <?php
 
-/**
- * @file
- * Contains Drupal\video_embed_field\ProviderPluginBase
- */
-
 namespace Drupal\video_embed_field;
 
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\image\Entity\ImageStyle;
 use GuzzleHttp\ClientInterface;
-use GuzzleHttp\Exception\ClientException;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -51,7 +45,7 @@ abstract class ProviderPluginBase implements ProviderPluginInterface, ContainerF
    *
    * @param string $configuration
    *   The configuration of the plugin.
-   * @param \GuzzleHttp\ClientInterface $http_client
+   * @param \GuzzleHttp\Client $http_client
    *    An HTTP client.
    *
    * @throws \Exception
@@ -97,7 +91,6 @@ abstract class ProviderPluginBase implements ProviderPluginInterface, ContainerF
    * {@inheritdoc}
    */
   public function renderThumbnail($image_style, $link_url) {
-    $this->downloadThumbnail();
     $output = [
       '#theme' => 'image',
       '#uri' => !empty($image_style) ? ImageStyle::load($image_style)->buildUrl($this->getLocalThumbnailUri()) : $this->getLocalThumbnailUri(),
@@ -113,16 +106,17 @@ abstract class ProviderPluginBase implements ProviderPluginInterface, ContainerF
   }
 
   /**
-   * Download the remote thumbnail to the local file system.
+   * {@inheritdoc}
    */
-  protected function downloadThumbnail() {
+  public function downloadThumbnail() {
     $local_uri = $this->getLocalThumbnailUri();
     if (!file_exists($local_uri)) {
       file_prepare_directory($this->thumbsDirectory, FILE_CREATE_DIRECTORY);
       try {
         $thumbnail = $this->httpClient->request('GET', $this->getRemoteThumbnailUrl());
         file_unmanaged_save_data((string) $thumbnail->getBody(), $local_uri);
-      } catch(\Exception $e) {
+      }
+      catch (\Exception $e) {
       }
     }
   }

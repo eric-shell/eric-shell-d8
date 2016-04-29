@@ -1,14 +1,8 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\video_embed_field\Tests\Kernel\FormatterDependenciesTest.
- */
-
-namespace Drupal\video_embed_field\Tests\Kernel;
+namespace Drupal\Tests\video_embed_field\Kernel;
 
 use Drupal\image\Entity\ImageStyle;
-use Drupal\video_embed_field\Tests\KernelTestBase;
 
 /**
  * Test the configuration dependencies are created correctly.

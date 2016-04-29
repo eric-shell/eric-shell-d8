@@ -1,13 +1,6 @@
 <?php
 
-/**
- * @file
- * Contains Drupal\video_embed_field\Tests\Kernel\VideoEmbedIFrameTest.
- */
-
-namespace Drupal\video_embed_field\Tests\Kernel;
-
-use Drupal\video_embed_field\Tests\KernelTestBase;
+namespace Drupal\Tests\video_embed_field\Kernel;
 
 /**
  * Test that the iframe element works.
@@ -17,9 +10,12 @@ use Drupal\video_embed_field\Tests\KernelTestBase;
 class VideoEmbedIFrameTest extends KernelTestBase {
 
   /**
+   * Test cases for the embed iframe.
+   *
    * @return array
+   *   Video iframe test cases.
    */
-  public function videoEmbedIFrameTestCases() {
+  public function videoEmbedIframeTestCases() {
     return [
       'Default' => [
         [
@@ -96,9 +92,9 @@ class VideoEmbedIFrameTest extends KernelTestBase {
   /**
    * Test the video embed iframe renders correctly.
    *
-   * @dataProvider videoEmbedIFrameTestCases
+   * @dataProvider videoEmbedIframeTestCases
    */
-  public function testVideoEmbedIFrame($renderable, $markup) {
+  public function testVideoEmbedIframe($renderable, $markup) {
     $this->assertEquals($markup, trim($this->container->get('renderer')->renderRoot($renderable)));
   }
 
