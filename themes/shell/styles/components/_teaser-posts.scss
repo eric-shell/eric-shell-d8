@@ -22,21 +22,6 @@
       width: 100%;
       position: relative;
       overflow: hidden;
-
-      &:hover{
-
-        .views-field-title{
-          bottom: -1px;
-          transition: $in-transition;
-        }
-
-        .views-field-field-image{
-          img{
-            transform: scale(1.1);
-            transition: all ease-out 2.5s;
-          }
-        }
-      }
     }
 
     .views-field-field-image{
@@ -113,6 +98,21 @@
 
     .views-row{
       width: 33.33333%;
+
+      &:hover{
+
+        .views-field-title{
+          bottom: -1px;
+          transition: $in-transition;
+        }
+
+        .views-field-field-image{
+          img{
+            transform: scale(1.1);
+            transition: all ease-out 2.5s;
+          }
+        }
+      }
     }
 
     .views-field-title{
