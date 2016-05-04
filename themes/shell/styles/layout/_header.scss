@@ -1,43 +1,26 @@
 @media #{$small-up}{
 
-  // Menu toggle
-  #menu-toggle{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 60px;
-    height: 60px;
-    background: red;
-    cursor: pointer;
-    z-index: 75;
-  }
-
   // Header
   header{
     position: fixed;
     top: 0;
-    right: -320px;
-    padding: 60px 0 0;
+    right: -100%;
     width: 100%;
-    max-width: 320px;
     height: 100vh;
     z-index: 50;
     background: $black;
     transition: $out-transition;
 
-    &.menu-active{
-      right: 0;
-      transition: $in-transition;
-    }
-
     .menu{
       margin: 0;
       padding: 0;
+      border-top: 57px solid $blue;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
 
       li{
         width: 100%;
+        padding: 0;
       }
 
       a{
@@ -49,15 +32,108 @@
         text-transform: uppercase;
         text-decoration: none;
         font-weight: 900;
+        transition: $out-transition;
 
         &.is-active{
           color: $white;
           background: $blue;
         }
+
+        &:hover{
+          background: $cyan;
+          transition: $in-transition;
+        }
       }
     }
   }
 
+  // Toggle sidebar navigation
+  #menu-toggle{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 57px;
+    height: 57px;
+    padding: 16px;
+    cursor: pointer;
+    background: $blue;
+    z-index: 75;
+
+    .menu-bar{
+      height: 3px;
+      position: absolute;
+      background: $white;
+      transition: $out-transition;
+
+      &:first-child{
+        width: calc(100% - 32px);
+        top: 18px;
+        left: 16px;
+        transition: $out-transition;
+      }
+
+      &:nth-child(2){
+        width: calc(94% - 32px);
+        top: 27px;
+        left: 16px;
+        transition: $out-transition;
+      }
+
+      &:last-child{
+        width: calc(88% - 32px);
+        top: 36px;
+        left: 16px;
+        transition: $out-transition;
+      }
+    }
+  }
+
+  // Active menu settings
+  .menu-active{
+
+    // Header
+    header{
+      right: 0;
+      transition: $in-transition;
+    }
+
+    // Toggle sidebar navigation
+    #menu-toggle{
+
+      .menu-bar{
+
+        &:first-child{
+          top: 27px;
+          transform: rotate(45deg);
+          transition: $in-transition;
+        }
+
+        &:nth-child(2){
+          opacity: 0;
+          transform: scale(0);
+          transition: $in-transition;
+        }
+
+        &:last-child{
+          top: 27px;
+          width: calc(100% - 32px);
+          transform: rotate(-45deg);
+          transition: $in-transition;
+        }
+      }
+    }
+  }
+}
+
+@media #{$medium-up}{
+
+  // Header
+  header{
+    right: -320px;
+    max-width: 320px;
+  }
+
+  // Content overlay when navigation is active
   body{
 
     &:before{
@@ -67,7 +143,7 @@
       width: 100%;
       height: 100%;
       z-index: 25;
-      background: rgba(24,24,24,.8);
+      background: rgba(28,31,30,.8);
       transition: $out-transition;
     }
 
@@ -79,10 +155,6 @@
       }
     }
   }
-}
-
-@media #{$medium-up}{
-
 }
 
 @media #{$large-up}{

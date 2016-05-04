@@ -110,7 +110,7 @@
         text-transform: uppercase;
         text-decoration: none;
         text-align: center;
-        @include link(.175em, $white);
+        @include link(3px, $white);
       }
     }
   }
