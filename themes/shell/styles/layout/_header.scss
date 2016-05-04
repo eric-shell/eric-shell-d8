@@ -8,15 +8,22 @@
     width: 100%;
     height: 100vh;
     z-index: 50;
-    background: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $blue;
     transition: $out-transition;
+
+    .region-header{
+      width: 100%;
+    }
 
     .menu{
       margin: 0;
       padding: 0;
-      border-top: 57px solid $blue;
       display: flex;
       flex-direction: column;
+      align-content: center;
 
       li{
         width: 100%;
@@ -27,8 +34,9 @@
         width: 100%;
         color: $white;
         display: block;
-        font-size: 1.1rem;
-        padding: 1.25em;
+        font-size: 1.75rem;
+        padding: 1em;
+        text-align: center;
         text-transform: uppercase;
         text-decoration: none;
         font-weight: 900;
@@ -67,7 +75,7 @@
 
       &:first-child{
         width: calc(100% - 32px);
-        top: 18px;
+        top: 19px;
         left: 16px;
         transition: $out-transition;
       }
@@ -81,7 +89,7 @@
 
       &:last-child{
         width: calc(88% - 32px);
-        top: 36px;
+        top: 35px;
         left: 16px;
         transition: $out-transition;
       }
@@ -131,6 +139,18 @@
   header{
     right: -320px;
     max-width: 320px;
+    background: $black;
+    align-items: flex-start;
+
+    .menu{
+      border-top: 57px solid $blue;
+
+      a{
+        padding: 1.25em;
+        text-align: left;
+        font-size: 1.25rem;
+      }
+    }
   }
 
   // Content overlay when navigation is active
@@ -159,4 +179,14 @@
 
 @media #{$large-up}{
 
+  // Header
+  header{
+
+    .menu{
+
+      a{
+        font-size: 1.4vw;
+      }
+    }
+  }
 }
