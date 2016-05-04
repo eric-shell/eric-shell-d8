@@ -41,15 +41,23 @@
  */
 #}
 
-{% include directory ~ '/templates/header.html.twig' %}
+<section id="menu-toggle"></section>
+
+<header role="menu">
+
+  {{ page.header }}
+
+</header>
 
 <main role="main">
-  <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-  <div class="layout-content">
-    {{ page.content }}
-  </div>{# /.layout-content #}
+  <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+  {{ page.content }}
 
 </main>
 
-{% include directory ~ '/templates/footer.html.twig' %}
+<footer role="contentinfo">
+
+  {{ page.footer }}
+
+</footer>
