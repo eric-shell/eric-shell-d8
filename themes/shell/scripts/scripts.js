@@ -7,6 +7,10 @@
       $('body').toggleClass('menu-active');
     });
 
+    $('#menu-toggle').hover(function() {
+      $('#menu-toggle').addClass('menu-toggle-active');
+    });
+
   });
 
   var lastScrollTop = 0;  

@@ -68,9 +68,22 @@
     z-index: 75;
     transition: $out-transition;
 
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -57px;
+      width: 57px;
+      height: 57px;
+    }
+
     &.menu-toggle-active{
       right: 0;
       transition: $in-transition;
+
+      &:before{
+        display: none;
+      }
     }
 
     .menu-bar{
