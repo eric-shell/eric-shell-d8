@@ -59,13 +59,19 @@
   #menu-toggle{
     position: fixed;
     top: 0;
-    right: 0;
+    right: -57px;
     width: 57px;
     height: 57px;
     padding: 16px;
     cursor: pointer;
     background: $blue;
     z-index: 75;
+    transition: $out-transition;
+
+    &.menu-toggle-active{
+      right: 0;
+      transition: $in-transition;
+    }
 
     .menu-bar{
       height: 3px;
@@ -149,7 +155,7 @@
         padding: 1.25em;
         text-align: left;
         font-size: 1.25rem;
-        
+
         &.is-active{
           color: $white;
           background: $cyan;
