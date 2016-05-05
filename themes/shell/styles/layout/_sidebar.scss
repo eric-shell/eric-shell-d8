@@ -1,7 +1,7 @@
 @media #{$small-up}{
 
-  // Header
-  header{
+  // Sidebar
+  #sidebar{
     position: fixed;
     top: 0;
     right: -100%;
@@ -14,7 +14,7 @@
     background: $blue;
     transition: $out-transition;
 
-    .region-header{
+    .region-sidebar{
       width: 100%;
     }
 
@@ -118,8 +118,8 @@
   // Active menu settings
   .menu-active{
 
-    // Header
-    header{
+    // Sidebar
+    #sidebar{
       right: 0;
       transition: $in-transition;
     }
@@ -154,7 +154,7 @@
   // Adjust header for the admin menu
   .toolbar-horizontal{
 
-    header,
+    #sidebar,
     #menu-toggle{
       top: 80px;
     }
@@ -163,8 +163,8 @@
 
 @media #{$medium-up}{
 
-  // Header
-  header{
+  // Sidebar
+  #sidebar{
     right: -320px;
     max-width: 320px;
     background: $black;
@@ -218,8 +218,8 @@
 
 @media #{$large-up}{
 
-  // Header
-  header{
+  // Sidebar
+  #sidebar{
 
     .menu{
       border-top: 69px solid $blue;
@@ -268,8 +268,8 @@
   // Active menu settings
   .menu-active{
 
-    // Header
-    header{
+    // Sidebar
+    #sidebar{
       right: 0;
       transition: $in-transition;
     }
