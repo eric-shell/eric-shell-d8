@@ -207,6 +207,7 @@
     }
 
     &.menu-active{
+      overflow: hidden;
 
       &:before{
         right: 0;
