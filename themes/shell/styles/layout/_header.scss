@@ -149,6 +149,17 @@
         padding: 1.25em;
         text-align: left;
         font-size: 1.25rem;
+        
+        &.is-active{
+          color: $white;
+          background: $cyan;
+        }
+
+        &:hover,
+        &:active{
+          background: $blue;
+          transition: $in-transition;
+        }
       }
     }
   }
@@ -183,6 +194,9 @@
   header{
 
     .menu{
+
+      li{
+      }
 
       a{
         font-size: 1.4vw;
