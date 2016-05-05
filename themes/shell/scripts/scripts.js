@@ -17,11 +17,13 @@
   $(window).scroll(function(event){
     var st = $(this).scrollTop();
 
-    if (st > lastScrollTop && st > 0){
-      $('#menu-toggle').removeClass('menu-toggle-active');
-    }
-    else {
-      $('#menu-toggle').addClass('menu-toggle-active');
+    if($('body.menu-active').length === 0){
+      if (st > lastScrollTop && st > 0){
+        $('#menu-toggle').removeClass('menu-toggle-active');
+      }
+      else {
+        $('#menu-toggle').addClass('menu-toggle-active');
+      }
     }
 
     lastScrollTop = st;
