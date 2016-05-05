@@ -7,7 +7,6 @@
     background: $black;
 
     li{
-      float: left;
       padding: 0;
     }
 
@@ -27,42 +26,17 @@
         transition: $in-transition;
       }
     }
-
-    .is-active{
-      a{
-        background: $blue;
-      }
-    }
-
-    .pager__item--ellipsis{
-      color: #fff;
-      font-size: 1rem;
-      padding: 1.5em .25em;
-    }
-
-    .pager__item--first,
-    .pager__item--previous,
-    .pager__item--next,
-    .pager__item--last{
-      display: none;
-    }
   }
 
   .ajax-progress-fullscreen {
-    display: inline-block;
-    left: 49%;
-    position: fixed;
-    top: 48.5%;
-    z-index: 1000;
-    background-color: red;
-    background-image: none;
-    background-position: center center;
-    background-repeat: no-repeat;
-    border-radius: 7px;
-    height: 24px;
-    opacity: 0.9;
-    padding: 4px;
-    width: 24px;
+    padding: 0;
+    opacity: 1;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    background: $blue;
   }
 }
 
@@ -74,10 +48,6 @@
     a{
       padding: 1.25em 1.5em;
     }
-
-    .pager__item--ellipsis{
-      padding: 1.25em .75em;
-    }
   }
 }
 
@@ -87,10 +57,6 @@
   .pager{
 
     a{
-      font-size: 1.4vw;
-    }
-
-    .pager__item--ellipsis{
       font-size: 1.4vw;
     }
   }
