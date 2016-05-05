@@ -150,6 +150,15 @@
       }
     }
   }
+
+  // Adjust header for the admin menu
+  .toolbar-horizontal{
+
+    header,
+    #menu-toggle{
+      top: 80px;
+    }
+  }
 }
 
 @media #{$medium-up}{
