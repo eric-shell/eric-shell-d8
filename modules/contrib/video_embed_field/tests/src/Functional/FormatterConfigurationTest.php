@@ -2,6 +2,7 @@
 
 namespace Drupal\Tests\video_embed_field\Functional;
 
+use Drupal\Tests\BrowserTestBase;
 use Drupal\video_embed_field\Plugin\Field\FieldFormatter\Thumbnail;
 
 /**
@@ -9,7 +10,20 @@ use Drupal\video_embed_field\Plugin\Field\FieldFormatter\Thumbnail;
  *
  * @group video_embed_field
  */
-class FormatterConfigurationTest extends FunctionalTestBase {
+class FormatterConfigurationTest extends BrowserTestBase {
+
+  use AdminUserTrait;
+  use EntityDisplaySetupTrait;
+
+  /**
+   * {@inheritdoc}
+   */
+  public static $modules = [
+    'video_embed_field',
+    'node',
+    'field_ui',
+    'colorbox',
+  ];
 
   /**
    * The URL to the manage display interface.
@@ -23,8 +37,9 @@ class FormatterConfigurationTest extends FunctionalTestBase {
    */
   protected function setUp() {
     parent::setUp();
-    $this->drupalLogin($this->adminUser);
-    $this->manageDisplay = 'admin/structure/types/manage/' . $this->contentTypeName . '/display/teaser';
+    $this->drupalLogin($this->createAdminUser());
+    $this->setupEntityDisplays();
+    $this->manageDisplay = 'admin/structure/types/manage/test_content_type_name/display/teaser';
   }
 
   /**
@@ -33,28 +48,44 @@ class FormatterConfigurationTest extends FunctionalTestBase {
   public function testVideoConfirmationForm() {
     // Test the settings form and summaries for the video formatter.
     $this->setFormatter('video_embed_field_video');
-    $this->assertText('Embedded Video (Responsive, autoplaying).');
+    $this->assertSession()->pageTextContains('Embedded Video (Responsive, autoplaying).');
     $this->updateFormatterSettings([
       'autoplay' => FALSE,
       'responsive' => FALSE,
-      'width' => '100%',
-      'height' => '100%',
+      'width' => 100,
+      'height' => 100,
     ]);
-    $this->assertText('Embedded Video (100%x100%).');
+    $this->assertSession()->pageTextContains('Embedded Video (100x100).');
 
     // Test the image formatter.
     $this->setFormatter('video_embed_field_thumbnail');
-    $this->assertText('Video thumbnail (no image style).');
+    $this->assertSession()->pageTextContains('Video thumbnail (no image style).');
     $this->updateFormatterSettings([
       'image_style' => 'thumbnail',
       'link_image_to' => Thumbnail::LINK_CONTENT,
     ]);
-    $this->assertText('Video thumbnail (thumbnail, linked to content).');
+    $this->assertSession()->pageTextContains('Video thumbnail (thumbnail, linked to content).');
     $this->updateFormatterSettings([
       'image_style' => 'medium',
       'link_image_to' => Thumbnail::LINK_PROVIDER,
     ]);
-    $this->assertText('Video thumbnail (medium, linked to provider).');
+    $this->assertSession()->pageTextContains('Video thumbnail (medium, linked to provider).');
+
+    $this->setFormatter('video_embed_field_colorbox');
+    $this->assertSession()->pageTextContains('Thumbnail that launches a modal window.');
+    $this->assertSession()->pageTextContains('Embedded Video (Responsive, autoplaying).');
+    $this->assertSession()->pageTextContains('Video thumbnail (medium, linked to provider).');
+    $this->updateFormatterSettings([
+      'autoplay' => FALSE,
+      'responsive' => FALSE,
+      'width' => 100,
+      'height' => 100,
+      'image_style' => 'medium',
+      'link_image_to' => Thumbnail::LINK_PROVIDER,
+    ]);
+    $this->assertSession()->pageTextContains('Thumbnail that launches a modal window.');
+    $this->assertSession()->pageTextContains('Embedded Video (100x100).');
+    $this->assertSession()->pageTextContains('Video thumbnail (medium, linked to provider).');
   }
 
   /**
@@ -87,6 +118,19 @@ class FormatterConfigurationTest extends FunctionalTestBase {
     $this->find('input[name="' . $this->fieldName . '_settings_edit"]')->click();
     $this->submitForm($edit, $this->fieldName . '_plugin_settings_update');
     $this->submitForm([], t('Save'));
+  }
+
+  /**
+   * Find an element based on a CSS selector.
+   *
+   * @param string $css_selector
+   *   A css selector to find an element for.
+   *
+   * @return \Behat\Mink\Element\NodeElement|null
+   *   The found element or null.
+   */
+  protected function find($css_selector) {
+    return $this->getSession()->getPage()->find('css', $css_selector);
   }
 
 }
