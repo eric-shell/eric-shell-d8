@@ -46,6 +46,19 @@
         padding: 0 1rem 2.5em;
         max-width: 45rem;
         margin: auto;
+
+        &.project-cta{
+          width: 100%;
+          padding: 1rem;
+          margin: 0 0 2.5em;
+          color: $white;
+          background: $blue;
+          max-width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include link-square;
+        }
       }
     }
 
