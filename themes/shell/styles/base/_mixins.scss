@@ -44,6 +44,12 @@
   }
 }
 
+@keyframes gradientAnimate {
+  0%{background-position: 100% 0%}
+  50%{background-position: 0% 100%}
+  100%{background-position: 100% 0%}
+}
+
 // Basic animated underline
 @mixin link($underline-height: .125em, $underline-color: $black){
   position: relative;
