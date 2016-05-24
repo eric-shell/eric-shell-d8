@@ -1,7 +1,7 @@
 @media #{$small-up}{
 
   // 404 page
-  .page-node-404{
+  .page-node-165{
 
     .region-content{
       display: flex;
@@ -19,6 +19,7 @@
 
     .field--name-title{
       font-size: 25vw;
+      padding: 0;
     }
 
     .field--name-field-page-body{
@@ -35,7 +36,7 @@
 @media #{$medium-up}{
 
   // Post page
-  .page-node-404{
+  .page-node-165{
 
     .field--name-title{
       font-size: 18vw;
@@ -46,7 +47,7 @@
 @media #{$large-up}{
 
   // Post page
-  .page-node-404{
+  .page-node-165{
 
     .field--name-title{
       font-size: 12vw;
