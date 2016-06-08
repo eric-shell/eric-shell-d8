@@ -1,0 +1,23 @@
+@media #{$small-up}{  
+
+  // Prettyprint
+  pre.prettyprint{
+    background: $black;
+    padding: 2.5rem;
+    border: 2.5rem solid $white;
+    max-width: 45rem;
+    margin: 0 auto;
+
+    li.L1, li.L3, li.L5, li.L7, li.L9{
+      background: $black;
+    }
+  }
+}
+
+@media #{$large-up}{
+
+  // Prettyprint
+  pre.prettyprint{
+    max-width: 60vw;
+  }
+}
