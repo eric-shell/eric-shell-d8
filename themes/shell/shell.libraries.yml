@@ -4,5 +4,6 @@ global-theming:
       styles/styles.min.css: {}
   js:
     scripts/scripts.js: {}
+    scripts/prettify.js: {}
   dependencies:
     - core/jquery
