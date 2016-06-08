@@ -1,0 +1,22 @@
+@media #{$small-up}{  
+
+  // Preloader
+  #preloader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:before{
+      content: '';
+      width: 500px;
+      height: 500px;
+      transform: scale(.15);
+      background: url(../images/loading.gif);
+    }
+  }
+}
