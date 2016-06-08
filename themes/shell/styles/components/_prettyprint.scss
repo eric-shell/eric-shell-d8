@@ -8,13 +8,27 @@
     border: 1rem solid $white;
     max-width: 45rem;
     margin: 0 auto 2.5em;
+    counter-reset: line; 
 
     ol{
+      display: table;
       margin-left: 1em;
 
       li{
         background: $black;
-        padding-left: .5em;
+        list-style-type: none;
+        padding-left: .75em;
+        position: relative;
+
+        &:before{
+          width: 2em;
+          position: absolute;
+          opacity: .4;
+          left: -3em;
+          text-align: right;
+          counter-increment: line; 
+          content: counter(line);
+        }
 
         &:first-child{
           padding-top: 1.5em;
@@ -31,7 +45,7 @@
     .pln { color: #268bd2; } /* plaintext */
     .pun { color: #839496; } /* punctuation */
     .typ { color: #b58900; } /* type */
-    .com { color: #93a1a1; font-style: italic; } /* comment */
+    .com { color: #899898; font-style: italic; } /* comment */
     span + .com{ color: #859900; } 
     .lit { color: #859900; } /* literal */
     .str { color: #2aa198; } /* string */
