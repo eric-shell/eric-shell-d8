@@ -1,19 +1,46 @@
-// Prettify minified base css
-.pln{color:#000}@media screen{.str{color:#080}.kwd{color:#008}.com{color:#800}.typ{color:#606}.lit{color:#066}.pun,.opn,.clo{color:#660}.tag{color:#008}.atn{color:#606}.atv{color:#080}.dec,.var{color:#606}.fun{color:red}}@media print,projection{.str{color:#060}.kwd{color:#006;font-weight:bold}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:bold}.lit{color:#044}.pun,.opn,.clo{color:#440}.tag{color:#006;font-weight:bold}.atn{color:#404}.atv{color:#060}}pre.prettyprint{padding:2px;border:1px solid #888}ol.linenums{margin-top:0;margin-bottom:0}li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}
-
 @media #{$small-up}{  
 
   // Prettyprint
   pre.prettyprint{
-    background: $black;
-    padding: 2.5rem;
+    color: #ccc;
+    padding: 0 0 0 2.5rem;
+    background: #000;
     border: 1rem solid $white;
     max-width: 45rem;
     margin: 0 auto 2.5em;
 
-    li.L1, li.L3, li.L5, li.L7, li.L9{
-      background: $black;
+    ol{
+      margin-left: 1em;
+
+      li{
+        background: $black;
+        padding-left: .5em;
+
+        &:first-child{
+          padding-top: 1.5em;
+        }
+
+        &:last-child{
+          padding-bottom: 1.5em;
+        }
+      }
     }
+
+    // Basic element colors
+    .kwd { color: $red; } /* keyword */
+    .pln { color: #268bd2; } /* plaintext */
+    .pun { color: #839496; } /* punctuation */
+    .typ { color: #b58900; } /* type */
+    .com { color: #93a1a1; font-style: italic; } /* comment */
+    span + .com{ color: #859900; } 
+    .lit { color: #859900; } /* literal */
+    .str { color: #2aa198; } /* string */
+    .tag { color: #268bd2; } /* tag */
+    .atn { color: #657b83; } /* attribute name */
+    .atv { color: #2aa198; } /* attribute value */
+    .opn { color: #839496; } /* Lisp open bracket */
+    .clo { color: #839496; } /* Lisp close bracket */
+    .dec { color: #839496; font-style: italic; } /* declaration */
   }
 }
 
