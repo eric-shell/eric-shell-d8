@@ -17,6 +17,7 @@
       height: 500px;
       transform: scale(.15);
       background: url(../images/loading.gif);
+      animation: .5s ease-out reveal;
     }
   }
 }
