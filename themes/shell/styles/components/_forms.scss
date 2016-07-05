@@ -2,6 +2,10 @@
 
   // Forms
   form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 30rem;
     padding: 4rem 1rem;
     margin: 0 auto;
@@ -30,20 +34,44 @@
       }
 
       .active-bar{
-        height: 4px;
+        height: 2px;
         width: 100%;
-        background: transparent;
+        background: $gray;
+        position: relative;
+
+        &:before,
+        &:after{
+          content: '';
+          position: absolute;
+          top: -2px;
+          background: $blue;
+          width: 100%;
+          height: 4px;
+          opacity: 0;
+          transition: $out-transition;
+        }
+
+        &:before{
+          left: 100%;
+        }
+
+        &:after{
+          right: 100%;
+        }
       }
 
       input,
       textarea{
         border: 0;
+        display: block;
+        width: 100%;
+        max-width: 30rem;
         padding: .75em .5em;
         height: inherit;
         transition: padding .1s ease-in-out;
 
         &:focus{
-          background: rgba(0,0,0,.015);
+          background: rgba(0,0,0,.025);
         }
 
         &:not(:focus){
@@ -61,7 +89,18 @@
 
         &:focus ~ .active-bar,
         &:not(.empty) ~ .active-bar{
-          background: $blue;
+
+          &:before{
+            left: 0;
+            opacity: 1;
+            transition: $in-transition;
+          }
+
+          &:after{
+            right: 0;
+            opacity: 1;
+            transition: $in-transition;
+          }
         }
       }
 

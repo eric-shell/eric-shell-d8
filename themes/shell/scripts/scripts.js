@@ -16,7 +16,7 @@
     });
 
     // Floating form item labels
-    $('main input[value=""], main textarea').addClass('empty');
+    $('main input, main textarea').addClass('empty');
       $('input, textarea').keyup(function(){
         if( $(this).val() == ""){
           $(this).addClass("empty");
