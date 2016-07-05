@@ -14,23 +14,3 @@ function shell_preprocess_html(&$variables) {
     $variables['attributes']['class'][] = 'page-node-' . str_replace(' ', '-', strtolower($node->label()));
   }
 }
-
-/**
- * Implements hook_form_alter().
- */
-
-// http://drupal.stackexchange.com/questions/159154/drupal-8-theme-a-contact-form
-function shell_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  
-  // Mail
-  $form['mail']['#attributes']['placeholder'][] = $form['mail']['#title'].'*';
-  unset($form['mail']['#title']);
-
-  // Message
-  $form['message']['widget'][0]['value']['#attributes']['placeholder'][] = $form['message']['widget'][0]['#title'].'*';
-  unset($form['message']['widget'][0]['value']['#title']);
-
-  // Submit
-  $form['actions']['submit']['#value'] = 'Send email';
-
-}

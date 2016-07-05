@@ -15,6 +15,17 @@
       $('#menu-toggle').addClass('menu-toggle-active');
     });
 
+    // Floating form item labels
+    $('main input[value=""], main textarea').addClass('empty');
+      $('input, textarea').keyup(function(){
+        if( $(this).val() == ""){
+          $(this).addClass("empty");
+        }
+        else{
+          $(this).removeClass("empty");
+        }
+    });
+
   });
 
   var lastScrollTop = 0;  

@@ -2,10 +2,6 @@
 
   // Forms
   form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     max-width: 30rem;
     padding: 4rem 1rem;
     margin: 0 auto;
@@ -17,22 +13,56 @@
 
     .form-item{
       padding: 0;
-      width: 100%;
-      margin: 0 0 1em;
+      margin: 0 0 2em;
+      position: relative;
 
       label{
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $gray;
         display: inline-block;
         width: 100%;
         clear: both;
-        font-size: .75em;
+        font-size: 1em;
+        width: 100%;
+        transition: $in-transition;
+      }
+
+      .active-bar{
+        height: 4px;
+        width: 100%;
+        background: transparent;
       }
 
       input,
       textarea{
-        border: 2px solid rgba(0,0,0,.1);
-        width: 100%;
-        padding: 1rem;
-        position: relative;
+        border: 0;
+        padding: .75em .5em;
+        height: inherit;
+        transition: padding .1s ease-in-out;
+
+        &:focus{
+          background: rgba(0,0,0,.015);
+        }
+
+        &:not(:focus){
+          padding: .75em 0;
+          transition: padding .1s ease-in-out;
+        }
+
+        &:focus ~ label,
+        &:not(.empty) ~ label{
+          top: -2em;
+          color: $black;
+          font-size: .5em;
+          transition: $in-transition;
+        }
+
+        &:focus ~ .active-bar,
+        &:not(.empty) ~ .active-bar{
+          background: $blue;
+        }
       }
 
       .form-required:after{
