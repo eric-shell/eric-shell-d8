@@ -26,6 +26,9 @@
         }
     });
 
+    // Autogrow textareas
+    $('textarea').autogrow();
+
   });
 
   var lastScrollTop = 0;  
