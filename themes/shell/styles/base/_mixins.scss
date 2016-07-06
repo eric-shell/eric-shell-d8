@@ -45,9 +45,24 @@
 }
 
 @keyframes gradientAnimate {
-  0%{background-position: 100% 0%}
-  50%{background-position: 0% 100%}
-  100%{background-position: 100% 0%}
+  0%{
+    background-position: 100% 0%
+  }
+  50%{
+    background-position: 0% 100%
+  }
+  100%{
+    background-position: 100% 0%
+  }
+}
+
+@keyframes sweep {
+  0%{
+    left: -100%;
+  }
+  100%{
+    left: 100%;
+  }
 }
 
 // Basic animated underline

@@ -8,16 +8,38 @@
     z-index: 1000;
     background: $white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    &:before{
+    p{
+      margin-top: -220px;
+      text-transform: uppercase;
+      font-weight: 900;
+      overflow: hidden;
+      position: relative;
+      animation: reveal 1.5s ease-in-out;
+
+      &:before{
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        width: 100%;
+        height: 2px;
+        background: $black;
+        animation: 2s infinite sweep;
+      }
+    }
+
+    .loader{
       content: '';
       width: 500px;
       height: 500px;
+      margin-top: -250px;
       transform: scale(.15);
       background: url(../images/loading.gif);
-      animation: 1s ease-in-out fromTop;
+      animation: reveal 1.5s ease-in-out;
     }
   }
 }
+

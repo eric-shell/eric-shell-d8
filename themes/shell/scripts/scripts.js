@@ -1,7 +1,7 @@
 (function ($) {
 
   $(window).load(function(){
-    $('#preloader').fadeOut('slow',function(){$(this).remove();});
+    //$('#preloader').fadeOut('slow',function(){$(this).remove();});
   });
 
   $(document).ready(function($) {
@@ -25,6 +25,11 @@
         $(this).removeClass("empty");
       }
     });
+
+    setInterval(function() {
+      var autofilled = document.querySelectorAll('input:-webkit-autofill');
+        $(this).removeClass("empty");
+    }, 500);
 
     // Autogrow textareas
     $('textarea').autogrow();
