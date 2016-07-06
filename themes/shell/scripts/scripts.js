@@ -6,11 +6,12 @@
 
   $(document).ready(function($) {
 
-    // Toggle main menu
+    // Open sidebar main menu
     $('#menu-toggle').click(function() {
       $('body').toggleClass('menu-active');
     });
 
+    // Display sidebar menu menu icon on hover
     $('#menu-toggle').hover(function() {
       $('#menu-toggle').addClass('menu-toggle-active');
     });
@@ -30,6 +31,7 @@
 
   });
 
+  // Menu button visibility on scroll
   var lastScrollTop = 0;  
   $(window).scroll(function(event){
     var st = $(this).scrollTop();
