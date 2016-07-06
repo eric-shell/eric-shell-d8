@@ -16,14 +16,13 @@
     });
 
     // Floating form item labels
-    $('main input, main textarea').addClass('empty');
-      $('input, textarea').keyup(function(){
-        if( $(this).val() == ""){
-          $(this).addClass("empty");
-        }
-        else{
-          $(this).removeClass("empty");
-        }
+    $('input, textarea').keyup(function(){
+      if( $(this).val() == ""){
+        $(this).addClass("empty");
+      }
+      else{
+        $(this).removeClass("empty");
+      }
     });
 
     // Autogrow textareas
