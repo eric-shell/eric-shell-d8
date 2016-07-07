@@ -71,7 +71,7 @@
         transition: padding .1s ease-in-out;
 
         &:focus{
-          background: rgba(0,0,0,.025);
+          background: $gray-light;
         }
 
         &:not(:focus){
@@ -106,8 +106,12 @@
         }
 
         &:-webkit-autofill {
-          -webkit-box-shadow: 0 0 0px 1000px white inset;
+          -webkit-box-shadow: 0 0 0px 1000px $white inset;
           -webkit-text-fill-color: $blue;
+
+          &:focus{
+            -webkit-box-shadow: 0 0 0px 1000px $gray-light inset;
+          }
         }
       }
 
