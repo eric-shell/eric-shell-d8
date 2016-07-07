@@ -26,11 +26,6 @@
       }
     });
 
-    setInterval(function() {
-      var autofilled = document.querySelectorAll('input:-webkit-autofill');
-        $(this).removeClass("empty");
-    }, 500);
-
     // Autogrow textareas
     $('textarea').autogrow();
 
