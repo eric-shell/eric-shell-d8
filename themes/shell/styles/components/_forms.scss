@@ -80,7 +80,8 @@
         }
 
         &:focus ~ label,
-        &:not(.empty) ~ label{
+        &:not(.empty) ~ label,
+        &:-webkit-autofill ~ label{
           top: -2em;
           color: $black;
           font-size: .5em;
@@ -88,7 +89,8 @@
         }
 
         &:focus ~ .active-bar,
-        &:not(.empty) ~ .active-bar{
+        &:not(.empty) ~ .active-bar,
+        &:-webkit-autofill ~ .active-bar{
 
           &:before{
             left: 0;
@@ -101,6 +103,11 @@
             opacity: 1;
             transition: $in-transition;
           }
+        }
+
+        &:-webkit-autofill {
+          -webkit-box-shadow: 0 0 0px 1000px white inset;
+          -webkit-text-fill-color: $blue;
         }
       }
 
