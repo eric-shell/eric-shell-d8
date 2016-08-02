@@ -1,8 +1,4 @@
 <?php
-/**
- * @file
- * Contains Drupal\login_security\Tests\LoginSecurityTestBase.
- */
 
 namespace Drupal\login_security\Tests;
 
@@ -14,6 +10,8 @@ use Drupal\simpletest\WebTestBase;
 abstract class LoginSecurityTestBase extends WebTestBase {
   const ADMIN_SETTINGS_PATH = 'admin/config/people/login_security';
 
+  public static $modules = ['login_security'];
+
   /**
    * {@inheritdoc}
    */
@@ -23,7 +21,6 @@ abstract class LoginSecurityTestBase extends WebTestBase {
     // Ensure these tables have no entries.
     db_query("TRUNCATE TABLE {login_security_track}");
     db_query("TRUNCATE TABLE {ban_ip}");
-    db_query("TRUNCATE TABLE {flood}");
 
     // Set time tracking window to 1 hour.
     \Drupal::configFactory()->getEditable('login_security.settings')
