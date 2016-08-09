@@ -194,13 +194,12 @@
 
   // Content overlay when navigation is active
   body{
-    overflow: hidden;
 
     &:before{
       content: '';
       position: absolute;
       left: 100%;
-      width: 100%;
+      width: 0;
       height: 100%;
       z-index: 25;
       background: rgba(28,31,30,0);
@@ -212,6 +211,7 @@
 
       &:before{
         left: 0;
+        width: 100%;
         background: rgba(28,31,30,.8);
         transition: $in-transition;
       }
