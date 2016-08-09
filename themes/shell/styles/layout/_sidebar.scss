@@ -194,6 +194,7 @@
 
   // Content overlay when navigation is active
   body{
+    overflow: hidden;
 
     &:before{
       content: '';
@@ -203,7 +204,7 @@
       height: 100%;
       z-index: 25;
       background: rgba(28,31,30,0);
-      transition: background .25s ease-in-out;
+      transition: $out-transition;
     }
 
     &.menu-active{
@@ -212,7 +213,7 @@
       &:before{
         left: 0;
         background: rgba(28,31,30,.8);
-        transition: background .1s ease-in-out;
+        transition: $in-transition;
       }
     }
   }
