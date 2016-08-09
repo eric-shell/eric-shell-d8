@@ -1,6 +1,17 @@
 @media #{$small-up}{  
 
-  // Blocks that are used on more than one page
+  // User memeber for block
+  .path-user{
+
+    #block-shell-content{
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 0 0;
+    }
+  }
+
+  // Available for work cta
   #block-availableforwork{
     color: $white;
     display: flex;
@@ -64,7 +75,8 @@
     justify-content: center;
     width: 100%;
     max-width: 1000px;
-    margin: 3rem auto;
+    margin: 0 auto;
+    padding: 3rem 0;
 
     .item-list{
 
@@ -91,7 +103,7 @@
 
 @media #{$medium-up}{  
 
-  // Blocks that are used on more than one page
+  // Available for work cta
   #block-availableforwork{
     padding: 1.5vw;
 
@@ -119,7 +131,7 @@
 
 @media #{$large-up}{  
 
-  // Blocks that are used on more than one page
+  // Available for work cta
   #block-availableforwork{
 
     p{
