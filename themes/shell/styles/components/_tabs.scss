@@ -3,7 +3,8 @@
   // Admin tabs
   .tabs{
     display: flex;
-    background: $gray;
+    justify-content: center;
+    background: $black;
 
     ul{
       width: 100%;
@@ -23,7 +24,7 @@
       font-weight: 900;
       font-size: .9rem;
       text-transform: uppercase;
-      padding: .5em 1.25em;
+      padding: 1.35em;
       text-decoration: none;
       transition: $out-transition;
 
@@ -37,7 +38,7 @@
     .is-active{
       
       a{
-        background: $cyan;
+        background: $blue;
       }
     }
   }
