@@ -56,6 +56,37 @@
       padding: 0;
     }
   }
+
+  // Recent Content
+  #block-views-block-content-recent-block-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 3rem auto;
+
+    .item-list{
+
+      li{
+        margin: .75em 0 .75em .1em;
+        list-style: none;
+      }
+
+      .views-field-title{
+        
+        a{
+          font-weight: 900;
+          text-decoration: none;
+
+          &:focus,
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media #{$medium-up}{  
