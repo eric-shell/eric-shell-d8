@@ -1,8 +1,13 @@
 (function ($) {
 
-  $(window).load(function(){
-    $('#preloader').fadeOut('slow',function(){$(this).remove();});
-  });
+  if($('body.path-frontpage').length !== 0){
+
+    $(window).load(function(){
+      $('#preloader').fadeOut('slow',function(){
+        $(this).remove();
+      });
+    });
+  }
 
   $(document).ready(function($) {
 
