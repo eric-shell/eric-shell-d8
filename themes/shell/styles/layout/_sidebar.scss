@@ -152,11 +152,30 @@
   }
 
   // Adjust header for the admin menu
+  // Horizontal display
   .toolbar-horizontal{
 
+    // Tray closed
     #sidebar,
     #menu-toggle{
-      top: 80px;
+      top: 39px;
+    }
+
+    // Tray open
+    &.toolbar-tray-open{
+
+      #sidebar,
+      #menu-toggle{
+        top: 80px;
+      }
+    }
+  }
+
+  // Vertical display
+  .toolbar-vertical{
+    #sidebar,
+    #menu-toggle{
+      top: 39px;
     }
   }
 }
