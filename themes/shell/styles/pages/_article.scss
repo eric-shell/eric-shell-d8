@@ -58,10 +58,6 @@
           align-items: center;
           justify-content: center;
           @include link-square;
-
-          a{
-            background: $blue;
-          }
         }
       }
     }
