@@ -3,44 +3,30 @@
   0%{
     opacity: 0;
   }
-  50%{
-    opacity: 0;  
-  }
   100%{
     opacity: 1;
-  }
-}
-
-@keyframes fromTop{
-  0%{
-    opacity: 0;
-    margin-top: -1.5rem;
-  }
-  100%{
-    opacity: 1;
-    margin-top: 0;
-  }
-}
-
-@keyframes fromRight{
-  0%{
-    opacity: 0;
-    margin-right: -4rem;
-  }
-  100%{
-    opacity: 1;
-    margin-right: 0;
   }
 }
 
 @keyframes fromLeft{
   0%{
     opacity: 0;
-    margin-left: -4rem;
+    left: -25%;
   }
   100%{
     opacity: 1;
-    margin-left: 0;
+    left: 0;
+  }
+}
+
+@keyframes fromRight{
+  0%{
+    opacity: 0;
+    right: -25%;
+  }
+  100%{
+    opacity: 1;
+    right: 0;
   }
 }
 
