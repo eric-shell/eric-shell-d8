@@ -2,161 +2,84 @@
 
   // Hero
   #hero{
-    position: relative;
     display: flex;
-    flex-direction: column;
-  }
-
-  #hero-photo{
+    position: relative;
+    overflow: hidden;
     background: $blue;
-    position: relative;
-    height: 70vw;
-    animation: 1s ease-out reveal;
 
-    // Hide profile photo on mobile
-    > img{
-      display: none;
+    #hero-imagery{
+      flex-basis: 60%;
+      animation: 1s ease-out fromLeft;
     }
-  }
 
-  #hero-logo{
-    position: absolute;
-    top: 14vw;
-    left: 15%;
-    width: 70%;
-    animation: 1.5s ease-out reveal;
-  }
+    #hero-background{
+      height: 0;
+      width: 100%;
+      padding-top: 78.85%;
+      background-image: url(../images/hero.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
 
-  #hero-content{
-    padding: 2.5rem 1.5rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    animation: 2.5s ease-out reveal;
-    @include link-round($blue, $white);
+    #hero-logo{
+      position: absolute;
+      top: 32%;
+      left: 7.5%;
+      height: 0;
+      width: 30%;
+      padding-top: 50%;
+      background-image: url(../images/logo.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
 
-    p{
-      text-align: left;
-      padding: 0;
+    #hero-content{
+      flex-basis: 40%;
+      z-index: 1;
+      position: relative;
+      background: $white;
+      @include link-round($blue, $white);
+      animation: 1s ease-out fromRight;
 
-      &:first-child{
-        margin: 0 0 2rem;
+      .field--name-field-page-body{
+        padding: 0;
+        height: 100%;
+        position: relative;
       }
 
-      &:last-child{
+      .field--name-field-body-text{
+        position: absolute;
+        top: 0;
+        left: -10%;
         width: 100%;
+        height: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
-      }
-    }
+        align-items: center;
 
-    .field--name-body{
-      padding: 0;
-    }
-  }
-}
+        p{
+          padding: 0;
+          font-size: 1.4vw;
+          text-align: justify;
 
-@media #{$medium-up}{
-
-  // Hero
-  #hero{
-    flex-direction: row;
-  }
-
-  #hero-photo{
-    height: auto;
-    flex-basis: 61.25%;
-    background: transparent;
-    animation: 1s ease-out fromLeft;
-
-    // Reveal profile photo
-    > img{
-      display: block;
-    }
-  }
-
-  #hero-logo{
-    position: absolute;
-    top: 15vw;
-    left: 8.5vw;
-    width: 48%;
-    animation: 1.5s ease-out fromLeft;
-  }
-
-  #hero-content{
-    margin-left: -2vw;
-    flex-basis: 38.75%;
-    text-align: left;
-    padding: 3.5vw 4vw 4vw 0;
-    background: transparent;
-    animation: 2.5s ease-out reveal;
-
-    p{
-      font-size: 1.4vw;
-      text-align: justify;
-
-      &:first-child{
-        margin: 3vw 0 2vw;
-      }
-    }
-  }
-}
-
-@media #{$mobile-landscape}{
-
-  // Hero
-  #hero{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #hero-photo{
-    background: $blue;
-    position: relative;
-    height: 70vh;
-    animation: 1s ease-out reveal;
-
-    // Hide profile photo on mobile
-    > img{
-      display: none;
-    }
-  }
-
-  #hero-logo{
-    position: absolute;
-    top: 10vh;
-    left: 10vh;
-    height: 50vh;
-    animation: 1.5s ease-out reveal;
-  }
-
-  #hero-content{
-    padding: 2.5rem 1.5rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    animation: 2.5s ease-out reveal;
-    @include link-round($blue, $white);
-
-    p{
-      font-size: 1.5rem;
-      text-align: center;
-      padding: 0;
-
-      &:first-child{
-        margin: 0 1rem 2rem;
+          &:first-child{
+            padding: 1em 2em 2em;
+          }
+        }
       }
 
-      &:last-child{
+      &:after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: -33%;
+        top: -40%;
         width: 100%;
-        display: flex;
-        justify-content: center;
+        height: 200%;
+        background: $white;
+        transform: rotate(29deg);
       }
-    }
-
-    .field--name-body{
-      padding: 0;
     }
   }
 }
