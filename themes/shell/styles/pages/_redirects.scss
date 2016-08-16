@@ -1,8 +1,8 @@
 @media #{$small-up}{
 
   // 404 and 403 Redirect
-  .page-node-165,
-  .page-node-166{
+  .page-node-404,
+  .page-node-403{
 
     .region-content{
       display: flex;
@@ -37,8 +37,8 @@
 @media #{$medium-up}{
 
   // 404 and 403 Redirect
-  .page-node-165,
-  .page-node-166{
+  .page-node-404,
+  .page-node-403{
 
     .field--name-title{
       font-size: 18vw;
@@ -49,8 +49,8 @@
 @media #{$large-up}{
 
   // 404 and 403 Redirect
-  .page-node-165,
-  .page-node-166{
+  .page-node-404,
+  .page-node-403{
 
     .field--name-title{
       font-size: 12vw;
