@@ -107,10 +107,10 @@
         height: 100%;
 
         p{
-          font-size: 1.4vw;
+          font-size: 1.875vw;
 
           &:first-child{
-            padding: 2em;
+            padding: 2em 1em;
           }
         }
       }
@@ -152,6 +152,10 @@
 
       .field--name-field-body-text{
         left: -10%;
+
+        p{
+          font-size: 1.525vw;
+        }
       }
     }
   }
