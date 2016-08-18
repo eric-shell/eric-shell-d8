@@ -3,6 +3,8 @@
   if($('body.path-frontpage').length !== 0){
 
     $(window).load(function(){
+      $('#hero-imagery').addClass('animate');
+      $('#hero-content').addClass('animate');
       $('#preloader').fadeOut('slow',function(){
         $(this).remove();
       });

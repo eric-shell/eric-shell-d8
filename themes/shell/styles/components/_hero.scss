@@ -2,21 +2,18 @@
 
   // Hero
   #hero{
-    display: flex;
     position: relative;
     overflow: hidden;
     background: $blue;
 
     #hero-imagery{
-      flex-basis: 60%;
       position: relative;
-      animation: 1s ease-out fromLeft;
     }
 
     #hero-background{
       height: 0;
-      width: 100%;
-      padding-top: 78.85%;
+      width: 135%;
+      padding-top: 105%;
       background-image: url(../images/hero.jpg);
       background-repeat: no-repeat;
       background-size: contain;
@@ -25,22 +22,20 @@
     #hero-logo{
       position: absolute;
       top: 30%;
-      left: 13%;
+      left: 15%;
       height: 0;
-      width: 50%;
-      padding-top: 50%;
+      width: 70%;
+      padding-top: 70%;
       background-image: url(../images/logo.svg);
       background-repeat: no-repeat;
       background-size: contain;
     }
 
     #hero-content{
-      flex-basis: 40%;
       z-index: 1;
       position: relative;
       background: $white;
       @include link-round($blue, $white);
-      animation: 1s ease-out fromRight;
 
       .field--name-field-page-body{
         padding: 0;
@@ -49,11 +44,7 @@
       }
 
       .field--name-field-body-text{
-        position: absolute;
-        top: 0;
-        left: -10%;
-        width: 100%;
-        height: 100%;
+        padding: 10vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -61,11 +52,65 @@
 
         p{
           padding: 0;
-          font-size: 1.4vw;
+          font-size: 4.2vw;
           text-align: justify;
 
           &:first-child{
-            padding: 1em 2em 2em;
+            padding: 0 0 2em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$medium-up}{
+
+  #hero{
+    display: flex;
+
+    #hero-imagery{
+      flex-basis: 50%;
+      transition: all ease-out .5s;
+
+      &.animate{
+        animation: 1s ease-out fromLeft;
+      }
+    }
+
+    #hero-background{
+      width: 100%;
+      padding-top: 78.85%;
+    }
+
+    #hero-logo{
+      top: 30%;
+      left: 13%;
+      width: 50%;
+      padding-top: 50%;
+    }
+
+    #hero-content{
+      flex-basis: 50%;
+      transition: all ease-out .5s;
+
+      &.animate{
+        animation: 1s ease-out fromRight;
+      }
+
+      .field--name-field-body-text{
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: -8%;
+        width: 100%;
+        height: 100%;
+
+        p{
+          font-size: 1.4vw;
+
+          &:first-child{
+            padding: 2em;
           }
         }
       }
@@ -74,12 +119,39 @@
         content: '';
         position: absolute;
         z-index: -1;
-        left: -33%;
+        left: -20%;
         top: -40%;
         width: 100%;
         height: 200%;
-        background: $white;
+        transform: rotate(14deg);
+        background: rgba(255,255,255,1);
+        transition: all ease-out .5s;
+      }
+    }
+  }
+}
+
+@media #{$large-up}{
+
+  #hero{
+
+    #hero-imagery{
+      flex-basis: 60%;
+      transition: all ease-out .5s;
+    }
+
+    #hero-content{
+      flex-basis: 40%;
+      transition: all ease-out .5s;
+
+      &:after{
+        left: -33%;
         transform: rotate(29deg);
+        transition: all ease-out .5s;
+      }
+
+      .field--name-field-body-text{
+        left: -10%;
       }
     }
   }
