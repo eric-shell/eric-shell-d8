@@ -291,12 +291,6 @@
   // Active menu settings
   .menu-active{
 
-    // Sidebar
-    #sidebar{
-      transform: translate(0,0);
-      transition: $in-transition;
-    }
-
     // Toggle sidebar navigation
     #menu-toggle{
 
