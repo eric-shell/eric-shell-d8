@@ -79,6 +79,12 @@
 
     .views-row{
 
+      .views-field-field-image{
+        img{
+          transform: scale(1.01);
+        }
+      }
+
       &:hover{
 
         .views-field-title{
