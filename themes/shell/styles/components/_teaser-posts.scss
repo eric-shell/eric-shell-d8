@@ -19,7 +19,7 @@
     }
 
     .views-row{
-      width: 100%;
+      width: 50%;
       position: relative;
       overflow: hidden;
     }
@@ -65,26 +65,7 @@
   .view-taxonomy-term{
 
     .views-row{
-      width: 50%;
-    }
-
-    .views-field-title{
-      display: block;
-    }
-  }
-}
-
-@media #{$medium-only}{
-
-  // Posts
-  .view-posts,
-  .view-posts-page,
-  .view-taxonomy-term{
-
-    .views-row{
-      &:nth-child(3n){
-        width: 100%;
-      }
+      width: 33.33333%;
     }
   }
 }
@@ -97,7 +78,6 @@
   .view-taxonomy-term{
 
     .views-row{
-      width: 33.33333%;
 
       &:hover{
 
