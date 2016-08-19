@@ -10,50 +10,8 @@
  */
 function shell_preprocess_html(&$variables) {
 
-  // Add current season class to body tag
-  $season = shell_current_season();
-  $variables['attributes']['class'][] = 'season-' . $season;
-
   // Add page title class to body tag
   if ($node = \Drupal::request()->attributes->get('node')) {
     $variables['attributes']['class'][] = 'page-node-' . str_replace(' ', '-', strtolower($node->label()));
   }
 }
-
-/**
- * Determines current season.
- */
-// function shell_current_season() {
-
-//   // What is today's date - number
-//   $day = date("z");
-
-//   // Days of spring
-//   $spring_starts = date("z", strtotime("March 21"));
-//   $spring_ends   = date("z", strtotime("June 20"));
-
-//   // Days of summer
-//   $summer_starts = date("z", strtotime("June 21"));
-//   $summer_ends   = date("z", strtotime("September 22"));
-
-//   // Days of fall
-//   $fall_starts = date("z", strtotime("September 23"));
-//   $fall_ends   = date("z", strtotime("December 20"));
-
-//   // If $day is between the days of spring, summer, fall, and winter
-//   if( $day >= $spring_starts && $day <= $spring_ends ) :
-//     $season = "spring";
-
-//   elseif( $day >= $summer_starts && $day <= $summer_ends ) :
-//     $season = "summer";
-
-//   elseif( $day >= $fall_starts && $day <= $fall_ends ) :
-//     $season = "fall";
-
-//   else :
-//     $season = "winter";
-
-//   endif;
-
-//   return $season;
-// }
