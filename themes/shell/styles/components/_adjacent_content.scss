@@ -10,81 +10,79 @@
   .article-pager{
     display: block;
 
-    .field--name-field-prev{
+    .field--name-field-prev,
+    .field--name-field-next{
       position: fixed;
-      right: 1rem;
       z-index: 12;
-      top: calc(42.5vh - 14px);
-      
-      a{
-        position: relative;
-        display: block;
-        width: 28px;
-        height: 30px;
-        text-indent: -9999px;
-        overflow: hidden;
+      width: 250px;
+      top: calc(42.5vh - 15px);
+      background: $white;
 
+      &:before{
+        content: '';
+        cursor: pointer;
+        position: absolute;
+        top: calc(50% - 15px);
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        opacity: .75;
+        transform: scale(.75);
+        transition: $out-transition;
+      }
+
+      &:hover{
         &:before{
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: '';
-          width: 0;
-          height: 0;
-          border-top: 15px solid transparent;
-          border-left: 28px solid $gray;
-          border-bottom: 15px solid transparent;
-          opacity: .75;
-          transform: scale(.75);
-          transition: $out-transition;
+          opacity: 0;
+          transform: scale(1);
+          transition: $in-transition;
         }
+      }
+      
+      .field--name-title{
+        font-size: 1rem;
+        padding: .5em;
+      }
 
-        &:hover{
-          &:before{
-            opacity: 1;
-            transform: scale(1);
-            transition: $in-transition;
-          }
-        }
+      a.adjacent-title{
+        width: 100%;
+        text-align: center;
+        font-weight: 900;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+
+    .field--name-field-prev{
+      right: 0;
+      transform: translate(250px,0);
+      transition: all ease-out .25s;
+
+      &:before{
+        left: -45px;
+        border-left: 28px solid $gray;
+      }
+
+      &:hover{
+        transform: translate(0,0);
+        transition: all ease-out .25s;
       }
     }
 
     .field--name-field-next{
-      position: fixed;
-      left: 1rem;
-      z-index: 12;
-      top: calc(42.5vh - 14px);
-      
-      a{
-        position: relative;
-        display: block;
-        width: 28px;
-        height: 44px;
-        text-indent: -9999px;
-        overflow: hidden;
+      left: 0;
+      transform: translate(-250px,0);
+      transition: all ease-out .25s;
 
-        &:before{
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: '';
-          width: 0;
-          height: 0;
-          border-top: 15px solid transparent;
-          border-right: 28px solid $gray;
-          border-bottom: 15px solid transparent;
-          opacity: .75;
-          transform: scale(.75);
-          transition: $out-transition;
-        }
+      &:before{
+        right: -45px;
+        border-right: 28px solid $gray;
+      }
 
-        &:hover{
-          &:before{
-            opacity: 1;
-            transform: scale(1);
-            transition: $in-transition;
-          }
-        }
+      &:hover{
+        transform: translate(0,0);
+        transition: all ease-out .25s;
       }
     }
   }
@@ -95,7 +93,7 @@
 
       .field--name-field-prev,
       .field--name-field-next{
-        top: calc(50vh - 11px);    
+        top: calc(50vh - 15px);    
       }
     }
   }
