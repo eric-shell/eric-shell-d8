@@ -23,37 +23,37 @@ function shell_preprocess_html(&$variables) {
 /**
  * Determines current season.
  */
-function shell_current_season() {
+// function shell_current_season() {
 
-  // What is today's date - number
-  $day = date("z");
+//   // What is today's date - number
+//   $day = date("z");
 
-  // Days of spring
-  $spring_starts = date("z", strtotime("March 21"));
-  $spring_ends   = date("z", strtotime("June 20"));
+//   // Days of spring
+//   $spring_starts = date("z", strtotime("March 21"));
+//   $spring_ends   = date("z", strtotime("June 20"));
 
-  // Days of summer
-  $summer_starts = date("z", strtotime("June 21"));
-  $summer_ends   = date("z", strtotime("September 22"));
+//   // Days of summer
+//   $summer_starts = date("z", strtotime("June 21"));
+//   $summer_ends   = date("z", strtotime("September 22"));
 
-  // Days of fall
-  $fall_starts = date("z", strtotime("September 23"));
-  $fall_ends   = date("z", strtotime("December 20"));
+//   // Days of fall
+//   $fall_starts = date("z", strtotime("September 23"));
+//   $fall_ends   = date("z", strtotime("December 20"));
 
-  // If $day is between the days of spring, summer, fall, and winter
-  if( $day >= $spring_starts && $day <= $spring_ends ) :
-    $season = "spring";
+//   // If $day is between the days of spring, summer, fall, and winter
+//   if( $day >= $spring_starts && $day <= $spring_ends ) :
+//     $season = "spring";
 
-  elseif( $day >= $summer_starts && $day <= $summer_ends ) :
-    $season = "summer";
+//   elseif( $day >= $summer_starts && $day <= $summer_ends ) :
+//     $season = "summer";
 
-  elseif( $day >= $fall_starts && $day <= $fall_ends ) :
-    $season = "fall";
+//   elseif( $day >= $fall_starts && $day <= $fall_ends ) :
+//     $season = "fall";
 
-  else :
-    $season = "winter";
+//   else :
+//     $season = "winter";
 
-  endif;
+//   endif;
 
-  return $season;
-}
+//   return $season;
+// }
