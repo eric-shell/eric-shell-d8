@@ -5,8 +5,8 @@
 @import "base/resets";
 @import "base/type";
 
-@import "layout/sidebar";
-@import "layout/footer";
+@import "regions/sidebar";
+@import "regions/footer";
 
 @import "components/preloader";
 @import "components/hero";
@@ -22,9 +22,9 @@
 @import "components/adjacent_content";
 @import "components/prettyprint";
 
-@import "pages/article";
-@import "pages/posts";
-@import "pages/work";
-@import "pages/contact";
-@import "pages/about";
-@import "pages/redirects";
+@import "nodes/article";
+@import "nodes/posts";
+@import "nodes/work";
+@import "nodes/contact";
+@import "nodes/about";
+@import "nodes/redirects";
