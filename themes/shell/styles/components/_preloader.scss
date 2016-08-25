@@ -6,6 +6,7 @@
   }
 
   .ajax-progress-fullscreen{
+    animation: reveal 1s ease-in-out;
     background: transparent;
     height: auto;
     opacity: 1;
@@ -24,7 +25,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: reveal 1s ease-in-out;
 
     &:after{
       content: '';
