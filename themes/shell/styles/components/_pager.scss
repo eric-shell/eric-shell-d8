@@ -27,18 +27,6 @@
       }
     }
   }
-
-  .ajax-progress-fullscreen {
-    padding: 0;
-    opacity: 1;
-    width: 500px;
-    height: 500px;
-    border-radius: 0;
-    top: calc(50% - 250px);
-    left: calc(50% - 250px);
-    transform: scale(.15);
-    background: url(../images/loading.gif);
-  }
 }
 
 @media #{$medium-up}{
