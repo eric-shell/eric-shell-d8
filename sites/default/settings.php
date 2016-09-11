@@ -61,3 +61,14 @@ $settings['trusted_host_patterns'] = array(
  * getting cached pages from the proxy.
  */
 $settings['omit_vary_cookie'] = TRUE;
+
+// Redirect all traffic to non-www. For example yoursite.com
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+  ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+  (php_sapi_name() != "cli")) {
+  if ($_SERVER['HTTP_HOST'] == 'www.eric.sh') {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: http://eric.sh'. $_SERVER['REQUEST_URI']);
+    exit();
+  }
+}
