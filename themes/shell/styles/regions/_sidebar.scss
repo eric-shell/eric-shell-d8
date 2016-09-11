@@ -121,6 +121,7 @@
 
     // Sidebar
     #sidebar{
+      overflow: auto;
       transform: translate(0,0);
       transition: $in-transition;
     }
