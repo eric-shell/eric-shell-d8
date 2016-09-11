@@ -35,7 +35,13 @@ $settings['install_profile'] = 'standard';
 $settings['trusted_host_patterns'] = array(
   '^es$',
   '^eric\.sh$',
-  '^.+\.eric\.sh$',
+  '^www\.eric\.sh$',
+  '^dev-eric-shell\.pantheon\.io$',
+  '^dev-eric-shell\.pantheonsite\.io$',
+  '^test-eric-shell\.pantheon\.io$',
+  '^test-eric-shell\.pantheonsite\.io$',
+  '^live-eric-shell\.pantheon\.io$',
+  '^live-eric-shell\.pantheonsite\.io$',
 );
 
 /**
