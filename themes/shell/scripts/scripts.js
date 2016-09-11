@@ -36,6 +36,11 @@
     // Autogrow textareas
     $('textarea').autogrow();
 
+    // Prettify syntax highlighting
+    if($('.field--name-field-body .prettyprint').length) {
+      $('body').attr('onload', 'prettyPrint()');
+    }
+
   });
 
   // Menu button visibility on scroll
