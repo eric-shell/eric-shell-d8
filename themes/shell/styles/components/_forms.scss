@@ -115,6 +115,26 @@
         }
       }
 
+      // Autofilled data
+      &.form-type-item.autofilled{
+        color: $blue;
+        border: 0;
+        padding: 0;
+
+        label{
+          top: -2.5em;
+          color: $black;
+          font-size: .5em;
+          transition: $in-transition;
+        }
+
+        .active-bar{
+          margin-top: 10px;
+          height: 4px;
+          background: $blue;
+        }
+      }
+
       .form-required:after{
         content: '*';
         font-size: 1em;

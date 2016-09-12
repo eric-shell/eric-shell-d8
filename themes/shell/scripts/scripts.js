@@ -25,13 +25,17 @@
 
     // Floating form item labels
     $('input, textarea').keyup(function(){
-      if( $(this).val() == ""){
+      if($(this).val() == ""){
         $(this).addClass("empty");
       }
       else{
         $(this).removeClass("empty");
       }
     });
+
+    if($('.form-item-mail input').length === 0){
+      $('.form-item-mail').addClass('autofilled');
+    }
 
     // Autogrow textareas
     $('textarea').autogrow();
