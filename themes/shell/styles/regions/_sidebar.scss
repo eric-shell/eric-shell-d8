@@ -97,6 +97,7 @@
         width: calc(100% - 32px);
         top: 19px;
         left: 16px;
+        transform: rotate(180deg);
         transition: $out-transition;
       }
 
@@ -111,6 +112,7 @@
         width: calc(88% - 32px);
         top: 35px;
         left: 16px;
+        transform: rotate(180deg);
         transition: $out-transition;
       }
     }
