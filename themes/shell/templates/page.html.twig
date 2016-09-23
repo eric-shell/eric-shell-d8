@@ -42,13 +42,17 @@
 #}
 
 {% if is_front %}
+
   <div id="preloader"></div>
+
 {% endif %}
 
 <section id="menu-toggle">
+
   <div class="menu-bar"></div>
   <div class="menu-bar"></div>
   <div class="menu-bar"></div>
+  
 </section>
 
 <aside role="menu" id="sidebar">
@@ -62,6 +66,12 @@
   {{ page.header }}
 
 </header>
+
+{% if is_front %}
+
+  {% include directory ~ '/templates/hero.html.twig' %}
+
+{% endif %}
 
 <main role="main">
 

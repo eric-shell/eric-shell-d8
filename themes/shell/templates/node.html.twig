@@ -70,10 +70,6 @@
 
 <article{{ attributes }}>
 
-  {% if url == '/ell' %}
-    {% include directory ~ '/templates/hero.html.twig' %}
-  {% endif %}
-
   {{ title_prefix }}
   {% if not page %}
     <h2{{ title_attributes }}>
@@ -82,11 +78,9 @@
   {% endif %}
   {{ title_suffix }}
 
-  {% if url != '/ell' %}
-    <div{{ content_attributes }}>
-      {{ content }}
-    </div>
-  {% endif %}
+  <div{{ content_attributes }}>
+    {{ content }}
+  </div>
 
   {% if display_submitted %}
     <footer>
