@@ -72,8 +72,8 @@
         }
 
         .back{
-          position: absolute;
-          top: -57px;
+          position: fixed;
+          top: 0;
           left: 0;
           width: 57px;
           height: 57px;
@@ -102,7 +102,6 @@
             transform: rotate(45deg);
           }
 
-          &:focus,
           &:hover{
             background: $cyan;
           }
@@ -280,6 +279,11 @@
 
       .menu{
         background: $black;
+
+        .back{
+          position: absolute;
+          top: -57px;
+        }
       }
     }
   }
