@@ -55,6 +55,59 @@
           transition: $in-transition;
         }
       }
+
+      // Second level menu items
+      .menu{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: -100%;
+        background: $blue;
+        transition: $out-transition;
+
+        &.expanded{
+          right: 0;
+          transition: $in-transition;
+        }
+
+        .back{
+          position: absolute;
+          top: -57px;
+          left: 0;
+          width: 57px;
+          height: 57px;
+          cursor: pointer;
+          z-index: 75;
+          padding: 16px;
+          transition: $out-transition;
+
+          &:before,
+          &:after{
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: calc(100% - 42px);
+            background: $white;
+            left: 20px;
+          }
+
+          &:before{
+            top: 23px;
+            transform: rotate(-45deg);
+          }
+
+          &:after{
+            top: 32px;
+            transform: rotate(45deg);
+          }
+
+          &:focus,
+          &:hover{
+            background: $cyan;
+          }
+        }
+      }
     }
   }
 
@@ -80,7 +133,13 @@
       height: 57px;
     }
 
-    &.menu-toggle-active{
+    &:focus,
+    &:hover{
+      background: $cyan;
+      transition: $in-transition;
+    }
+
+    &.menu-toggle-show{
       right: 0;
       transition: $in-transition;
 
@@ -206,6 +265,10 @@
         &.is-active{
           color: $white;
           background: $cyan;
+
+          &:hover{
+            background: $cyan;
+          }
         }
 
         &:hover,
@@ -213,6 +276,10 @@
           background: $blue;
           transition: $in-transition;
         }
+      }
+
+      .menu{
+        background: $black;
       }
     }
   }
@@ -254,6 +321,29 @@
 
       a{
         font-size: 1.4rem;
+      }
+
+      .menu{
+        .back{
+          top: -69px;
+          width: 69px;
+          height: 69px;
+
+          &:before,
+          &:after{
+            left: 24px;
+            height: 4px;
+            width: calc(100% - 52px);
+          }
+
+          &:before{
+            top: 28px;
+          }
+
+          &:after{
+            top: 38px;
+          }
+        }
       }
     }
   }

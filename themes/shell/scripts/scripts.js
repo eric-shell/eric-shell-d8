@@ -16,11 +16,26 @@
     // Open sidebar main menu
     $('#menu-toggle').click(function() {
       $('body').toggleClass('menu-active');
+      $(this).toggleClass('menu-toggle-active');
     });
 
     // Display sidebar menu menu icon on hover
     $('#menu-toggle').hover(function() {
-      $('#menu-toggle').addClass('menu-toggle-active');
+      $(this).addClass('menu-toggle-show');
+    });
+
+    // Remove active class from Work menu item
+    $('.menu-item--expanded > a').removeClass('is-active');
+
+    // Prevent click and toggle sub-menu
+    $('.menu-item--expanded > a').click(function(e) {
+      event.preventDefault(e);
+      $(this).next('ul').toggleClass('expanded');
+    });
+
+    // Go back from submenu selection
+    $('.menu-item--expanded .menu .back').click(function(){
+      $(this).parent().removeClass('expanded');
     });
 
     // Floating form item labels
@@ -54,10 +69,10 @@
 
     if($('body.menu-active').length === 0){
       if (st > lastScrollTop && st > 0){
-        $('#menu-toggle').removeClass('menu-toggle-active');
+        $('#menu-toggle').removeClass('menu-toggle-show');
       }
       else {
-        $('#menu-toggle').addClass('menu-toggle-active');
+        $('#menu-toggle').addClass('menu-toggle-show');
       }
     }
 
