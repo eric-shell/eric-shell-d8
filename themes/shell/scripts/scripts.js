@@ -25,16 +25,16 @@
     });
 
     // Remove active class from Work menu item
-    $('.menu-item--expanded > a').removeClass('is-active');
+    $('#sidebar .menu-item--expanded > a').removeClass('is-active');
 
     // Prevent click and toggle sub-menu
-    $('.menu-item--expanded > a').click(function(e) {
+    $('#sidebar .menu-item--expanded > a').click(function(e) {
       event.preventDefault(e);
       $(this).next('ul').toggleClass('expanded');
     });
 
     // Go back from submenu selection
-    $('.menu-item--expanded .menu .back').click(function(){
+    $('#sidebar .menu-item--expanded .menu .back').click(function(){
       $(this).parent().removeClass('expanded');
     });
 
