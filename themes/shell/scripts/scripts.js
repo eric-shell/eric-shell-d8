@@ -17,7 +17,7 @@
     $('#menu-toggle').click(function() {
       $('body').toggleClass('menu-active');
       $('#sidebar .menu-item--expanded .menu').removeClass('expanded');
-      $(this).toggleClass('menu-toggle-show');
+      $(this).toggleClass('menu-toggle-active');
     });
 
     // Display sidebar menu menu icon on hover
