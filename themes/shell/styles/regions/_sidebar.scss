@@ -296,7 +296,7 @@
 
         &.is-active{
           color: $white;
-          background: $cyan;
+          background: $blue;
 
           &:hover{
             background: $cyan;
@@ -305,7 +305,7 @@
 
         &:hover,
         &:active{
-          background: $blue;
+          background: $cyan;
           transition: $in-transition;
         }
       }
