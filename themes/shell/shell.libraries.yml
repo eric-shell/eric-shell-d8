@@ -3,8 +3,8 @@ global-theming:
     theme:
       styles/styles.min.css: {}
   js:
-    scripts/scripts.js: {}
     scripts/prettify.js: {}
     scripts/autogrow.js: {}
+    scripts/scripts.js: {}
   dependencies:
     - core/jquery
