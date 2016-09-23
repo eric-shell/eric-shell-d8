@@ -1,7 +1,7 @@
 @media #{$small-up}{
 
   // Work page
-  .page-node-work{
+  .page-node-web{
 
     h1{
       font-size: 15vw;
@@ -10,7 +10,7 @@
       text-align: center;
     }
 
-    .field--name-field-page-body{
+    .field--name-field-body{
       padding: .5rem 0 2rem;
       color: $white;
       background: $blue;
@@ -27,7 +27,7 @@
 @media #{$medium-up}{
 
   // Post page
-  .page-node-work{
+  .page-node-web{
 
     h1{
       font-size: 10vw;
@@ -38,7 +38,7 @@
 @media #{$large-up}{
 
   // Post page
-  .page-node-work{
+  .page-node-web{
 
     h1{
       font-size: 6.5vw;
