@@ -30,44 +30,6 @@
     }
   }
 
-  // Posts List cta
-  #block-postslistbanner{
-    color: $white;
-    display: flex;
-    justify-content: center;
-    background: $cyan;
-    padding: 1rem;
-    @include link-square;
-
-    p{
-      font-size: 3.5vw;
-      padding: 0;
-    }
-
-    .field--name-body{
-      padding: 0;
-    }
-  }
-
-  // Work list cta
-  #block-worklistbanner{
-    color: $white;
-    display: flex;
-    justify-content: center;
-    background: $cyan;
-    padding: 1rem;
-    @include link-square;
-
-    p{
-      font-size: 3.5vw;
-      padding: 0;
-    }
-
-    .field--name-body{
-      padding: 0;
-    }
-  }
-
   // Recent Content
   #block-views-block-content-recent-block-1{
     display: flex;
