@@ -1,6 +1,6 @@
 @media #{$small-up}{  
 
-  // User memeber for block
+  // User memeber history block
   .path-user{
 
     #block-shell-content{
@@ -74,22 +74,6 @@
       font-size: 2vw;
     }
   }
-
-  // Posts list cta
-  #block-postslistbanner{
-
-    p{
-      font-size: 2vw;
-    }
-  }
-
-  // Work list cta
-  #block-worklistbanner{
-
-    p{
-      font-size: 2vw;
-    }
-  }
 }
 
 @media #{$large-up}{  
@@ -99,22 +83,6 @@
 
     p{
       font-size: 1.5vw;
-    }
-  }
-
-  // Posts list cta
-  #block-postslistbanner{
-
-    p{
-      font-size: 1.5vw
-    }
-  }
-
-  // Work list cta
-  #block-worklistbanner{
-
-    p{
-      font-size: 1.5vw
     }
   }
 }
