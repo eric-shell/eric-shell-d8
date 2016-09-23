@@ -96,6 +96,11 @@
         &.expanded{
           right: 0;
           transition: $in-transition;
+
+          .back{
+            opacity: 1;
+            transition: $out-transition;
+          }
         }
 
         .back{
@@ -107,6 +112,7 @@
           cursor: pointer;
           z-index: 75;
           padding: 16px;
+          opacity: 0;
           transition: $out-transition;
 
           &:before,
