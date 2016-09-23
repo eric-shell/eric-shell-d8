@@ -16,7 +16,8 @@
     // Open sidebar main menu
     $('#menu-toggle').click(function() {
       $('body').toggleClass('menu-active');
-      $(this).toggleClass('menu-toggle-active');
+      $('#sidebar .menu-item--expanded .menu').removeClass('expanded');
+      $(this).toggleClass('menu-toggle-show');
     });
 
     // Display sidebar menu menu icon on hover
@@ -48,6 +49,7 @@
       }
     });
 
+    // Determine is an input has a locked prefill
     if($('.form-item-mail input').length === 0){
       $('.form-item-mail').addClass('autofilled');
     }
