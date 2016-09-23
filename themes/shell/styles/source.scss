@@ -16,13 +16,13 @@
 @import "components/pager";
 @import "components/forms";
 @import "components/lists";
-@import "components/teaser_photo";
-@import "components/teaser_web";
 @import "components/recommended_content";
 @import "components/adjacent_content";
 @import "components/prettyprint";
 
-@import "nodes/photo";
+@import "nodes/photo_full";
+@import "nodes/photo_teaser";
+@import "nodes/web_teaser";
 @import "nodes/about";
 @import "nodes/contact";
 @import "nodes/redirects";
