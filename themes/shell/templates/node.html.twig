@@ -78,9 +78,11 @@
   {% endif %}
   {{ title_suffix }}
 
-  <div{{ content_attributes }}>
-    {{ content }}
-  </div>
+  {% if url != '/ell' %}
+    <div{{ content_attributes }}>
+      {{ content }}
+    </div>
+  {% endif %}
 
   {% if display_submitted %}
     <footer>
