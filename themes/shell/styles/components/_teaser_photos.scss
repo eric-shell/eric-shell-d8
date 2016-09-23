@@ -1,8 +1,7 @@
 @media #{$small-up}{
 
-  // Posts
-  .view-posts,
-  .view-posts-page,
+  // Photos
+  .view-photos,
   .view-taxonomy-term{
     background: $black;
 
@@ -54,9 +53,8 @@
 
 @media #{$medium-up}{
 
-  // Posts
-  .view-posts,
-  .view-posts-page,
+  // Photos
+  .view-photos,
   .view-taxonomy-term{
 
     .views-row{
@@ -67,9 +65,8 @@
 
 @media #{$large-up}{
 
-  // Posts
-  .view-posts,
-  .view-posts-page,
+  // Photos
+  .view-photos,
   .view-taxonomy-term{
 
     .views-row{
