@@ -80,6 +80,17 @@
   // Photo nodes
   .page-node-type-photo{
 
+    .featured-image{
+      display: flex;
+      justify-content: center;
+
+      img{
+        max-height: 85vh;
+        max-width: 85vw;
+        width: auto;
+      }
+    }
+
     .field--name-field-body-text{
 
       p{
@@ -87,7 +98,7 @@
       }
     }
 
-    .featured-image{
+    .field--name-field-body-image{
       display: flex;
       justify-content: center;
 

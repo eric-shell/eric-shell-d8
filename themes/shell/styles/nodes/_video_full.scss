@@ -92,6 +92,17 @@
       }
     }
 
+    .field--name-field-body-image{
+      display: flex;
+      justify-content: center;
+
+      img{
+        max-height: 85vh;
+        max-width: 85vw;
+        width: auto;
+      }
+    }
+
     .field--name-field-tags{
 
       a{
