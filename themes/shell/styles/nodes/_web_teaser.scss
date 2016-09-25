@@ -1,25 +1,17 @@
 @media #{$small-up}{
 
-  // Work
-  .view-work,
-  .view-work-page{
+  .view-web{
 
-    .views-row{
+    .field-content{
       width: 100%;
-    }
-
-    // Teasers
-    .node-teaser{
       display: flex;
       flex-direction: column;
     }
 
-    // Article content containers
     .teaser-group{
       width: 100%;
     }
 
-    // Article thumbnail
     .teaser-image{
       overflow: hidden;
 
@@ -29,7 +21,6 @@
       }
     }
 
-    // Article body container
     .teaser-content{
       padding: 1.5rem;
       display: flex;
@@ -37,19 +28,17 @@
       justify-content: space-between;
     }
 
-    // Article title
     .field--name-title{
+      margin: 0;
       padding: 0;
     }
 
-    // Article summary
-    .field--name-field-summary{
+    .field--name-field-body{
       padding: 1vw 0 0;
       flex-grow: 1;
       max-width: 100%;
     }
 
-    // Article tags
     .field--name-field-tags{
       display: none;
     }
@@ -58,29 +47,28 @@
 
 @media #{$medium-up}{
 
-  // Work
-  .view-work,
-  .view-work-page{
+  .view-web{
 
-    // Article tags
     .field--name-field-tags{
       display: flex;
       flex-wrap: wrap;
       padding: 1rem 0 0;
 
-      .field__item{
-        margin-right: 1.5em;
-
-        a{
-          font-size: 1rem;
-          font-weight: 700;
-          line-height: 1.5;
-          text-transform: uppercase;
-        }
+      li{
+        margin: 0 1.5em 0 0;
+        list-style: none;
+        display: inline-block;
 
         &:last-child{
-          margin-right: 0;
+          margin: 0;
         }
+      }
+
+      a{
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.5;
+        text-transform: uppercase;
       }
     }
   }
@@ -88,27 +76,21 @@
 
 @media #{$large-up}{
 
-  // Work
-  .view-work,
-  .view-work-page{
+  .view-web{
 
-    // Teasers
-    .node-teaser{
+    .field-content{
       flex-direction: row;
     }
 
-    // Article content containers
     .teaser-group{
       width: 50%;
     }
 
-    // Article body container
     .teaser-content{
       padding: 4vw;
       flex-direction: column;
     }
 
-    // Article thumbnail
     .teaser-image{
 
       &:hover{
@@ -120,30 +102,24 @@
       }
     }
 
-    // Article summary
-    .field--name-field-summary{
+    .field--name-field-body{
       padding: 1vw 0 0;
       flex-grow: 1;
     }
 
-    // Article tags
     .field--name-field-tags{
       display: flex;
       padding: 0;
 
-      .field__item{
+      a{
+        font-size: 1.3vw;
         margin-right: 1.5vw;
-
-        a{
-          font-size: 1.3vw;
-        }
       }
     }
 
-    // Row offset
     .views-row:nth-child(even){
 
-      .node-teaser{
+      .field-content{
         flex-direction: row-reverse;
       }
     }
