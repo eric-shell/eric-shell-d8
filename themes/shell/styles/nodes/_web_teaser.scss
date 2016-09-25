@@ -2,7 +2,7 @@
 
   .view-web{
 
-    .field-content{
+    .views-row{
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -78,7 +78,7 @@
 
   .view-web{
 
-    .field-content{
+    .views-row{
       flex-direction: row;
     }
 
@@ -118,10 +118,7 @@
     }
 
     .views-row:nth-child(even){
-
-      .field-content{
-        flex-direction: row-reverse;
-      }
+      flex-direction: row-reverse;
     }
   }
 }
