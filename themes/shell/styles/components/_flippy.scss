@@ -84,4 +84,16 @@
       }
     }
   }
+
+  .page-node-type-web{
+
+    .flippy{
+
+      .flippy-previous,
+      .flippy-next{
+        top: calc(50vh - 15px);    
+      }
+    }
+  }
+
 }
