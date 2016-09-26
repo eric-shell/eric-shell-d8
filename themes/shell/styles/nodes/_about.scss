@@ -3,10 +3,21 @@
   // About and resume
   .page-node-about{
 
+    #block-aboutpageheader{
+      color: $white;
+      background: $blue;
+      text-align: center;
+      padding: 3rem 20px;
+
+      h1{
+        font-size: 15vw;
+      }
+    }
+
     .region-content{
 
       .page-title{
-        padding: 0;
+        display: none;
       }
 
       p, ul{
@@ -104,10 +115,31 @@
   }
 }
 
+@media #{$medium-up}{
+
+  // About and resume
+  .page-node-about{
+
+    #block-aboutpageheader{
+
+      h1{
+        font-size: 10vw;
+      }
+    }
+  }
+}
+
 @media #{$large-up}{
 
   // About and resume
   .page-node-about{
+
+    #block-aboutpageheader{
+
+      h1{
+        font-size: 6.5vw;
+      }
+    }
 
     .region-content{
 
