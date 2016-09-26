@@ -1,6 +1,5 @@
 @media #{$small-up}{  
 
-  // Forms
   form{
     display: flex;
     flex-direction: column;
@@ -173,7 +172,6 @@
       }
     }
 
-    // Hidden elements
     .description,
     #edit-preview{
       display: none;

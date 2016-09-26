@@ -1,6 +1,5 @@
 @media #{$small-up}{
 
-  // Sidebar
   #sidebar{
     position: fixed;
     top: 0;
@@ -214,7 +213,6 @@
   // Active menu settings
   .menu-active{
 
-    // Sidebar
     #sidebar{
       overflow: auto;
       transform: translate(0,0);
@@ -279,7 +277,6 @@
 
 @media #{$medium-up}{
 
-  // Sidebar
   #sidebar{
     transform: translate(320px,0);
     max-width: 320px;
@@ -350,7 +347,6 @@
 
 @media #{$large-up}{
 
-  // Sidebar
   #sidebar{
 
     .menu{

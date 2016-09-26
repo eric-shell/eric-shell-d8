@@ -1,6 +1,5 @@
 @media #{$small-up}{
 
-  // Pager
   .pager{
     display: flex;
     justify-content: center;
@@ -30,8 +29,7 @@
 }
 
 @media #{$medium-up}{
-  
-  // Pager
+
   .pager{
 
     a{
@@ -42,7 +40,6 @@
 
 @media #{$large-up}{
 
-  // Pager
   .pager{
 
     a{

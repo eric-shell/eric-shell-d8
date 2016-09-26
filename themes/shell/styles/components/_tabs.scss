@@ -1,6 +1,5 @@
 @media #{$small-up}{
 
-  // Admin tabs
   .tabs{
     display: flex;
     justify-content: flex-start;
@@ -47,7 +46,6 @@
 
 @media #{$medium-up}{
 
-  // Admin tabs
   .tabs{
     padding: 0 2rem;
     justify-content: center;
@@ -60,7 +58,6 @@
 
 @media #{$large-up}{
 
-  // Admin tabs
   .tabs{
     padding: 0 2rem;
 

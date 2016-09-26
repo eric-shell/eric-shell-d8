@@ -1,16 +1,13 @@
 @media #{$small-up}{
 
-  // Photos
   .view-photos,
   .view-taxonomy-term{
     background: $black;
 
-    // Teasers
     .node-teaser{
       display: flex;
     }
 
-    // Teaser container
     .view-content,
     .views-infinite-scroll-content-wrapper{
       display: flex;
@@ -54,7 +51,6 @@
 
 @media #{$medium-up}{
 
-  // Photos
   .view-photos,
   .view-taxonomy-term{
 
@@ -66,7 +62,6 @@
 
 @media #{$large-up}{
 
-  // Photos
   .view-photos,
   .view-taxonomy-term{
 
@@ -89,6 +84,7 @@
     }
 
     .views-field-field-image{
+      
       img{
         transform: scale(1.0075);
         transition: all ease-in .1s;
