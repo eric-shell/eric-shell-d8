@@ -21,12 +21,10 @@
 @import "components/view_header";
 @import "components/recommended_content";
 
-@import "nodes/photo_full";
-@import "nodes/photo_teaser";
-@import "nodes/video_full";
-@import "nodes/video_teaser";
-@import "nodes/web_full";
-@import "nodes/web_teaser";
 @import "nodes/about";
 @import "nodes/contact";
+@import "nodes/display_full_content";
+@import "nodes/display_teaser_photo";
+@import "nodes/display_teaser_video";
+@import "nodes/display_teaser_web";
 @import "nodes/redirects";

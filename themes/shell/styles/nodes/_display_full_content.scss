@@ -1,6 +1,7 @@
 @media #{$small-up}{
 
-  // Photo nodes
+  .page-node-type-web,
+  .page-node-type-video,
   .page-node-type-photo{
 
     .featured-image{
@@ -8,6 +9,22 @@
       justify-content: center;
       background: $black;
       z-index: 5;
+    }
+
+    .featured-video{
+      position: relative;
+      background: #000;
+      z-index: 5;
+
+      .video-embed-field-responsive-video{
+        display: flex;
+        justify-content: center;
+      }
+
+      iframe{
+        max-width: 85vw;
+        margin: 0 auto;
+      }
     }
 
     .field--name-field-body-text{
@@ -62,7 +79,8 @@
 
 @media #{$medium-up}{
 
-  // Photo nodes
+  .page-node-type-web,
+  .page-node-type-video,
   .page-node-type-photo{
 
     .field--name-field-tags{
@@ -77,7 +95,8 @@
 
 @media #{$large-up}{
 
-  // Photo nodes
+  .page-node-type-web,
+  .page-node-type-video,
   .page-node-type-photo{
 
     .featured-image{
