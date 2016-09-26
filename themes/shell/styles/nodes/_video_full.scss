@@ -41,6 +41,10 @@
       }
     }
 
+    .field--name-field-body-image{
+      margin: 0 0 2.25em;
+    }
+
     .field--name-field-tags{
       display: flex;
       flex-wrap: wrap;
@@ -95,6 +99,7 @@
     .field--name-field-body-image{
       display: flex;
       justify-content: center;
+      margin: 0 0 2.75em;
 
       img{
         max-height: 85vh;

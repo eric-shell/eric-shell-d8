@@ -33,7 +33,7 @@
     }
 
     .field--name-field-body-image{
-      margin: 0 0 3em;
+      margin: 0 0 2.25em;
     }
 
     .field--name-field-tags{
@@ -101,6 +101,7 @@
     .field--name-field-body-image{
       display: flex;
       justify-content: center;
+      margin: 0 0 2.75em;
 
       img{
         max-height: 85vh;
