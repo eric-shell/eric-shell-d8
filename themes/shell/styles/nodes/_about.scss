@@ -1,21 +1,9 @@
 @media #{$small-up}{
 
-  // About and resume
   .page-node-about{
 
     .page-title{
       display: none;
-    }
-
-    #block-aboutpageheader{
-      color: $white;
-      background: $blue;
-      text-align: center;
-      padding: 3rem 20px;
-
-      h1{
-        font-size: 15vw;
-      }
     }
 
     .field--name-field-body-text{
@@ -29,31 +17,9 @@
   }
 }
 
-@media #{$medium-up}{
-
-  // About and resume
-  .page-node-about{
-
-    #block-aboutpageheader{
-
-      h1{
-        font-size: 10vw;
-      }
-    }
-  }
-}
-
 @media #{$large-up}{
 
-  // About and resume
   .page-node-about{
-
-    #block-aboutpageheader{
-
-      h1{
-        font-size: 6.5vw;
-      }
-    }
 
     .field--name-field-body-text{
 

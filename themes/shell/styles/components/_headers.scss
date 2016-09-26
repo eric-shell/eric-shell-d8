@@ -1,26 +1,26 @@
 @media #{$small-up}{  
 
-  .view-header{
+  .view-header,
+  #block-aboutpageheader,
+  #block-contactpageheader{
     color: $white;
     background: $blue;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 20px;
+    padding: 4rem 20px;
 
     h1{
         font-size: 15vw;
-    }
-
-    p{
-
     }
   }
 }
 
 @media #{$medium-up}{
 
-  .view-header{
+  .view-header,
+  #block-aboutpageheader,
+  #block-contactpageheader{
 
     h1{
       font-size: 10vw;
@@ -30,7 +30,10 @@
 
 @media #{$large-up}{
 
-  .view-header{
+  .view-header,
+  #block-aboutpageheader,
+  #block-contactpageheader{
+
     h1{
       font-size: 6.5vw;
     }
