@@ -7,6 +7,10 @@
 
     li{
       padding: 0;
+
+      a.is-active{
+        background: $cyan;
+      }
     }
 
     a{
