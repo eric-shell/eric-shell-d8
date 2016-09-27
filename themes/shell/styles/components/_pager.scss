@@ -8,8 +8,14 @@
     li{
       padding: 0;
 
-      a.is-active{
+      &.is-active a{
         background: $cyan;
+      }
+
+      &.pager__item--first,
+      &.pager__item--ellipsis,
+      &.pager__item--last{
+        display: none;
       }
     }
 
