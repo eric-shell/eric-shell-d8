@@ -280,7 +280,7 @@ function flippy_form_node_type_edit_form_alter(&$form, FormStateInterface $form_
           $schema_info = $sort_field->getSchema();
         }
       }
-      if (isset($schema_info['columns']['value']) && ($schema_info['columns']['value']['type'] == 'int' || $sort_field->getType() == 'datetime')) {
+      if (isset($schema_info['columns']['value']) && ($schema_info['columns']['value']['type'] == 'varchar' || $schema_info['columns']['value']['type'] == 'int' || $sort_field->getType() == 'datetime')) {
         $sort_options[$sort_field->getName()] = $sort_field->getLabel();
       }
     }
