@@ -22,12 +22,15 @@
       padding: 0;
     }
 
-    .field--name-field-page-body{
+    .field--name-field-body{
       padding: 0 0 2rem;
-      @include link-square;
 
       p:first-child{
         padding: 0 0 1.25em;
+      }
+
+      a{
+        @include link-square;
       }
     }
   }

@@ -98,49 +98,47 @@
 
 // Square emphasized link
 @mixin link-square($base-color: $white, $active-text-color: $blue){
-  
-  a{
-    color: $base-color;
-    border: 2px solid $base-color;
-    margin: 0 .5em;
-    padding: .5em .75em;
-    transition: $out-transition;
+  display: inline-block;
+  color: $base-color;
+  border: 2px solid $base-color;
+  margin: 0 .5em;
+  padding: .5em .75em;
+  transition: $out-transition;
+  text-decoration: none;
 
-    &:focus,
-    &:hover{
-      color: $active-text-color;
-      background: $base-color;
-      transition: $in-transition;
-    }
+  &:focus,
+  &:hover{
+    color: $active-text-color;
+    background: $base-color;
+    transition: $in-transition;
+  }
 
-    &:before,
-    &:after{
-      display: none;
-    }
+  &:before,
+  &:after{
+    display: none;
   }
 }
 
 // Round emphasized link
 @mixin link-round($base-color: $white, $active-text-color: $blue){
-  
-  a{
-    color: $base-color;
-    border: 2px solid $base-color;
-    border-radius: 3em;
-    margin: 0;
-    padding: .5em 1.5em;
-    transition: $out-transition;
+  display: inline-block;
+  color: $base-color;
+  border: 2px solid $base-color;
+  border-radius: 3em;
+  margin: 0;
+  padding: .5em 1.5em;
+  transition: $out-transition;
+  text-decoration: none;
 
-    &:focus,
-    &:hover{
-      color: $active-text-color;
-      background: $base-color;
-      transition: $in-transition;
-    }
+  &:focus,
+  &:hover{
+    color: $active-text-color;
+    background: $base-color;
+    transition: $in-transition;
+  }
 
-    &:before,
-    &:after{
-      display: none;
-    }
+  &:before,
+  &:after{
+    display: none;
   }
 }

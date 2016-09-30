@@ -34,7 +34,6 @@
       z-index: 1;
       position: relative;
       background: $white;
-      @include link-round($blue, $white);
 
       .field--name-field-page-body{
         padding: 0;
@@ -57,6 +56,10 @@
           &:first-child{
             padding: 0 0 2em;
           }
+        }
+
+        a{
+          @include link-round($blue, $white);
         }
       }
     }

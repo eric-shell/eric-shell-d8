@@ -18,11 +18,16 @@
     justify-content: center;
     background: $cyan;
     padding: 1rem;
-    @include link-square;
 
     p{
-      font-size: 3.5vw;
       padding: 0;
+      font-size: 3.5vw;
+      display: flex;
+      align-items: center;
+    }
+
+    a{
+      @include link-square;
     }
 
     .field--name-body{
