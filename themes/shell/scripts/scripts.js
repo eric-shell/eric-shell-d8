@@ -65,14 +65,16 @@
     // Resume page
     if($('body.page-node-resume').length) {
 
-      // Toggle each resume section
+      // When the resume cta for each slide is clicked
       $('a.next-slide').click(function(e){
 
         // Show next slide
         event.preventDefault(e);
         $(this).parent().next('.slide').addClass('visible');
-        $('html,body').animate({ scrollTop:$(this).parent().next().offset().top}, 'slow');
-        
+        $('html,body').animate({
+          scrollTop:$(this).parent().next().offset().top
+        }, 500);
+
       });
     }
 
