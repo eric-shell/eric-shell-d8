@@ -36,24 +36,25 @@
         ul{
           margin: 0;
           list-style: none;
+          line-height: 1.8;
         }
 
         h1{
-          font-size: 1.5rem;
+          font-size: 1.75rem;
         }
 
         h2{
-          font-size: 1.25rem;
+          font-size: 1.5rem;
         }
 
         h3{
-          font-size: 1.15rem;
+          font-size: 1.25rem;
         }
       }
 
       .slide-container{
         max-width: 1000px;
-        margin: 0 auto;
+        margin: 0 auto 2em;
       }
     }
   }
