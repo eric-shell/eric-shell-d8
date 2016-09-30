@@ -62,6 +62,17 @@
       $('body').attr('onload', 'prettyPrint()');
     }
 
+    // Resume page
+    if($('body.page-node-resume').length) {
+
+      // Toggle each resume section
+      $('a.next-slide').click(function(e){
+        event.preventDefault(e);
+        $(this).parent().next('.slide').addClass('visible');
+        $('html,body').animate({ scrollTop:$(this).parent().next().offset().top}, 'slow');
+      });
+    }
+
   });
 
   // Menu button visibility on scroll
