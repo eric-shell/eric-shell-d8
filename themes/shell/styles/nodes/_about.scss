@@ -1,31 +1,6 @@
 @media #{$small-up}{
 
-  .page-node-about{
+  .page-node-resume{
 
-    .page-title{
-      display: none;
-    }
-
-    .field--name-field-body-text{
-
-      p{
-        padding: 0 1rem 2.5em;
-        max-width: 45rem;
-        margin: auto;
-      }
-    }
-  }
-}
-
-@media #{$large-up}{
-
-  .page-node-about{
-
-    .field--name-field-body-text{
-
-      p{
-        max-width: 60vw;
-      }
-    }
   }
 }
