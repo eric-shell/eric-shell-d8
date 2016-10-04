@@ -20,7 +20,7 @@
 
         &.visible{
           min-height: 85vh;
-          max-height: 85vh;
+          max-height: 100%;
           transition: $out-transition;
         }
 
@@ -55,6 +55,10 @@
       .slide-container{
         max-width: 1000px;
         margin: 0 auto 2em;
+      }
+
+      #intro{
+        flex-direction: row;
       }
     }
   }
