@@ -65,16 +65,24 @@
     // Resume page
     if($('body.page-node-resume').length) {
 
-      // When the resume cta for each slide is clicked
+      // When the resume link for each slide is clicked
       $('a.next-slide').click(function(e){
 
-        // Show next slide
-        event.preventDefault(e);
-        $(this).parent().next('.slide').addClass('visible');
-        $('html,body').animate({
-          scrollTop:$(this).parent().next().offset().top
-        }, 500);
+        // Start the resume experience
+        if($(this).hasClass('start')){
+          event.preventDefault(e);
+          $(this).parent().removeClass('visible');
+          $(this).parent().next('.slide').addClass('visible');
+        }
 
+        // Show next the slide
+        else{
+          event.preventDefault(e);
+          $(this).parent().next('.slide').addClass('visible');
+          $('html,body').animate({
+            scrollTop:$(this).parent().next().offset().top
+          }, 500);
+        }
       });
     }
 
