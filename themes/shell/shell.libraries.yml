@@ -5,6 +5,7 @@ global-theming:
   js:
     scripts/vendor/prettify.js: {}
     scripts/vendor/autogrow.js: {}
+    scripts/vendor/slick.min.js: {}
     scripts/scripts.js: {}
   dependencies:
     - core/jquery

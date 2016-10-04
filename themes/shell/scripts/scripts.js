@@ -65,24 +65,31 @@
     // Resume page
     if($('body.page-node-resume').length) {
 
-      // When the resume link for each slide is clicked
-      $('a.next-slide').click(function(e){
+      // When the resume link for each panel is clicked
+      $('a.next-panel').click(function(e){
 
         // Start the resume experience
         if($(this).hasClass('start')){
           event.preventDefault(e);
           $(this).parent().removeClass('visible');
-          $(this).parent().next('.slide').addClass('visible');
+          $(this).parent().next('.panel').addClass('visible');
         }
 
-        // Show next the slide
+        // Show next the panel
         else{
           event.preventDefault(e);
-          $(this).parent().next('.slide').addClass('visible');
+          $(this).parent().next('.panel').addClass('visible');
           $('html,body').animate({
             scrollTop:$(this).parent().next().offset().top
           }, 500);
         }
+      });
+
+      // Create sliders
+      $('.slider').slick({
+        dots: true,
+        infinite: false,
+        adaptiveHeight: true
       });
     }
 
