@@ -94,6 +94,7 @@
 
         &.expanded{
           right: 0;
+          justify-content: center;
           transition: $in-transition;
 
           .back{
