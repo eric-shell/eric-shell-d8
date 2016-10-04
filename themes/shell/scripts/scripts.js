@@ -88,7 +88,7 @@
       // Create sliders
       $('.slider').slick({
         dots: true,
-        infinite: false,
+        infinite: true,
         adaptiveHeight: true
       });
     }
