@@ -71,16 +71,16 @@
         // Start the resume experience
         if($(this).hasClass('start')){
           event.preventDefault(e);
-          $(this).parent().removeClass('visible');
-          $(this).parent().next('.panel').addClass('visible');
+          $(this).parent().parent().removeClass('visible');
+          $(this).parent().parent().next('.panel').addClass('visible');
         }
 
         // Show next the panel
         else{
           event.preventDefault(e);
-          $(this).parent().next('.panel').addClass('visible');
+          $(this).parent().parent().next('.panel').addClass('visible');
           $('html,body').animate({
-            scrollTop:$(this).parent().next().offset().top
+            scrollTop:$(this).parent().parent().next().offset().top
           }, 500);
         }
       });

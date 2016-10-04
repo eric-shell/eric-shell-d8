@@ -36,7 +36,6 @@
       }
 
       a{
-        color: $white;
         @include link-square;
       }
 
@@ -57,18 +56,34 @@
     }
 
     .panel-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       max-width: 800px;
-      margin: 0 auto 2em;
+
+      &.slides{
+        display: inline-block;
+        margin: 0 auto;
+      }
     }
 
-    #intro{
-      flex-direction: column;
-      font-size: 7vw;
+    .panel-cta{
+      margin: 2em 0 0;
+    }
 
-      p{
-        opacity: .5;
-        padding: .5em 0;
+    #intro,
+    #outro{
+
+      .panel-container{
+        flex-direction: column;
+        font-size: 7vw;
+
+        p{
+          opacity: .5;
+          padding: .5em 0;
+        }
       }
     }
 
@@ -82,23 +97,6 @@
         }
       }
     }
-
-    #outro{
-
-      p{
-        opacity: .5;
-        padding: .5em 0;
-      }
-
-      #outro-actions{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 1em 0 0;
-        font-size: 7vw;
-      }
-    }
   }
 }
 
@@ -106,24 +104,16 @@
 
   .page-node-resume{
 
-    #intro{
-      flex-direction: row;
-      font-size: 2.5vw;
-
-      p{
-        padding: 0;
-      }
-    }
-
+    #intro,
     #outro{
 
-      p{
-        padding: 0;
-      }
-
-      #outro-actions{
+      .panel-container{
         flex-direction: row;
         font-size: 2.5vw;
+
+        p{
+          padding: 0;
+        }
       }
     }
   }
