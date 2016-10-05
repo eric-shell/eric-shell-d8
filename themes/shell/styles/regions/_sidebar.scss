@@ -308,8 +308,13 @@
         }
       }
 
+      // Second level menu items
       .menu{
         background: $black;
+
+        &.expanded{
+          justify-content: flex-start;
+        }
 
         .back{
           position: absolute;
