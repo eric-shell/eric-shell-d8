@@ -99,6 +99,10 @@
   }
 
   // Custom slick theming
+  .slick-slide{
+    padding: 0 0 0 1px;
+  }
+
   button.slick-arrow{
     opacity: 0;
     border: 0;
