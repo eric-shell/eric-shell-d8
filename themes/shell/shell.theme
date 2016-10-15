@@ -15,3 +15,20 @@ function shell_preprocess_html(&$variables) {
     $variables['attributes']['class'][] = 'page-node-' . str_replace(' ', '-', strtolower($node->label()));
   }
 }
+
+function shell_preprocess_flippy(&$vars) {
+
+  // Custom output previous link
+  if ($vars['prev']['#type'] == 'link') {
+    $prev_title = $vars['prev']['#title'];
+    $vars['prev_label'] = $prev_title;
+    $vars['prev_url'] = $vars['prev']['#url']->toString();
+  }
+
+  // Custom output next link
+  if ($vars['next']['#type'] == 'link') {
+    $next_title = $vars['next']['#title'];
+    $vars['next_label'] = $next_title;
+    $vars['next_url'] = $vars['next']['#url']->toString();
+  }
+}

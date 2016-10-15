@@ -1,0 +1,11 @@
+<ul class="flippy">
+  
+    {% if prev %}
+    <li class="flippy-previous"><a href="{{ prev_url }}"><img src="{{ prev_label }}" /></a></li>
+    {% endif %}
+
+    {% if next %}
+    <li class="flippy-next"><a href="{{ next_url }}"><img src="{{ next_label }}" /></a></li>
+    {% endif %}
+
+</ul>
