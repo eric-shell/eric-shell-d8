@@ -9,6 +9,7 @@ use Drupal\Component\Utility\SafeMarkup;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\user\UserInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_cron().
@@ -68,7 +69,7 @@ function login_security_form_alter(array &$form, FormStateInterface  $form_state
  * message before it gets updated with the current login instance.
  */
 function login_security_set_login_timestamp(array $form, FormStateInterface $form_state) {
-  $account = db_select('users_field_data', 'u')
+  $account = \Drupal::database()->select('users_field_data', 'u')
   ->fields('u', array('login', 'access'))
   ->condition('name', $form_state->getValue('name'))
   ->condition('status', 1)
@@ -255,12 +256,12 @@ function login_security_submit(array $form, FormStateInterface $form_state) {
   if (is_object($user)) {
     $login = _login_security_login_timestamp();
     if ($conf->get('last_login_timestamp') && $login > 0) {
-      drupal_set_message(t('Your last login was @stamp.', array('@stamp' => format_date($login, 'large'))), 'status');
+      drupal_set_message(t('Your last login was @stamp.', array('@stamp' => format_date($login, 'long'))), 'status');
     }
 
     $access = _login_security_access_timestamp();
     if ($conf->get('last_access_timestamp') && $access > 0) {
-      drupal_set_message(t('Your last page access (site activity) was @stamp.', array('@stamp' => format_date($access, 'large'))), 'status');
+      drupal_set_message(t('Your last page access (site activity) was @stamp.', array('@stamp' => format_date($access, 'long'))), 'status');
     }
   }
 }
@@ -390,7 +391,7 @@ function login_user_block_user_name($variables, FormStateInterface $form_state) 
       $user_blocked_email_user = $conf->get('user_blocked_email_user');
       if ($user_blocked_email_user !== '') {
         $from = \Drupal::config('system.site')->get('mail');
-        $admin_mail = db_select('users_field_data', 'u')
+        $admin_mail = \Drupal::database()->select('users_field_data', 'u')
         ->fields('u', array('mail'))
         ->condition('name', $user_blocked_email_user)
         ->execute()
@@ -424,31 +425,31 @@ function _login_security_get_variables_by_name($name) {
     '@uid' => $account->uid->value,
     '@site' => \Drupal::config('system.site')->get('name'),
     '@uri' => $base_url,
-    '@edit_uri' => \Drupal::url('entity.user.edit_form', array('user' => $account->uid->value), array('absolute' => TRUE)),
+    '@edit_uri' => Url::fromRoute('entity.user.edit_form', array('user' => $account->uid->value), array('absolute' => TRUE))->toString(),
     '@hard_block_attempts' => $config->get('host_wrong_count_hard'),
     '@soft_block_attempts' => $config->get('host_wrong_count'),
     '@user_block_attempts' => $config->get('user_wrong_count'),
-    '@user_ip_current_count' => db_select('login_security_track', 'lst')
+    '@user_ip_current_count' => \Drupal::database()->select('login_security_track', 'lst')
     ->fields('lst', array('id'))
     ->condition('name', $name)
     ->condition('host', $ipaddress)
     ->countQuery()
     ->execute()
     ->fetchField(),
-    '@ip_current_count' => db_select('login_security_track', 'lst')
+    '@ip_current_count' => \Drupal::database()->select('login_security_track', 'lst')
     ->fields('lst', array('id'))
     ->condition('host', $ipaddress)
     ->countQuery()
     ->execute()
     ->fetchField(),
-    '@user_current_count' => db_select('login_security_track', 'lst')
+    '@user_current_count' => \Drupal::database()->select('login_security_track', 'lst')
     ->fields('lst', array('id'))
     ->condition('name', $name)
     ->countQuery()
     ->execute()
     ->fetchField(),
     '@tracking_time' => $config->get('track_time'),
-    '@tracking_current_count' => db_select('login_security_track', 'lst')
+    '@tracking_current_count' => \Drupal::database()->select('login_security_track', 'lst')
     ->fields('lst', array('id'))
     ->countQuery()
     ->execute()
