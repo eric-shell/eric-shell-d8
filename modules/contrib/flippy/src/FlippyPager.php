@@ -302,7 +302,7 @@ class FlippyPager {
         'next' => $next,
         'last' => $last,
       ];
-      $event = new FlippyEvent($queries);
+      $event = new FlippyEvent($queries, $node);
       $this->eventDispatcher->dispatch('buildFlippyQuery', $event);
       $queries = $event->getQueries();
 

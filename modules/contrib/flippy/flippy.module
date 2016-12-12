@@ -448,10 +448,10 @@ function template_preprocess_flippy(&$vars) {
 
   // See if we need to create the loop
   if ($flippy_settings->get('flippy_loop_' . $vars['node']->getType())) {
-    if (!$vars['list']['next']['nid']) {
+    if (!isset($vars['list']['next']['nid'])) {
       $vars['list']['next']['nid'] = $vars['list']['first']['nid'];
     }
-    if (!$vars['list']['prev']['nid']) {
+    if (!isset($vars['list']['prev']['nid'])) {
       $vars['list']['prev']['nid'] = $vars['list']['last']['nid'];
     }
   }
