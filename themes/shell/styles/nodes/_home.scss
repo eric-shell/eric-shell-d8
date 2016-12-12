@@ -1,0 +1,9 @@
+@media #{$small-up}{
+
+  .page-node-home{
+
+    .field.field--name-field-body{
+      display: none;
+    }
+  }
+}
